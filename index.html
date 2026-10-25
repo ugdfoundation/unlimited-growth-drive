@@ -195,6 +195,37 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 .vc::before,.vc::after{content:"";position:absolute;top:0;bottom:14px;width:40px;z-index:3;pointer-events:none}
 .vc::after{right:0;background:linear-gradient(90deg,transparent,var(--bg2))}
 
+
+/* single service pages */
+.sp-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.sp-hero>*{min-width:0}
+.sp-hero .chips{margin-top:22px}
+.sp-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.sp-visual{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface);box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.sp-visual .shot{border:0;border-radius:0}
+.sp-panel{padding:24px;display:grid;gap:14px}
+.sp-panel .ptop{display:flex;align-items:center;gap:14px}
+.sp-panel .bigico{width:58px;height:58px;border-radius:16px;background:var(--glow);color:var(--accent);display:grid;place-items:center;flex:none}
+.sp-panel .bigico svg{width:30px;height:30px}
+.sp-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.sp-panel li{display:flex;gap:10px;align-items:center;background:var(--bg2);border-radius:10px;padding:10px 12px;font-size:.92rem}
+.sp-panel li::before{content:"✓";color:var(--good);font-weight:700}
+.why3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.why3 .card b.n{font-family:var(--f-mono);color:var(--accent);font-size:.8rem}
+.inc6{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.inc6 .card{gap:8px}
+.inc6 .card .ck{width:34px;height:34px;border-radius:10px;background:var(--glow);color:var(--accent);display:grid;place-items:center;font-weight:700}
+.inc6 .card p,.why3 .card p{color:var(--muted);font-size:.93rem}
+.steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;list-style:none;padding:0;margin:0;counter-reset:st}
+.steps4 li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 18px;counter-increment:st}
+.steps4 li::before{content:"0" counter(st);display:block;font-family:var(--f-mono);color:var(--accent);font-size:.8rem;margin-bottom:10px}
+.steps4 li h3{margin-bottom:6px}
+.steps4 li p{color:var(--muted);font-size:.9rem}
+.sp-two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sp-two .chips .chip{font-size:.82rem;padding:7px 12px}
+@media (max-width:900px){.sp-hero{grid-template-columns:1fr}.why3,.inc6{grid-template-columns:1fr 1fr}.steps4{grid-template-columns:1fr 1fr}.sp-two{grid-template-columns:1fr}}
+@media (max-width:620px){.why3,.inc6,.steps4{grid-template-columns:1fr}}
+
 /* why / founder */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .split>*{min-width:0}
@@ -369,14 +400,15 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
         <li><a href="#home" data-go="home">Home</a></li>
         <li class="has-drop"><button type="button" id="svcBtn" aria-expanded="false" aria-controls="svcDrop">Services ▾</button>
           <div class="drop" id="svcDrop" hidden>
-            <a href="#services" data-go="services" data-to="s-google">Google Ads<span>Search, PMax, Local Services</span></a>
-            <a href="#services" data-go="services" data-to="s-meta">Meta Ads<span>Facebook & Instagram</span></a>
-            <a href="#services" data-go="services" data-to="s-web">Website Design<span>Fast, conversion-first sites</span></a>
-            <a href="#services" data-go="services" data-to="s-track">Conversion Tracking<span>GA4, GTM, server-side, calls</span></a>
-            <a href="#services" data-go="services" data-to="s-cro">Landing Pages & CRO<span>More leads from the same clicks</span></a>
-            <a href="#services" data-go="services" data-to="s-seo">SEO & Local SEO<span>Google Business Profile, rankings</span></a>
-            <a href="#services" data-go="services" data-to="s-social">Social Media<span>Content & community</span></a>
-            <a href="#services" data-go="services" data-to="s-auto">CRM & Automation<span>Follow-up that never sleeps</span></a>
+            <a href="#services" data-go="service" data-to="s-google">Google Ads<span>Search, PMax, Local Services</span></a>
+            <a href="#services" data-go="service" data-to="s-meta">Meta Ads<span>Facebook & Instagram</span></a>
+            <a href="#services" data-go="service" data-to="s-web">Website Design<span>Fast, conversion-first sites</span></a>
+            <a href="#services" data-go="service" data-to="s-track">Conversion Tracking<span>GA4, GTM, server-side, calls</span></a>
+            <a href="#services" data-go="service" data-to="s-cro">Landing Pages & CRO<span>More leads from the same clicks</span></a>
+            <a href="#services" data-go="service" data-to="s-seo">SEO & Local SEO<span>Google Business Profile, rankings</span></a>
+            <a href="#services" data-go="service" data-to="s-social">Social Media<span>Content & community</span></a>
+            <a href="#services" data-go="service" data-to="s-auto">CRM & Automation<span>Follow-up that never sleeps</span></a>
+            <a href="#services" data-go="services" style="grid-column:1/-1;text-align:center;border-top:1px solid var(--line);border-radius:0;color:var(--accent);font-weight:600">View all services →</a>
           </div>
         </li>
         <li><a href="#work" data-go="work">Case Studies</a></li>
@@ -589,6 +621,9 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
   <div class="band" style="padding-top:20px"><div class="wrap" id="svcDetail"></div></div>
   <div class="band alt"><div class="wrap" data-cta></div></div>
 </section>
+
+<!-- ============ SINGLE SERVICE ============ -->
+<section class="view" data-view="service" hidden><div id="svcPage"></div></section>
 
 <!-- ============ WORK ============ -->
 <section class="view" data-view="work" hidden>
@@ -885,15 +920,15 @@ $("#brow1").innerHTML=fill(r1,0);$("#brow2").innerHTML=fill(r2,5);
 $$(".btrack").forEach(t=>t.children&&[...t.children].slice(t.children.length/2).forEach(c=>c.setAttribute("aria-hidden","true")));
 
 /* render */
-const svcCard=s=>`<a class="card svc" href="#services" data-go="services" data-to="${s.id}"><span class="ico"><svg><use href="#i-${s.ico}"/></svg></span><h3>${s.name}</h3><p>${s.short}</p><span class="more">Learn more →</span></a>`;
+const svcCard=s=>`<a class="card svc" href="#services" data-go="service" data-to="${s.id}"><span class="ico"><svg><use href="#i-${s.ico}"/></svg></span><h3>${s.name}</h3><p>${s.short}</p><span class="more">Learn more →</span></a>`;
 $("#homeSvcs").innerHTML=SERVICES.map(svcCard).join("");
 const FAM=[["google","Paid Search","Google Ads that show up the moment buyers search for you.","s-google"],["meta","Paid Social","Facebook & Instagram ads that create demand and retarget.","s-meta"],["web","Websites","Fast, trust-building sites built to get the call.","s-web"],["track","Tracking","Every call, form and booking tied to its campaign.","s-track"]];
-$("#families").innerHTML=FAM.map(([k,t,d,id])=>`<a class="card fam svc" href="#services" data-go="services" data-to="${id}"><div class="shot">${IMG[k]}</div><div class="body"><h3>${t}</h3><p>${d}</p><span class="more">Explore →</span></div></a>`).join("");
+$("#families").innerHTML=FAM.map(([k,t,d,id])=>`<a class="card fam svc" href="#services" data-go="service" data-to="${id}"><div class="shot">${IMG[k]}</div><div class="body"><h3>${t}</h3><p>${d}</p><span class="more">Explore →</span></div></a>`).join("");
 $("#showcase").innerHTML=showcase;$("#founderPh").innerHTML=AVATARS[0].replace('viewBox="0 0 200 200"','viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block"');
 $("#aboutImg").innerHTML=aboutImg;
 
-$("#footSvcs").innerHTML=SERVICES.slice(0,6).map(s=>`<li><a href="#services" data-go="services" data-to="${s.id}">${s.name.replace(" Management","").replace(" (Facebook & Instagram)","")}</a></li>`).join("");
-$("#svcDetail").innerHTML=SERVICES.map((s,i)=>`<div class="sd" id="${s.id}"><div><span class="num">${String(i+1).padStart(2,"0")} / ${String(SERVICES.length).padStart(2,"0")}</span><h2 style="font-size:1.5rem;margin-top:8px">${s.name}</h2><div class="chips" style="margin-top:12px">${s.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div>${IMG[s.ico]?`<div class="shot" style="margin-top:18px">${IMG[s.ico]}</div>`:""}</div><div><p class="lede">${s.short}</p><ul>${s.points.map(p=>`<li>${p}</li>`).join("")}</ul><a class="btn btn-ghost btn-sm" style="margin-top:16px" href="#contact" data-go="contact">Get a quote for ${s.name.split(" ")[0]==="Google"||s.name.split(" ")[0]==="Meta"?s.name.split(" (")[0]:"this service"}</a></div></div>`).join("");
+$("#footSvcs").innerHTML=SERVICES.slice(0,6).map(s=>`<li><a href="#services" data-go="service" data-to="${s.id}">${s.name.replace(" Management","").replace(" (Facebook & Instagram)","")}</a></li>`).join("");
+$("#svcDetail").innerHTML=SERVICES.map((s,i)=>`<div class="sd" id="${s.id}"><div><span class="num">${String(i+1).padStart(2,"0")} / ${String(SERVICES.length).padStart(2,"0")}</span><h2 style="font-size:1.5rem;margin-top:8px">${s.name}</h2><div class="chips" style="margin-top:12px">${s.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div>${IMG[s.ico]?`<div class="shot" style="margin-top:18px">${IMG[s.ico]}</div>`:""}</div><div><p class="lede">${s.short}</p><ul>${s.points.map(p=>`<li>${p}</li>`).join("")}</ul><a class="btn btn-primary btn-sm" style="margin-top:16px;margin-right:8px" href="#service" data-go="service" data-to="${s.id}">See full service →</a><a class="btn btn-ghost btn-sm" style="margin-top:16px" href="#contact" data-go="contact">Get a quote for ${s.name.split(" ")[0]==="Google"||s.name.split(" ")[0]==="Meta"?s.name.split(" (")[0]:"this service"}</a></div></div>`).join("");
 const caseCard=c=>`<article class="card"><div class="case-top"><span class="tag">${c.ind}</span><span class="tag">Sample</span></div><div><span class="big">${c.big}</span><div style="color:var(--muted);font-size:.88rem;margin-top:6px">${c.bigL}</div></div><div class="bars" aria-hidden="true">${c.bars.map(h=>`<i style="height:${h}%"></i>`).join("")}</div><h3>${c.title}</h3><div class="metrics">${c.m.map(([k,v])=>`<span>${k}<b>${v}</b></span>`).join("")}</div></article>`;
 $("#homeProof").innerHTML=CASES.slice(0,3).map(caseCard).join("");
 const revCard=r=>`<article class="card review" data-cat="${r.cat}"><span class="stars" aria-label="5 stars">★★★★★</span><div class="chips"><span class="chip">${r.cat}</span><span class="chip">${r.ind}</span></div><blockquote>[Paste a real client review here.]</blockquote><footer><span class="av">${r.init}</span><span>${r.who}</span></footer></article>`;
@@ -903,6 +938,105 @@ $("#teamGrid").innerHTML=TEAM.map(t=>`<article class="card member${t.open?" open
 $("#faq").innerHTML=FAQ.map(([q,a],i)=>`<details${i===0?" open":""}><summary>${q}</summary><p>${a}</p></details>`).join("");
 const CTA=`<div class="cta"><div><h2>Not sure where your marketing is losing leads?</h2><p>Share your website, current campaigns and main goal. Our free audit shows whether the next step is ads, tracking, a new page or nothing at all.</p><ul><li>Your website</li><li>Active campaigns</li><li>Main business goal</li></ul></div><div style="display:grid;gap:10px;justify-items:start"><a class="btn" href="#contact" data-go="contact">Get a Free Audit →</a><a class="btn" style="background:transparent;color:var(--accent-ink);border-color:var(--accent-ink)" href="https://wa.me/8801754829854" target="_blank" rel="noopener">WhatsApp us</a></div></div>`;
 $$("[data-cta]").forEach(el=>el.innerHTML=CTA);
+
+const SVC_PAGES={
+"s-google":{slug:"google-ads",eyebrow:"Google Ads Management",h1:'Show up the moment <span class="mark">buyers search for you.</span>',lede:"We plan, build and manage Google Ads that bring in calls, form leads and booked jobs, not just clicks. Every campaign is tied to tracking, so you see what each dollar brings back.",
+ why:[["Buyers with intent","People searching for your service are ready to act. We put you in front of them at that exact moment."],["No wasted spend","Tight keyword targeting, negative lists and location settings stop budget leaking to the wrong searches."],["Clear numbers","Calls, forms and bookings are tracked back to the keyword, so decisions are based on leads, not guesses."]],
+ inc:[["Keyword & competitor research","We find the searches your best customers use, sorted by intent, cost and location."],["Search campaigns","Tightly grouped ad groups, strong ad copy and assets that lift click-through rate."],["Performance Max & YouTube","Extra reach across Maps, YouTube, Display and Gmail when the account is ready for it."],["Local Services Ads","Google Guaranteed / Screened setup so you appear at the very top with pay-per-lead pricing."],["Search-term cleanup","Weekly review of real search terms and negative keywords to cut irrelevant clicks."],["Bids & budget pacing","Smart bidding strategies and daily pacing so the budget lasts the whole month."]],
+ steps:[["Audit","We review your account, website, tracking and competitors."],["Build","Campaign structure, keywords, ads, assets and conversion tracking."],["Launch & learn","Close daily watch in the first weeks while Google learns."],["Scale","Cut what doesn't work, grow what does, report every month."]],
+ who:["Law firms","Dentists & clinics","Home services","Towing & auto","Detailing","E-commerce"],tools:["Google Ads","Google Tag Manager","GA4","Looker Studio","Call tracking"],
+ faq:[["How much should I spend on Google Ads?","It depends on your market and cost per click. We usually suggest a test budget that can produce enough leads to learn from, then scale based on results."],["Do I own the ad account?","Yes. The account is in your name and you pay Google directly. We work inside it with manager access."],["How fast will I see leads?","Search campaigns can bring leads in the first days. The first 4 to 8 weeks are for learning and fine-tuning."],["Do you lock me into a contract?","No long lock-in. After a short onboarding period, billing is month to month."]]},
+"s-meta":{slug:"meta-ads",eyebrow:"Meta Ads · Facebook & Instagram",h1:'Ads people stop scrolling for, <span class="mark">and then call.</span>',lede:"We create demand on Facebook and Instagram with scroll-stopping creative, smart audiences and lead forms, then retarget warm visitors until they book.",
+ why:[["Reach before they search","Get in front of local people who need you but haven't started searching yet."],["Low cost per lead","Instant lead forms and messenger ads make it easy to say yes, often at a lower cost than search."],["Stay top of mind","Retargeting keeps your business in front of visitors who didn't call the first time."]],
+ inc:[["Pixel & Conversions API","Accurate tracking even with browser privacy limits, so Meta optimizes for real leads."],["Audience strategy","Location, interest, custom and lookalike audiences built from your best customers."],["Creative production","Images, short videos and reels with hooks and offers that fit each audience."],["Lead form campaigns","Short forms with qualifying questions that filter out low-quality leads."],["Retargeting","Sequenced ads for site visitors, video viewers and past enquiries."],["Creative testing","Ongoing tests of hooks, formats and offers to keep results fresh."]],
+ steps:[["Research","Your offer, audience and what competitors are running."],["Create","Ad concepts, copy and video built for the feed."],["Launch","Campaigns go live with tracking checked end to end."],["Optimize","Test, refresh creative and shift budget to winners."]],
+ who:["Dentists & clinics","Med spas","Home services","Real estate","Fitness","E-commerce"],tools:["Meta Ads Manager","Conversions API","Canva","CapCut","GA4"],
+ faq:[["Facebook or Google Ads, which is better?","Google captures people already searching. Meta creates new demand and retargets. Many businesses get the best results using both."],["Do you make the ad creative?","Yes. We write the copy and design the images and short videos. You can also send your own photos and clips."],["What budget do I need?","A modest test budget is enough to start. We scale once we see which audiences and creatives bring good leads."],["Will the leads be good quality?","We add qualifying questions to forms and track which leads turn into customers, then optimize for those."]]},
+"s-web":{slug:"website-design",eyebrow:"Website Design & Development",h1:'A website built to <span class="mark">get the call.</span>',lede:"Fast, mobile-first websites that build trust in seconds and turn visitors into calls, forms and bookings. Designed for your customers, ready for ads and SEO.",
+ why:[["First impressions count","Visitors decide in seconds. A clean, modern site makes your business look like the obvious choice."],["Made for mobile","Most local searches happen on phones. Every page is built to load fast and convert on small screens."],["Ready to grow","SEO-ready structure and tracking built in, so ads and organic traffic work from day one."]],
+ inc:[["Conversion-first design","Clear layout, strong calls to action and click-to-call on every page."],["Copywriting","Headlines and page copy that speak to your customer's problem and your offer."],["Service & location pages","Dedicated pages for each service and area you cover."],["Speed & mobile","Optimized images and code for fast loading and good Core Web Vitals."],["SEO foundations","Clean structure, meta tags, schema and sitemap set up properly."],["Tracking & forms","Forms, calls and bookings connected to GA4 and your ad platforms."]],
+ steps:[["Discover","Goals, customers, competitors and the pages you need."],["Design","Wireframes and visual design for your approval."],["Build","Development, content, forms and tracking."],["Launch","Testing, go-live and handover with training."]],
+ who:["Law firms","Dentists & clinics","Contractors","Auto services","Local stores","Startups"],tools:["WordPress","Shopify","Custom code","Vercel","GA4"],
+ faq:[["How long does a website take?","Most business websites take 2 to 4 weeks, depending on the number of pages and how fast content is ready."],["Will I be able to edit it?","Yes. We build on platforms you can edit, and we show you how to update text and images."],["Do you write the content?","Yes, we can write all page copy. You review and approve before launch."],["Do I own the website?","Yes. The domain, hosting and website are yours."]]},
+"s-track":{slug:"conversion-tracking",eyebrow:"Conversion Tracking",h1:'Know exactly which ads <span class="mark">bring you customers.</span>',lede:"We set up GA4, Google Tag Manager, server-side and call tracking so every call, form and booking ties back to the campaign that drove it.",
+ why:[["Stop guessing","See which campaigns, keywords and ads produce real leads, not just clicks."],["Better ad results","Google and Meta optimize better when they receive accurate conversion data."],["Trust your numbers","Clean, de-duplicated data that matches what happens in your business."]],
+ inc:[["Tag Manager setup & audit","A clean GTM container with organized tags, triggers and variables."],["GA4 events","Key events for calls, forms, bookings and purchases set up correctly."],["Server-side tracking","More accurate data that holds up against ad blockers and browser limits."],["Call & form tracking","Track phone calls and form submissions back to their source."],["Enhanced conversions","Google and Meta enhanced conversions for better matching and optimization."],["Offline conversions","Send closed deals from your CRM back to the ad platforms."]],
+ steps:[["Audit","Check what is tracked today and what is missing or broken."],["Plan","A simple tracking plan for every lead action."],["Implement","GTM, GA4, ad platform and call tracking setup."],["Verify","Test every action and hand over a clear report."]],
+ who:["Businesses running ads","Agencies","E-commerce stores","Lead-gen businesses","Clinics","Law firms"],tools:["Google Tag Manager","GA4","Server-side GTM","Meta CAPI","CallRail"],
+ faq:[["Why does tracking matter so much?","Without it you can't tell which ads work. Ad platforms also use conversion data to find more people likely to become customers."],["Can you fix my existing tracking?","Yes. We audit your current setup, fix errors and remove duplicate conversions."],["What is server-side tracking?","Data is sent through your own server container, which is more accurate and less affected by blockers and privacy limits."],["Do you track phone calls?","Yes, we set up call tracking so calls are linked to the ad or page that drove them."]]},
+"s-cro":{slug:"landing-pages-cro",eyebrow:"Landing Pages & CRO",h1:'More leads from <span class="mark">the same ad budget.</span>',lede:"Focused landing pages and steady testing that turn more of your existing visitors into enquiries. Better conversion rate means a lower cost per lead.",
+ why:[["Lower cost per lead","Doubling conversion rate can halve what each lead costs, without spending more on ads."],["Message match","Pages that match the ad and keyword, so visitors know they are in the right place."],["Decisions from data","Heatmaps, recordings and A/B tests show what to change next."]],
+ inc:[["Ad-matched landing pages","One page per offer or service, matched to the ad that sent the visitor."],["Offer & copy","Clear offers, benefits and calls to action that remove doubt."],["Trust signals","Reviews, videos, badges and guarantees placed where they matter."],["Heatmaps & recordings","See where people click, scroll and drop off."],["A/B testing","Test headlines, forms, layouts and offers one at a time."],["Speed optimization","Fast-loading pages, because every second of delay costs leads."]],
+ steps:[["Analyze","Review your traffic, pages and where visitors drop off."],["Hypothesize","List the changes most likely to lift conversions."],["Test","Build variations and run tests with enough traffic."],["Roll out","Keep the winners and plan the next test."]],
+ who:["Businesses running ads","Law firms","Clinics","Home services","SaaS","E-commerce"],tools:["Microsoft Clarity","GA4","Google Optimize alternatives","Unbounce","WordPress"],
+ faq:[["What is CRO?","Conversion rate optimization: improving your pages so a bigger share of visitors call, book or buy."],["Do I need a separate landing page?","For ads, usually yes. A focused page with one goal converts better than a general homepage."],["How long do tests take?","It depends on traffic. Most tests need a few weeks to reach a reliable result."],["Can you improve my current website?","Yes. We often start with quick fixes on your existing pages before building new ones."]]},
+"s-seo":{slug:"seo-local-seo",eyebrow:"SEO & Local SEO",h1:'Rank on Google Maps for <span class="mark">the services that pay your bills.</span>',lede:"We grow your visibility on Google Maps and organic search with a strong Google Business Profile, local citations, reviews and service pages built to rank.",
+ why:[["Free traffic that compounds","Good rankings keep bringing leads every month without paying per click."],["Win the map pack","Most local searchers choose from the top 3 businesses on Google Maps."],["Build trust","Ranking high with strong reviews makes you look like the leader in your area."]],
+ inc:[["Google Business Profile","Full optimization: categories, services, photos, posts and Q&A."],["Local citations","Consistent name, address and phone across key directories."],["Review strategy","A simple system to get more 5-star reviews and reply to them."],["On-page SEO","Titles, headings, content and internal links optimized for your keywords."],["Technical SEO","Speed, indexing, schema and site structure fixes."],["Service & city pages","Pages that target each service and area you want to rank for."]],
+ steps:[["Audit","Rankings, competitors, profile and website health."],["Fix","Technical issues, profile gaps and on-page basics."],["Build","Content, citations and reviews that build authority."],["Report","Monthly ranking and lead reports with next steps."]],
+ who:["Dentists & clinics","Law firms","Contractors","Auto shops","Restaurants","Local stores"],tools:["Google Business Profile","Search Console","GA4","BrightLocal","Ahrefs"],
+ faq:[["How long does SEO take?","Local SEO often shows movement in 1 to 3 months. Competitive keywords can take longer. It builds over time."],["Can you guarantee #1 rankings?","No honest agency can guarantee rankings. We focus on the work that moves rankings and leads, and report progress monthly."],["Do reviews really matter?","Yes. Review count, rating and recency are strong local ranking and trust signals."],["Do I need SEO if I run ads?","Ads bring leads now. SEO builds a free lead source over time. Together they cover both."]]},
+"s-social":{slug:"social-media-management",eyebrow:"Social Media Management",h1:'A social presence that <span class="mark">builds trust every week.</span>',lede:"Consistent posting, content creation and community care for Facebook and Instagram, so your brand looks active, professional and worth calling.",
+ why:[["Look active and trusted","Customers check your social pages before they call. An active page builds confidence."],["Save your time","We plan, create and post, so you can focus on running the business."],["Support your ads","Good organic content makes your paid ads and retargeting perform better."]],
+ inc:[["Monthly content calendar","A planned mix of posts, reels and stories approved in advance."],["Graphic design","On-brand graphics and carousels for your feed."],["Short-form video","Reels and short videos edited for reach and engagement."],["Captions & hashtags","Copy that sounds like your brand, with local hashtags."],["Community management","Replies to comments and messages so no customer is ignored."],["Monthly insights","Reach, engagement and follower growth in a simple report."]],
+ steps:[["Brand","Learn your voice, audience and goals."],["Plan","A monthly content calendar for approval."],["Create & post","Design, video, captions and scheduling."],["Review","Monthly results and ideas for next month."]],
+ who:["Clinics & med spas","Restaurants","Real estate","Fitness","Local brands","E-commerce"],tools:["Meta Business Suite","Canva","CapCut","Later","Instagram"],
+ faq:[["How many posts per month?","Plans usually include 12 to 20 posts per month, depending on your goals and budget."],["Do you create the content?","Yes. We design graphics and edit videos. Photos or clips from your business make content even better."],["Will I approve posts first?","Yes. You see the monthly calendar and approve before anything goes live."],["Does social media bring leads?","Organic social builds trust and supports ads. For direct leads, we pair it with Meta Ads."]]},
+"s-auto":{slug:"crm-marketing-automation",eyebrow:"CRM & Marketing Automation",h1:'Follow-up that <span class="mark">never lets a lead go cold.</span>',lede:"Instant replies, follow-up sequences and booking flows that respond in seconds, day or night, so more of your leads turn into booked appointments.",
+ why:[["Speed wins the lead","Leads contacted within minutes are far more likely to book than those called hours later."],["Nothing slips through","Every lead lands in one pipeline with clear next steps."],["More reviews, more repeat work","Automatic review requests and reminders keep customers coming back."]],
+ inc:[["CRM setup","A clean pipeline for every lead from first contact to closed deal."],["Instant replies","Automatic SMS and email replies the moment a lead comes in."],["Nurture sequences","Follow-up messages over days and weeks for leads not ready yet."],["Booking automation","Calendar links, confirmations and reminders that cut no-shows."],["Review requests","Automatic requests for Google reviews after each job."],["Lead reporting","See lead source, response time and conversion in one place."]],
+ steps:[["Map","Your lead sources, sales steps and current follow-up."],["Build","CRM, pipelines, forms and automations."],["Connect","Link ads, website, calendar and phone."],["Improve","Track results and refine messages over time."]],
+ who:["Clinics & med spas","Law firms","Home services","Coaches","Real estate","Agencies"],tools:["GoHighLevel","HubSpot","Calendly","Zapier","Twilio"],
+ faq:[["Which CRM do you use?","We work with GoHighLevel, HubSpot and others. We recommend the best fit for your size and budget."],["Can it connect to my ads?","Yes. Leads from Google, Meta and your website flow into the CRM automatically."],["Will messages sound robotic?","No. We write messages in your voice and keep them short and personal."],["Do I need this if I'm small?","Small businesses benefit most, because automation does the follow-up you don't have time for."]]}
+};
+
+const CAL_URL="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call";
+function renderService(id){const s=SERVICES.find(x=>x.id===id)||SERVICES[0],d=SVC_PAGES[s.id],idx=SERVICES.indexOf(s);
+ const visual=IMG[s.ico]?`<div class="shot">${IMG[s.ico]}</div>`:"";
+ const panel=`<div class="sp-panel"><div class="ptop"><span class="bigico"><svg><use href="#i-${s.ico}"/></svg></span><div><b>${s.name}</b><div class="tag" style="margin-top:4px">What you get</div></div></div><ul>${s.points.slice(0,4).map(p=>`<li>${p}</li>`).join("")}</ul></div>`;
+ const rel=[1,2,3].map(k=>SERVICES[(idx+k)%SERVICES.length]);
+ $("#svcPage").innerHTML=`
+ <div class="phead"><div class="wrap sp-hero"><div>
+  <p class="crumb"><a href="#home" data-go="home" style="text-decoration:none">Home</a> / <a href="#services" data-go="services" style="text-decoration:none">Services</a> / ${s.name}</p>
+  <span class="eyebrow">${d.eyebrow}</span>
+  <h1 style="margin-top:14px;font-size:clamp(2rem,4.6vw,3.5rem)">${d.h1}</h1>
+  <p class="lede">${d.lede}</p>
+  <div class="sp-ctas"><a class="btn btn-primary" href="${CAL_URL}" target="_blank" rel="noopener">Book a Free Strategy Call →</a><a class="btn btn-ghost" href="#contact" data-go="contact">Get a Free Audit</a></div>
+  <div class="chips">${s.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div>
+ </div><div class="sp-visual">${visual}${panel}</div></div></div>
+
+ <div class="band"><div class="wrap">
+  <div class="head"><span class="eyebrow">Why it matters</span><h2>What ${s.name.replace(" (Facebook & Instagram)","")} <span class="mark">does for your business.</span></h2></div>
+  <div class="why3">${d.why.map(([t,p],i)=>`<article class="card"><b class="n">0${i+1}</b><h3>${t}</h3><p>${p}</p></article>`).join("")}</div>
+ </div></div>
+
+ <div class="band alt"><div class="wrap">
+  <div class="head"><span class="eyebrow">What's included</span><h2>Everything you need, <span class="mark">done for you.</span></h2></div>
+  <div class="inc6">${d.inc.map(([t,p])=>`<article class="card"><span class="ck">✓</span><h3>${t}</h3><p>${p}</p></article>`).join("")}</div>
+ </div></div>
+
+ <div class="band"><div class="wrap">
+  <div class="head"><span class="eyebrow">How we work</span><h2>A simple process, <span class="mark">clear at every step.</span></h2></div>
+  <ol class="steps4">${d.steps.map(([t,p])=>`<li><h3>${t}</h3><p>${p}</p></li>`).join("")}</ol>
+ </div></div>
+
+ <div class="band alt"><div class="wrap sp-two">
+  <article class="card"><span class="eyebrow">Who it's for</span><h3 style="font-size:1.3rem">Built for businesses like yours</h3><div class="chips">${d.who.map(c=>`<span class="chip">${c}</span>`).join("")}</div></article>
+  <article class="card"><span class="eyebrow">Tools we use</span><h3 style="font-size:1.3rem">Proven platforms, set up properly</h3><div class="chips">${d.tools.map(c=>`<span class="chip">${c}</span>`).join("")}</div></article>
+ </div></div>
+
+ <div class="band"><div class="wrap">
+  <div class="head"><span class="eyebrow">FAQ</span><h2>Questions about <span class="mark">${s.name.replace(" (Facebook & Instagram)","")}.</span></h2></div>
+  <div class="faq">${d.faq.map(([q,a],i)=>`<details${i===0?" open":""}><summary>${q}</summary><p>${a}</p></details>`).join("")}</div>
+ </div></div>
+
+ <div class="band alt"><div class="wrap">
+  <div class="head"><span class="eyebrow">Related services</span><h2>Works even better <span class="mark">together.</span></h2></div>
+  <div class="grid g3">${rel.map(svcCard).join("")}</div>
+ </div></div>
+
+ <div class="band"><div class="wrap">${CTA}</div></div>`;
+ document.title=s.name+" | Unlimited Growth Drive";}
 
 /* filters */
 function makeFilters(box,cats,onPick){box.innerHTML=["All",...cats].map((c,i)=>`<button type="button" aria-pressed="${i===0}">${c}</button>`).join("");
@@ -915,12 +1049,13 @@ makeFilters($("#workFilters"),[...new Set(CASES.map(c=>c.ind))],renderWork);rend
 const VIEWS=$$("[data-view]").map(v=>v.dataset.view);
 function go(view,to){
   if(!VIEWS.includes(view))view="home";
+  if(view==="service"){renderService(to);}else document.title="Unlimited Growth Drive | Digital Marketing Agency";
   $$("[data-view]").forEach(v=>v.hidden=v.dataset.view!==view);
   $$(".menu a[data-go]").forEach(a=>a.classList.toggle("on",a.dataset.go===view));
   $("#mobileNav").hidden=true;$("#burger").setAttribute("aria-expanded","false");
   $("#svcDrop").hidden=true;$("#svcBtn").setAttribute("aria-expanded","false");
-  requestAnimationFrame(()=>{const t=to&&document.getElementById(to);if(t){t.scrollIntoView({block:"start"});window.scrollBy(0,-80)}else window.scrollTo(0,0)});
-  try{history.replaceState(null,"","#"+view)}catch(e){}
+  requestAnimationFrame(()=>{const t=view!=="service"&&to&&document.getElementById(to);if(t){t.scrollIntoView({block:"start"});window.scrollBy(0,-80)}else window.scrollTo(0,0)});
+  try{const sl=view==="service"?"service/"+(SVC_PAGES[to]||SVC_PAGES["s-google"]).slug:view;history.replaceState(null,"","#"+sl)}catch(e){}
   runCounters();
 }
 document.addEventListener("click",e=>{const a=e.target.closest("[data-go]");if(!a)return;e.preventDefault();go(a.dataset.go,a.dataset.to)});
@@ -963,7 +1098,9 @@ $("#leadForm").addEventListener("submit",e=>{e.preventDefault();const name=$("#f
  msg.style.color="var(--good)";msg.innerHTML=`Ready. <a href="${url}" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Open WhatsApp to send →</a>`;});
 
 /* initial view from hash */
-const h=(location.hash||"").replace("#","");go(VIEWS.includes(h)?h:"home");
+const h=(location.hash||"").replace("#","");
+if(h.startsWith("service/")){const sl=h.slice(8),id=Object.keys(SVC_PAGES).find(k=>SVC_PAGES[k].slug===sl);go("service",id||"s-google")}else go(VIEWS.includes(h)?h:"home");
+window.addEventListener("hashchange",()=>{const x=location.hash.slice(1);if(x.startsWith("service/")){const id=Object.keys(SVC_PAGES).find(k=>SVC_PAGES[k].slug===x.slice(8));if(id)go("service",id)}else if(VIEWS.includes(x))go(x)});
 
 /* video reviews carousel: auto-slides right-to-left, pauses on hover/touch and while a video plays */
 (()=>{const tr=document.getElementById("vtrack");if(!tr)return;let playing=false,hover=false;
