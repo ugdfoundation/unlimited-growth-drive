@@ -689,7 +689,6 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
       <div class="tst-ctrl">
         <button type="button" id="tstPrev" aria-label="Previous reviews">←</button>
         <div class="tst-bar"><i id="tstBar"></i></div>
-        <span class="tst-count" id="tstCount"></span>
         <button type="button" id="tstNext" aria-label="Next reviews">→</button>
       </div>
     </div>
@@ -1288,7 +1287,7 @@ const TESTI=[["Yeg Detailerzz", "", "I’ve had a great experience working with 
  tr.innerHTML=TESTI.map(card).join("");
  const cards=()=>[...tr.children].filter(c=>!c.hidden);
  const step=()=>{const c=cards()[0];return c?c.getBoundingClientRect().width+20:300};
- const upd=()=>{const vis=cards().length,per=Math.max(1,Math.round(tr.clientWidth/step())),idx=Math.min(vis,Math.round(tr.scrollLeft/step())+per);document.getElementById("tstBar").style.width=(vis?idx/vis*100:0)+"%";document.getElementById("tstCount").textContent=idx+" / "+vis};
+ const upd=()=>{const vis=cards().length,per=Math.max(1,Math.round(tr.clientWidth/step())),idx=Math.min(vis,Math.round(tr.scrollLeft/step())+per);document.getElementById("tstBar").style.width=(vis?idx/vis*100:0)+"%"};
  tr.addEventListener("scroll",()=>requestAnimationFrame(upd),{passive:true});addEventListener("resize",upd);
  const next=()=>{if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-8)tr.scrollTo({left:0});else tr.scrollBy({left:step()})};
  const prev=()=>{if(tr.scrollLeft<=4)tr.scrollTo({left:tr.scrollWidth});else tr.scrollBy({left:-step()})};
