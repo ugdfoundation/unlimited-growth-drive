@@ -2,21 +2,17 @@
 </head><body>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
 <style>
 /* Layout: a "growth dashboard" — dark ink-navy road with a marigold signal accent; brand purple reserved for the logo, odometer counters, gauge-style proof. */
 :root{
-  --bg:#0E1124; --bg2:#151935; --surface:#1B2042; --line:#2A3060; --fg:#EEF0FA; --muted:#A3A9CC; --accent:#F5B83D; --accent-ink:#1A1405; --brand:#B547AF; --brand2:#9A3AA4; --good:#5FD6A0; --glow:rgba(245,184,61,.16);
+  --bg:#FAF9F6; --bg2:#F2F0EA; --surface:#FFFFFF; --line:#E3DFD5; --fg:#0E1B33; --muted:#566074; --accent:#A8780A; --accent-ink:#FFFFFF; --gold:#E9B13B; --navy:#0E1B33; --navy2:#16264A; --brand:#93308F; --brand2:#7E2C8E; --good:#1E8A5A; --glow:rgba(233,177,59,.14);
   --f-display:"Roboto",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
   --f-body:"Roboto",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
-  --f-mono:"Roboto Mono",ui-monospace,Menlo,monospace;
-  --r:14px; --max:1180px;
-  color-scheme:dark;
+  --f-mono:"Roboto",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --r:10px; --max:1180px;
+  color-scheme:light;
 }
-@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){ --bg:#F6F5FB; --bg2:#ECEBF6; --surface:#FFFFFF; --line:#D9D8EA; --fg:#12152B; --muted:#5A5F80; --accent:#C98A0E; --accent-ink:#FFFFFF; --brand:#93308F; --brand2:#7E2C8E; --good:#1E9A68; --glow:rgba(201,138,14,.12); color-scheme:light}}
-:root[data-theme="light"]{ --bg:#F6F5FB; --bg2:#ECEBF6; --surface:#FFFFFF; --line:#D9D8EA; --fg:#12152B; --muted:#5A5F80; --accent:#C98A0E; --accent-ink:#FFFFFF; --brand:#93308F; --brand2:#7E2C8E; --good:#1E9A68; --glow:rgba(201,138,14,.12); color-scheme:light}
-:root[data-theme="dark"]{ --bg:#0E1124; --bg2:#151935; --surface:#1B2042; --line:#2A3060; --fg:#EEF0FA; --muted:#A3A9CC; --accent:#F5B83D; --accent-ink:#1A1405; --brand:#B547AF; --brand2:#9A3AA4; --good:#5FD6A0; --glow:rgba(245,184,61,.16); color-scheme:dark}
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -369,6 +365,106 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
 .view{animation:fade .35s ease}
 @keyframes fade{from{opacity:.4;transform:translateY(6px)}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== editorial refresh ===== */
+body{font-size:17px;line-height:1.65}
+h1{font-weight:700;letter-spacing:-.035em;font-size:clamp(2.4rem,5.4vw,4.6rem)}
+h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(1.8rem,3.4vw,2.7rem)}
+h3{font-weight:600;letter-spacing:-.01em}
+.mark{color:inherit}
+.eyebrow{font-family:var(--f-body);font-size:.9rem;letter-spacing:0;text-transform:none;font-weight:600;color:var(--accent)}
+.eyebrow::before{display:none}
+.btn{border-radius:8px;font-weight:600;letter-spacing:.005em}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy2);transform:none}
+.btn-ghost{border-color:var(--fg);color:var(--fg)}
+.btn-ghost:hover{background:var(--fg);color:#fff;border-color:var(--fg)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#F3C25A}
+.card{border-radius:var(--r);box-shadow:none}
+.svc:hover{border-color:var(--fg);transform:none}
+.svc .ico{background:var(--bg2);color:var(--fg);border-radius:8px}
+.svc .more{color:var(--fg);text-decoration:underline;text-underline-offset:4px}
+.chip{font-family:var(--f-body);font-size:.8rem;border:0;background:var(--bg2);color:var(--fg);border-radius:6px;padding:5px 10px}
+.phead{background:none}
+.hero::after{display:none}
+header.top{background:color-mix(in srgb,var(--bg) 92%,transparent)}
+.menu a,.menu button{color:var(--fg);font-weight:500}
+.menu a:hover,.menu button:hover{color:var(--accent)}
+.menu a.on{box-shadow:inset 0 -2px 0 var(--gold)}
+.drop{box-shadow:0 20px 50px rgba(14,27,51,.12)}
+.notice{display:none}
+.band.navy{background:var(--navy);color:#fff}
+.band.navy .lede,.band.navy p{color:#C5CCDA}
+.band.navy .eyebrow{color:var(--gold)}
+.band.navy h2,.band.navy h3{color:#fff}
+.vmeta .stars,.review .stars,.stars{color:var(--gold)}
+.vplay{background:#fff;color:var(--navy)}
+.float .bk{background:var(--navy);color:#fff}
+.cta{background:var(--navy);color:#fff;border-radius:16px}
+.cta p,.cta li{color:#C5CCDA}
+.cta .btn{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+/* hero */
+.hero{padding-block:clamp(56px,8vw,110px) clamp(48px,6vw,80px)}
+.hero-grid{grid-template-columns:1.15fr .85fr;gap:64px}
+.hero h1{max-width:13ch}
+.hero .lede{font-size:1.15rem;max-width:52ch}
+.hero-label{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;color:var(--muted);font-weight:500}
+.hero-label i{width:8px;height:8px;border-radius:50%;background:var(--good);display:inline-block}
+.trust{border-top:1px solid var(--line);gap:40px}
+.trust b{font-weight:700;font-size:1.6rem}
+.hero-video{position:relative}
+.hero-video .vframe{aspect-ratio:4/5;border-radius:14px;overflow:hidden}
+.hero-video .vframe img{opacity:1}
+.hero-video figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;font-size:.92rem;color:var(--muted)}
+.hero-video figcaption b{color:var(--fg);display:block;font-size:1rem}
+.hero-video .tagline{position:absolute;left:-18px;bottom:72px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.85rem;box-shadow:0 14px 40px rgba(14,27,51,.12);max-width:220px}
+.hero-video .tagline b{display:block;font-size:1rem}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-video{max-width:420px}.hero-video .tagline{left:12px}}
+/* brands */
+.brands{background:transparent;border-block:1px solid var(--line);padding-block:28px}
+.brands-title{font-family:var(--f-body);letter-spacing:0;text-transform:none;font-size:.95rem;color:var(--muted);font-weight:500}
+.bchip{background:transparent;border:0;padding:6px 4px;font-weight:600;color:#7A8296;font-size:1.05rem}
+.bchip i{display:none}
+.btrack{gap:44px}
+/* services list */
+.slist{border-top:1px solid var(--line)}
+.slist a{display:grid;grid-template-columns:70px 1.1fr 1.4fr 40px;gap:24px;align-items:center;padding:26px 4px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s,padding .2s}
+.slist a:hover{background:var(--surface);padding-inline:16px}
+.slist .n{color:var(--muted);font-size:.95rem;font-variant-numeric:tabular-nums}
+.slist h3{font-size:1.35rem}
+.slist p{color:var(--muted);font-size:.98rem}
+.slist .arr{font-size:1.4rem;justify-self:end;transition:transform .2s}
+.slist a:hover .arr{transform:translateX(4px)}
+.slist a>*{min-width:0}
+@media (max-width:760px){.slist a{grid-template-columns:36px minmax(0,1fr) 24px;gap:6px 14px}.slist .n{grid-column:1;grid-row:1}.slist h3{grid-column:2;grid-row:1;font-size:1.15rem}.slist p{grid-column:2;grid-row:2}.slist .arr{grid-column:3;grid-row:1}}
+/* steps on navy */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.18)}
+.steps li{padding:28px 24px 8px 0}
+.steps li+li{padding-left:24px;border-left:1px solid rgba(255,255,255,.18)}
+.steps b{display:block;color:var(--gold);font-size:.95rem;margin-bottom:12px}
+.steps h3{font-size:1.25rem;margin-bottom:8px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}.steps li:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}.steps li+li{padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.18)}}
+/* industries list */
+.ind{background:none;border:0;border-top:1px solid var(--line);border-radius:0;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.ind div{background:none;padding:20px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.ind div span{text-align:right;font-size:.92rem}
+@media (max-width:700px){.ind{grid-template-columns:1fr}.ind div{display:grid}.ind div span{text-align:left}}
+/* founder / team */
+.portrait{background:var(--navy)!important}
+.mono{display:grid;place-items:center;width:100%;height:100%;font-size:5rem;font-weight:700;color:var(--gold);background:var(--navy)}
+.member .ph{background:var(--navy)}
+.member .ph .mono{font-size:2.6rem}
+.project .meta{color:var(--muted);font-size:.9rem}
+.project ul{margin:0;padding-left:18px;color:var(--muted);font-size:.93rem;display:grid;gap:4px}
+.clients{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.clients span{padding:16px 0;border-bottom:1px solid var(--line);font-weight:500}
+@media (max-width:800px){.clients{grid-template-columns:1fr 1fr}}
+.vtag{display:none}
+.sp-panel .bigico{background:var(--bg2);color:var(--fg)}
+.inc6 .card .ck{background:var(--bg2);color:var(--fg)}
+.vnav button:hover{border-color:var(--fg);color:var(--fg)}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -411,20 +507,20 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
             <a href="#services" data-go="services" style="grid-column:1/-1;text-align:center;border-top:1px solid var(--line);border-radius:0;color:var(--accent);font-weight:600">View all services →</a>
           </div>
         </li>
-        <li><a href="#work" data-go="work">Case Studies</a></li>
+        <li><a href="#work" data-go="work">Our Work</a></li>
         <li><a href="#about" data-go="about">About</a></li>
         <li><a href="#team" data-go="team">Team</a></li>
         <li><a href="#pricing" data-go="pricing">Pricing</a></li>
         <li><a href="#contact" data-go="contact">Contact</a></li>
       </ul>
       <div class="nav-cta">
-        <a class="btn btn-primary btn-sm" href="#contact" data-go="contact">Book a Free Call</a>
+        <a class="btn btn-primary btn-sm" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Book a free call</a>
       </div>
       <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">☰</button>
     </nav>
     <div class="mobile" id="mobileNav" hidden>
-      <a href="#home" data-go="home">Home</a><a href="#services" data-go="services">Services</a><a href="#work" data-go="work">Case Studies</a><a href="#about" data-go="about">About</a><a href="#team" data-go="team">Team</a><a href="#pricing" data-go="pricing">Pricing</a><a href="#contact" data-go="contact">Contact</a>
-      <a class="btn btn-primary" style="margin-top:10px;border:0" href="#contact" data-go="contact">Book a Free Call</a>
+      <a href="#home" data-go="home">Home</a><a href="#services" data-go="services">Services</a><a href="#work" data-go="work">Our Work</a><a href="#about" data-go="about">About</a><a href="#team" data-go="team">Team</a><a href="#pricing" data-go="pricing">Pricing</a><a href="#contact" data-go="contact">Contact</a>
+      <a class="btn btn-primary" style="margin-top:10px;border:0" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Book a free call</a>
     </div>
   </div>
 </header>
@@ -436,91 +532,56 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
   <div class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">Google Ads · Meta Ads · Websites · Tracking</span>
-        <h1 style="margin-top:18px">Turn ad spend into <span class="mark">calls, cases and customers.</span></h1>
-        <p class="lede">Unlimited Growth Drive is a full-service digital marketing agency for local and high-ticket businesses in the USA and Canada. We build the website, run the ads, track every lead and keep optimizing until growth becomes predictable.</p>
+        <span class="hero-label"><i></i>Google Ads, Meta Ads, websites &amp; tracking</span>
+        <h1 style="margin-top:22px">More calls, cases and customers from your ad budget.</h1>
+        <p class="lede">We're a small, hands-on team that runs Google and Meta ads, builds the websites they point to and tracks every lead back to its source. Most of our clients are local and high-ticket businesses in the US and Canada.</p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="#contact" data-go="contact">Get a Free Growth Audit →</a>
-          <a class="btn btn-ghost" href="#work" data-go="work">See Our Results</a>
+          <a class="btn btn-primary" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Book a free strategy call</a>
+          <a class="btn btn-ghost" href="#video-reviews" data-scroll="video-reviews">Hear from our clients</a>
         </div>
         <div class="trust">
-          <div><b data-count="2021">2021</b><span>Driving growth since</span></div>
-          <div><b><span data-count="200">200</span>+</b><span>Clients served</span></div>
-          <div><b>USA · CA</b><span>Markets we serve</span></div>
-          <div><b>5.0★</b><span>Average client rating</span></div>
+          <div><b>2021</b><span>Working with clients since</span></div>
+          <div><b>200+</b><span>Clients served</span></div>
+          <div><b>USA &amp; Canada</b><span>Main markets</span></div>
         </div>
       </div>
-      <div class="dash" aria-label="Example campaign dashboard">
-        <div class="dash-top"><span>GROWTH DRIVE · LAST 30 DAYS</span><span class="live">LIVE</span></div>
-        <svg class="gauge" viewBox="0 0 200 116" aria-hidden="true">
-          <path d="M20 106a80 80 0 0 1 160 0" fill="none" stroke="var(--line)" stroke-width="14" stroke-linecap="round"/>
-          <path id="gArc" d="M20 106a80 80 0 0 1 160 0" fill="none" stroke="var(--accent)" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="78 100"/>
-          <g id="needle" style="transform-origin:100px 106px;transform:rotate(50deg);transition:transform 1.4s cubic-bezier(.2,.8,.2,1)"><path d="M100 106 100 40" stroke="var(--fg)" stroke-width="3" stroke-linecap="round"/></g>
-          <circle cx="100" cy="106" r="7" fill="var(--fg)"/>
-          <text x="20" y="114" fill="var(--muted)" font-size="8" font-family="Roboto Mono,monospace" text-anchor="middle">0</text>
-          <text x="180" y="114" fill="var(--muted)" font-size="8" font-family="Roboto Mono,monospace" text-anchor="middle">MAX</text>
-        </svg>
-        <div class="odo" id="odo" aria-label="Qualified leads"><span>0</span><span>3</span><span>4</span><span>7</span></div>
-        <div class="odo-label">Qualified leads this month</div>
-        <div class="dash-rows">
-          <div><small>CALLS</small><b>212</b><span class="up">▲ 38%</span></div>
-          <div><small>COST / LEAD</small><b>$41</b><span class="up">▼ 27%</span></div>
-          <div><small>ROAS</small><b>4.6×</b><span class="up">▲ 1.2×</span></div>
-        </div>
-        <p class="sample-note">Illustrative example dashboard</p>
-      </div>
+      <figure class="hero-video" style="margin:0">
+        <button class="vframe" data-yt="tD2hr08SN94" aria-label="Play video review from Sanofi Law"><img src="https://i.ytimg.com/vi/tD2hr08SN94/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/tD2hr08SN94/hqdefault.jpg'" alt="Sanofi Law client video review"><span class="vplay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button>
+        <div class="tagline"><span class="stars">★★★★★</span><b>Sanofi Law</b>Law firm, Google Ads client</div>
+        <figcaption><span><b>Hear it from a client</b>A 47-second review from one of our law firm clients.</span></figcaption>
+      </figure>
     </div>
   </div>
 
   <div class="brands" aria-label="Brands we have worked with">
-    <p class="brands-title">Brands we are proud to have partnered with &amp; helped scale</p>
+    <p class="brands-title">Some of the businesses we've worked with</p>
     <div class="brow"><div class="btrack" id="brow1"></div></div>
     <div class="brow"><div class="btrack rev" id="brow2"></div></div>
   </div>
 
 
-  <div class="band" style="padding-bottom:0">
-    <div class="wrap">
-      <div class="head"><span class="eyebrow">What we build</span><h2>Website, ads and tracking <span class="mark">working as one.</span></h2></div>
-      <div class="showcase" id="showcase" role="img" aria-label="Laptop showing a law firm website, phone showing an Instagram ad and a lead report card"></div>
-    </div>
-  </div>
   <div class="band">
     <div class="wrap">
-      <div class="head"><span class="eyebrow">The growth drive system</span><h2>Clicks are easy. <span class="mark">Qualified leads</span> take a system.</h2><p class="lede">Every stage feeds the next, so no lead gets lost between the first click and the signed contract.</p></div>
-      <ol class="road">
-        <li><b>01</b><h3>Audit</h3><p>We review your site, ads, tracking and competitors.</p></li>
-        <li><b>02</b><h3>Strategy</h3><p>A plan built around real search intent and your margins.</p></li>
-        <li><b>03</b><h3>Website</h3><p>A fast landing page that matches the ad and asks for the call.</p></li>
-        <li><b>04</b><h3>Traffic</h3><p>Google and Meta campaigns aimed at buyers, not browsers.</p></li>
-        <li><b>05</b><h3>Tracking</h3><p>Calls, forms and bookings measured, never guessed.</p></li>
-        <li><b>06</b><h3>Follow-up</h3><p>Every enquiry gets an owner and a fast reply.</p></li>
-        <li><b>07</b><h3>Scale</h3><p>Budget moves to what produces paying clients.</p></li>
+      <div class="head" style="display:flex;justify-content:space-between;align-items:end;gap:24px;max-width:none;flex-wrap:wrap"><div style="max-width:640px;display:grid;gap:14px"><span class="eyebrow">What we do</span><h2>Eight services. One team that owns the result.</h2></div><a class="btn btn-ghost btn-sm" href="#services" data-go="services">All services</a></div>
+      <div class="slist" id="homeSvcs"></div>
+    </div>
+  </div>
+
+  <div class="band navy">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">How we work</span><h2>No mystery. Here's what happens after you reach out.</h2></div>
+      <ol class="steps">
+        <li><b>Week 1</b><h3>Audit &amp; plan</h3><p>We go through your ads, website, tracking and competitors, then send you a plain-English plan.</p></li>
+        <li><b>Week 2</b><h3>Build</h3><p>Tracking first, then campaigns and the landing pages they send traffic to.</p></li>
+        <li><b>Weeks 3–8</b><h3>Launch &amp; tune</h3><p>Daily checks while the platforms learn. We cut waste fast and keep what brings leads.</p></li>
+        <li><b>Ongoing</b><h3>Grow</h3><p>Budget moves to what produces paying clients. You get a short report and a call every month.</p></li>
       </ol>
     </div>
   </div>
 
   <div class="band alt">
     <div class="wrap">
-      <div class="head"><span class="eyebrow">What we do</span><h2>Every digital marketing service, <span class="mark">one accountable team.</span></h2><p class="lede">Start with the one channel that is holding you back, or let us run the whole engine.</p></div>
-      <div class="grid g4" id="families" style="margin-bottom:40px"></div>
-      <div class="head" style="margin-bottom:24px"><h3 style="font-size:1.3rem">All services</h3></div>
-      <div class="grid g4" id="homeSvcs"></div>
-      <div style="margin-top:28px"><a class="btn btn-ghost" href="#services" data-go="services">Explore all services →</a></div>
-    </div>
-  </div>
-
-  <div class="band">
-    <div class="wrap">
-      <div class="head"><span class="eyebrow">Real proof</span><h2>Results we can show, <span class="mark">not vanity metrics.</span></h2></div>
-      <div class="proof" id="homeProof"></div>
-      <p class="notice">Placeholder figures. Replace each card with numbers and screenshots from your own verified ad accounts before going live.</p>
-    </div>
-  </div>
-
-  <div class="band alt">
-    <div class="wrap">
-      <div class="head"><span class="eyebrow">Industries</span><h2>Different markets need <span class="mark">different playbooks.</span></h2></div>
+      <div class="head"><span class="eyebrow">Industries</span><h2>Industries we know well</h2></div>
       <div class="ind">
         <div><b>Law Firms</b><span>Personal injury, estate planning, family, immigration</span></div>
         <div><b>Dental & Medical</b><span>New-patient campaigns for clinics and practices</span></div>
@@ -534,9 +595,9 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
     </div>
   </div>
 
-  <div class="band alt" id="video-reviews">
+  <div class="band" id="video-reviews">
     <div class="wrap">
-      <div class="head"><span class="eyebrow">Video reviews</span><h2>Hear it from <span class="mark">our clients.</span></h2><p class="lede">Real business owners talking about what it was like to work with Unlimited Growth Drive.</p></div>
+      <div class="head"><span class="eyebrow">Video reviews</span><h2>Don't take our word for it.</h2><p class="lede">Unscripted videos from business owners we work with.</p></div>
       <div class="vc" id="vc">
         <div class="vtrack" id="vtrack" tabindex="0" aria-label="Client video reviews">
           <article class="vcard"><button class="vframe" data-yt="tD2hr08SN94" aria-label="Play video review from Sanofi Law"><img src="https://i.ytimg.com/vi/tD2hr08SN94/mqdefault.jpg" alt="" loading="lazy"><span class="vtag">Video</span><span class="vplay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button><div class="vmeta"><span class="stars" aria-label="5 stars">★★★★★</span><b>Sanofi Law</b><small>Law firm · Google Ads</small></div></article>
@@ -551,18 +612,9 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
           </div>
   </div>
 
-  <div class="band">
-    <div class="wrap">
-      <div class="head"><span class="eyebrow">Client reviews</span><h2>What clients say about <span class="mark">working with UGD.</span></h2></div>
-      <div class="filters" id="revFilters" role="group" aria-label="Filter reviews"></div>
-      <div class="grid g3" id="reviews"></div>
-      <p class="notice">Review cards are placeholders. Paste real client reviews (Fiverr, Google, Clutch) with the client's permission.</p>
-    </div>
-  </div>
-
   <div class="band alt">
     <div class="wrap">
-      <div class="head"><span class="eyebrow">Free tool</span><h2>Ad budget <span class="mark">lead estimator.</span></h2><p class="lede">Move the sliders to see roughly how many leads and how much revenue a monthly budget can produce.</p></div>
+      <div class="head"><span class="eyebrow">Free tool</span><h2>What could your ad budget bring in?</h2><p class="lede">Move the sliders to see roughly how many leads and how much revenue a monthly budget can produce.</p></div>
       <div class="calc">
         <div>
           <div class="field"><label for="cBudget">Monthly ad budget <output id="oBudget">$3,000</output></label><input type="range" id="cBudget" min="500" max="30000" step="250" value="3000"></div>
@@ -588,7 +640,7 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
     <div class="wrap split">
       <div>
         <span class="eyebrow">Why UGD</span>
-        <h2 style="margin-top:14px">Built around the outcome, <span class="mark">not the click.</span></h2>
+        <h2 style="margin-top:14px">Why business owners stay with us</h2>
         <div class="why" style="margin-top:24px">
           <div><svg><use href="#i-track"/></svg><span><h3>Tracking you can trust</h3><p>Browser and server-side tracking through GTM and GA4, so every call and form ties back to a campaign.</p></span></div>
           <div><svg><use href="#i-web"/></svg><span><h3>Pages that match the ad</h3><p>Visitors land on a page made for their search, not on a generic homepage.</p></span></div>
@@ -597,7 +649,7 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
         </div>
       </div>
       <div class="portrait" aria-label="Founder photo placeholder">
-        <span class="init" id="founderPh" style="position:absolute;inset:0;display:block;opacity:1"></span>
+        <span id="founderPh" style="position:absolute;inset:0;display:block"><span class="mono">S</span></span>
         <div class="cap"><b>Samad</b>Founder, Unlimited Growth Drive · Top Rated nominated on Fiverr. "Our goal is simple: turn ad spend into real cases, calls and clients."</div>
       </div>
     </div>
@@ -605,7 +657,7 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
 
   <div class="band alt">
     <div class="wrap">
-      <div class="head"><span class="eyebrow">FAQ</span><h2>Questions we hear <span class="mark">every week.</span></h2></div>
+      <div class="head"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
       <div class="faq" id="faq"></div>
     </div>
   </div>
@@ -617,7 +669,7 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
 
 <!-- ============ SERVICES ============ -->
 <section class="view" data-view="services" hidden>
-  <div class="phead"><div class="wrap"><p class="crumb">Home / Services</p><span class="eyebrow">Services</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">Full-funnel digital marketing <span class="mark">under one roof.</span></h1><p class="lede">Paid ads bring the traffic, the website converts it, tracking proves it and automation follows up. We do all four.</p></div></div>
+  <div class="phead"><div class="wrap"><p class="crumb">Home / Services</p><span class="eyebrow">Services</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">Digital marketing services</h1><p class="lede">Paid ads bring the traffic, the website converts it, tracking proves it and automation follows up. We do all four.</p></div></div>
   <div class="band" style="padding-top:20px"><div class="wrap" id="svcDetail"></div></div>
   <div class="band alt"><div class="wrap" data-cta></div></div>
 </section>
@@ -627,22 +679,21 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
 
 <!-- ============ WORK ============ -->
 <section class="view" data-view="work" hidden>
-  <div class="phead"><div class="wrap"><p class="crumb">Home / Case Studies</p><span class="eyebrow">Case studies</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">Real accounts. <span class="mark">Real numbers.</span></h1><p class="lede">A look at how we build campaigns for different industries and what changed for each client.</p></div></div>
+  <div class="phead"><div class="wrap"><p class="crumb">Home / Our work</p><span class="eyebrow">Our work</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">The kind of work we do, by industry.</h1><p class="lede">Every account is different, so here's what we typically build for each type of business. Want numbers from a business like yours? Ask on a call and we'll walk you through real accounts.</p></div></div>
   <div class="band"><div class="wrap">
-    <div class="filters" id="workFilters" role="group" aria-label="Filter case studies"></div>
-    <div class="proof" id="workGrid"></div>
-    <p class="notice">All case study numbers here are placeholders. Swap in figures and screenshots from your own verified ad accounts.</p>
+    <div class="filters" id="workFilters" role="group" aria-label="Filter by industry"></div>
+    <div class="grid g3" id="workGrid"></div>
   </div></div>
   <div class="band alt"><div class="wrap">
-    <div class="head"><span class="eyebrow">Client reviews</span><h2>In their words</h2></div>
-    <div class="grid g3" id="reviews2"></div>
+    <div class="head"><span class="eyebrow">Clients</span><h2>Businesses we've worked with</h2></div>
+    <div class="clients" id="clientList"></div>
   </div></div>
   <div class="band"><div class="wrap" data-cta></div></div>
 </section>
 
 <!-- ============ ABOUT ============ -->
 <section class="view" data-view="about" hidden>
-  <div class="phead"><div class="wrap"><p class="crumb">Home / About</p><span class="eyebrow">About us</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">We help business owners <span class="mark">grow from the ground up.</span></h1><p class="lede">Unlimited Growth Drive started in Rajshahi, Bangladesh in 2021 and now runs campaigns for local and high-ticket businesses across the USA and Canada.</p></div></div>
+  <div class="phead"><div class="wrap"><p class="crumb">Home / About</p><span class="eyebrow">About us</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">We help business owners grow from the ground up.</h1><p class="lede">Unlimited Growth Drive started in Rajshahi, Bangladesh in 2021 and now runs campaigns for local and high-ticket businesses across the USA and Canada.</p></div></div>
   <div class="band"><div class="wrap split">
     <div style="display:grid;gap:18px">
       <span class="eyebrow">Our story</span>
@@ -680,7 +731,7 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
 
 <!-- ============ TEAM ============ -->
 <section class="view" data-view="team" hidden>
-  <div class="phead"><div class="wrap"><p class="crumb">Home / Team</p><span class="eyebrow">Our team</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">The people behind <span class="mark">your growth.</span></h1><p class="lede">Creativity, strategy and accountability. Every client works directly with specialists, never a middle layer.</p></div></div>
+  <div class="phead"><div class="wrap"><p class="crumb">Home / Team</p><span class="eyebrow">Our team</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">The people behind your growth.</h1><p class="lede">Creativity, strategy and accountability. Every client works directly with specialists, never a middle layer.</p></div></div>
   <div class="band"><div class="wrap">
     <div class="grid g3" id="teamGrid"></div>
   </div></div>
@@ -699,7 +750,7 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
 
 <!-- ============ PRICING ============ -->
 <section class="view" data-view="pricing" hidden>
-  <div class="phead"><div class="wrap"><p class="crumb">Home / Pricing</p><span class="eyebrow">Pricing</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">Simple plans. <span class="mark">No long contracts.</span></h1><p class="lede">Management fees are separate from ad spend, which you pay directly to Google or Meta.</p></div></div>
+  <div class="phead"><div class="wrap"><p class="crumb">Home / Pricing</p><span class="eyebrow">Pricing</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">Simple plans. No long contracts.</h1><p class="lede">Management fees are separate from ad spend, which you pay directly to Google or Meta.</p></div></div>
   <div class="band"><div class="wrap">
     <div class="grid g3">
       <div class="card price"><span class="tag">Launch</span><div class="amt">$1,000 <small>starting</small></div><p style="color:var(--muted)">One channel, done right. Ideal for testing paid ads.</p>
@@ -770,7 +821,7 @@ footer.site{border-top:1px solid var(--line);padding-block:56px 32px;background:
       </div>
       <div><h4>Services</h4><ul id="footSvcs"></ul></div>
       <div><h4>Company</h4><ul>
-        <li><a href="#about" data-go="about">About</a></li><li><a href="#team" data-go="team">Team</a></li><li><a href="#work" data-go="work">Case Studies</a></li><li><a href="#pricing" data-go="pricing">Pricing</a></li><li><a href="#contact" data-go="contact">Contact</a></li></ul></div>
+        <li><a href="#about" data-go="about">About</a></li><li><a href="#team" data-go="team">Team</a></li><li><a href="#work" data-go="work">Our Work</a></li><li><a href="#pricing" data-go="pricing">Pricing</a></li><li><a href="#contact" data-go="contact">Contact</a></li></ul></div>
       <div><h4>Contact</h4><ul>
         <li style="color:var(--muted);font-size:.9rem">+880 1754-829854</li><li style="color:var(--muted);font-size:.9rem;word-break:break-all">unlimitedgrowthdrive@gmail.com</li><li style="color:var(--muted);font-size:.9rem">Rajshahi, Bangladesh</li></ul></div>
     </div>
@@ -805,12 +856,12 @@ const SERVICES=[
   points:["CRM setup and lead pipelines","Instant SMS and email replies","Follow-up and nurture sequences","Appointment booking automation","Review request automation","Lead quality reporting"]}
 ];
 const CASES=[
- {ind:"Legal",title:"Personal injury firm, Texas",big:"3.2×",bigL:"more signed cases",m:[["Leads","186"],["CPL","$94"],["Spend","$17.5K"]],bars:[20,28,26,40,48,55,62,70,78,90]},
- {ind:"Automotive",title:"Collision center, California",big:"+118%",bigL:"quote requests",m:[["Calls","412"],["CPL","$22"],["Spend","$9K"]],bars:[30,34,38,36,50,58,64,72,80,88]},
- {ind:"Dental",title:"Family dental clinic, Ontario",big:"94",bigL:"new patients / mo",m:[["Bookings","94"],["CPL","$38"],["ROAS","6.1×"]],bars:[18,24,30,38,44,52,60,66,74,82]},
- {ind:"Towing",title:"24/7 towing company, Florida",big:"1,040",bigL:"tracked calls",m:[["Calls","1,040"],["CPC","$4.10"],["CVR","21%"]],bars:[40,46,44,52,60,58,70,76,84,92]},
- {ind:"Detailing",title:"Ceramic coating studio, Arizona",big:"5.4×",bigL:"return on ad spend",m:[["Leads","133"],["CPL","$29"],["ROAS","5.4×"]],bars:[22,26,34,40,46,50,58,68,76,86]},
- {ind:"E-commerce",title:"Apparel store, USA",big:"$84K",bigL:"tracked revenue",m:[["Orders","1,212"],["CPA","$14"],["ROAS","4.2×"]],bars:[26,32,30,42,48,56,60,70,82,94]}
+ {ind:"Legal",title:"Law firms",meta:"Personal injury, family, immigration",did:["Google Search & Local Services Ads","Practice-area landing pages","Call and form tracking into the CRM"]},
+ {ind:"Automotive",title:"Collision & auto body",meta:"Quote requests and insurance claims",did:["Call-only and Search campaigns","Photo-estimate landing pages","Call tracking by campaign"]},
+ {ind:"Dental",title:"Dental & medical clinics",meta:"New-patient bookings",did:["Google Ads for high-value treatments","Meta Ads for new-patient offers","Online booking tracked end to end"]},
+ {ind:"Towing",title:"Towing & roadside",meta:"24/7 emergency calls",did:["Call-only campaigns by service area","Night and weekend scheduling","Missed-call follow-up"]},
+ {ind:"Detailing",title:"Detailing, wraps & PPF",meta:"Ceramic coating, PPF, tint",did:["Google and Meta Ads with before/after creative","Quote landing pages","Retargeting for site visitors"]},
+ {ind:"E-commerce",title:"Online stores",meta:"Shopping and catalog sales",did:["Shopping & Performance Max","Meta catalog and retargeting","Server-side purchase tracking"]}
 ];
 const REVIEWS=[
  {cat:"Google Ads",ind:"Legal",init:"L",who:"Law firm client · USA"},
@@ -821,12 +872,8 @@ const REVIEWS=[
  {cat:"Google Ads",ind:"Towing",init:"T",who:"Towing company · USA"}
 ];
 const TEAM=[
- {init:"S",name:"Samad",role:"Founder & CEO",bio:"Founder of Unlimited Growth Drive and a Top Rated nominated freelancer on Fiverr. Leads strategy and high-converting Google Ads campaigns that turn ad spend into predictable growth.",tags:["Strategy","Google Ads"]},
- {init:"M",name:"Nill Mostakim",role:"Co-owner · Google Ads & Tracking",bio:"Runs Google Ads for law firms, dental & medical practices and auto body shops in the USA and Canada, with browser-side and server-side tracking through GTM and GA4.",tags:["PPC","GTM","GA4"]},
- {init:"W",name:"[Name]",role:"Lead Web Designer",bio:"Has completed 24+ website projects for law firms. Builds fast, responsive, SEO-friendly sites that turn clicks into consultations.",tags:["WordPress","UI/UX"]},
- {init:"+",name:"[Name]",role:"Meta Ads Specialist",bio:"Add your Facebook & Instagram ads lead here: creative testing, audiences and retargeting.",tags:["Meta","Creative"],open:1},
- {init:"+",name:"[Name]",role:"SEO & Content Lead",bio:"Add your SEO specialist here: Google Business Profile, local rankings and content.",tags:["SEO","Content"],open:1},
- {init:"+",name:"[Name]",role:"Client Success Manager",bio:"Add your account manager here: onboarding, reporting and client communication.",tags:["Support"],open:1}
+ {init:"S",name:"Samad",role:"Founder & CEO",bio:"Founded Unlimited Growth Drive in 2021. Leads strategy and Google Ads for our clients, and is a Top Rated nominated seller on Fiverr.",tags:["Strategy","Google Ads"]},
+ {init:"NM",name:"Nill Mostakim",role:"Co-owner · Google Ads & Tracking",bio:"Runs Google Ads for law firms, dental and medical practices and auto body shops in the US and Canada, with browser-side and server-side tracking through GTM and GA4.",tags:["PPC","GTM","GA4"]}
 ];
 const FAQ=[
  ["How fast will I see results from Google Ads?","Most clients see calls and leads in the first 1–2 weeks. Campaigns usually stabilize after 30–60 days, once there is enough data to optimize bids and keywords."],
@@ -921,20 +968,19 @@ $$(".btrack").forEach(t=>t.children&&[...t.children].slice(t.children.length/2).
 
 /* render */
 const svcCard=s=>`<a class="card svc" href="#services" data-go="service" data-to="${s.id}"><span class="ico"><svg><use href="#i-${s.ico}"/></svg></span><h3>${s.name}</h3><p>${s.short}</p><span class="more">Learn more →</span></a>`;
-$("#homeSvcs").innerHTML=SERVICES.map(svcCard).join("");
+$("#homeSvcs").innerHTML=SERVICES.map((s,i)=>`<a href="#service" data-go="service" data-to="${s.id}"><span class="n">${String(i+1).padStart(2,"0")}</span><h3>${s.name}</h3><p>${s.short}</p><span class="arr" aria-hidden="true">→</span></a>`).join("");
 const FAM=[["google","Paid Search","Google Ads that show up the moment buyers search for you.","s-google"],["meta","Paid Social","Facebook & Instagram ads that create demand and retarget.","s-meta"],["web","Websites","Fast, trust-building sites built to get the call.","s-web"],["track","Tracking","Every call, form and booking tied to its campaign.","s-track"]];
-$("#families").innerHTML=FAM.map(([k,t,d,id])=>`<a class="card fam svc" href="#services" data-go="service" data-to="${id}"><div class="shot">${IMG[k]}</div><div class="body"><h3>${t}</h3><p>${d}</p><span class="more">Explore →</span></div></a>`).join("");
-$("#showcase").innerHTML=showcase;$("#founderPh").innerHTML=AVATARS[0].replace('viewBox="0 0 200 200"','viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block"');
-$("#aboutImg").innerHTML=aboutImg;
+
+if(0)$("#founderPh").innerHTML=AVATARS[0].replace('viewBox="0 0 200 200"','viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block"');
+$("#aboutImg").innerHTML=`<div class="mono" style="aspect-ratio:16/9;border-radius:14px;font-size:1.1rem;color:#C5CCDA;padding:28px;text-align:center;line-height:1.6"><div><b style="display:block;color:#fff;font-size:1.6rem;margin-bottom:6px">Rajshahi → USA &amp; Canada</b>A remote team serving clients across time zones since 2021.</div></div>`;
 
 $("#footSvcs").innerHTML=SERVICES.slice(0,6).map(s=>`<li><a href="#services" data-go="service" data-to="${s.id}">${s.name.replace(" Management","").replace(" (Facebook & Instagram)","")}</a></li>`).join("");
 $("#svcDetail").innerHTML=SERVICES.map((s,i)=>`<div class="sd" id="${s.id}"><div><span class="num">${String(i+1).padStart(2,"0")} / ${String(SERVICES.length).padStart(2,"0")}</span><h2 style="font-size:1.5rem;margin-top:8px">${s.name}</h2><div class="chips" style="margin-top:12px">${s.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div>${IMG[s.ico]?`<div class="shot" style="margin-top:18px">${IMG[s.ico]}</div>`:""}</div><div><p class="lede">${s.short}</p><ul>${s.points.map(p=>`<li>${p}</li>`).join("")}</ul><a class="btn btn-primary btn-sm" style="margin-top:16px;margin-right:8px" href="#service" data-go="service" data-to="${s.id}">See full service →</a><a class="btn btn-ghost btn-sm" style="margin-top:16px" href="#contact" data-go="contact">Get a quote for ${s.name.split(" ")[0]==="Google"||s.name.split(" ")[0]==="Meta"?s.name.split(" (")[0]:"this service"}</a></div></div>`).join("");
-const caseCard=c=>`<article class="card"><div class="case-top"><span class="tag">${c.ind}</span><span class="tag">Sample</span></div><div><span class="big">${c.big}</span><div style="color:var(--muted);font-size:.88rem;margin-top:6px">${c.bigL}</div></div><div class="bars" aria-hidden="true">${c.bars.map(h=>`<i style="height:${h}%"></i>`).join("")}</div><h3>${c.title}</h3><div class="metrics">${c.m.map(([k,v])=>`<span>${k}<b>${v}</b></span>`).join("")}</div></article>`;
-$("#homeProof").innerHTML=CASES.slice(0,3).map(caseCard).join("");
+const caseCard=c=>`<article class="card project"><span class="tag">${c.ind}</span><h3 style="font-size:1.3rem">${c.title}</h3><span class="meta">${c.meta}</span><ul>${c.did.map(d=>`<li>${d}</li>`).join("")}</ul></article>`;
+$("#clientList").innerHTML=BRANDS.map(n=>`<span>${n.replace(/&/g,"&amp;")}</span>`).join("");
+
 const revCard=r=>`<article class="card review" data-cat="${r.cat}"><span class="stars" aria-label="5 stars">★★★★★</span><div class="chips"><span class="chip">${r.cat}</span><span class="chip">${r.ind}</span></div><blockquote>[Paste a real client review here.]</blockquote><footer><span class="av">${r.init}</span><span>${r.who}</span></footer></article>`;
-$("#reviews").innerHTML=REVIEWS.map(revCard).join("");
-$("#reviews2").innerHTML=REVIEWS.slice(0,3).map(revCard).join("");
-$("#teamGrid").innerHTML=TEAM.map(t=>`<article class="card member${t.open?" open":""}"><div class="ph">${AVATARS[TEAM.indexOf(t)]||t.init}</div><span class="role">${t.role}</span><h3 style="font-size:1.25rem">${t.name}</h3><p>${t.bio}</p><div class="chips">${t.tags.map(x=>`<span class="chip">${x}</span>`).join("")}</div></article>`).join("");
+$("#teamGrid").innerHTML=TEAM.map(t=>`<article class="card member${t.open?" open":""}"><div class="ph">${t.photo?`<img src="${t.photo}" alt="${t.name}" style="width:100%;height:100%;object-fit:cover">`:`<span class="mono">${t.init}</span>`}</div><span class="role">${t.role}</span><h3 style="font-size:1.25rem">${t.name}</h3><p>${t.bio}</p><div class="chips">${t.tags.map(x=>`<span class="chip">${x}</span>`).join("")}</div></article>`).join("");
 $("#faq").innerHTML=FAQ.map(([q,a],i)=>`<details${i===0?" open":""}><summary>${q}</summary><p>${a}</p></details>`).join("");
 const CTA=`<div class="cta"><div><h2>Not sure where your marketing is losing leads?</h2><p>Share your website, current campaigns and main goal. Our free audit shows whether the next step is ads, tracking, a new page or nothing at all.</p><ul><li>Your website</li><li>Active campaigns</li><li>Main business goal</li></ul></div><div style="display:grid;gap:10px;justify-items:start"><a class="btn" href="#contact" data-go="contact">Get a Free Audit →</a><a class="btn" style="background:transparent;color:var(--accent-ink);border-color:var(--accent-ink)" href="https://wa.me/8801754829854" target="_blank" rel="noopener">WhatsApp us</a></div></div>`;
 $$("[data-cta]").forEach(el=>el.innerHTML=CTA);
@@ -1041,7 +1087,7 @@ function renderService(id){const s=SERVICES.find(x=>x.id===id)||SERVICES[0],d=SV
 /* filters */
 function makeFilters(box,cats,onPick){box.innerHTML=["All",...cats].map((c,i)=>`<button type="button" aria-pressed="${i===0}">${c}</button>`).join("");
  box.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;$$("button",box).forEach(x=>x.setAttribute("aria-pressed",x===b));onPick(b.textContent)});}
-makeFilters($("#revFilters"),[...new Set(REVIEWS.map(r=>r.cat))],c=>$$("#reviews .review").forEach(el=>el.hidden=!(c==="All"||el.dataset.cat===c)));
+
 function renderWork(c){$("#workGrid").innerHTML=CASES.filter(x=>c==="All"||x.ind===c).map(caseCard).join("")}
 makeFilters($("#workFilters"),[...new Set(CASES.map(c=>c.ind))],renderWork);renderWork("All");
 
@@ -1070,11 +1116,11 @@ function runCounters(){if(reduce)return;$$("[data-count]").forEach(el=>{if(el.cl
   (function tick(t){const p=Math.min(1,(t-t0)/d),v=Math.round(start+(end-start)*(1-Math.pow(1-p,3)));el.textContent=v.toLocaleString("en-US").replace(/,/g,end>1000?"":",");if(p<1)requestAnimationFrame(tick)})(t0)})}
 
 /* odometer + gauge */
-let leads=347;const odo=$("#odo");
+let leads=347;const odo=$("#odo");if(odo){
 function setOdo(n){odo.innerHTML=String(n).padStart(4,"0").split("").map(d=>`<span>${d}</span>`).join("");odo.setAttribute("aria-label",n+" qualified leads")}
 setOdo(leads);
 if(!reduce){setInterval(()=>{leads+=1;setOdo(leads);const a=50+Math.sin(leads/3)*6;$("#needle").style.transform=`rotate(${a}deg)`},3200);
-  $("#needle").style.transform="rotate(-90deg)";requestAnimationFrame(()=>requestAnimationFrame(()=>$("#needle").style.transform="rotate(50deg)"))}
+  $("#needle").style.transform="rotate(-90deg)";requestAnimationFrame(()=>requestAnimationFrame(()=>$("#needle").style.transform="rotate(50deg)"))}}
 
 /* calculator */
 const money=n=>"$"+Math.round(n).toLocaleString("en-US");
@@ -1097,11 +1143,13 @@ $("#leadForm").addEventListener("submit",e=>{e.preventDefault();const name=$("#f
  const url="https://wa.me/8801754829854?text="+encodeURIComponent(text);
  msg.style.color="var(--good)";msg.innerHTML=`Ready. <a href="${url}" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Open WhatsApp to send →</a>`;});
 
+document.addEventListener("click",e=>{const a=e.target.closest("[data-scroll]");if(!a)return;e.preventDefault();const t=document.getElementById(a.dataset.scroll);if(t)t.scrollIntoView({behavior:"smooth"})});
 /* initial view from hash */
 const h=(location.hash||"").replace("#","");
 if(h.startsWith("service/")){const sl=h.slice(8),id=Object.keys(SVC_PAGES).find(k=>SVC_PAGES[k].slug===sl);go("service",id||"s-google")}else go(VIEWS.includes(h)?h:"home");
 window.addEventListener("hashchange",()=>{const x=location.hash.slice(1);if(x.startsWith("service/")){const id=Object.keys(SVC_PAGES).find(k=>SVC_PAGES[k].slug===x.slice(8));if(id)go("service",id)}else if(VIEWS.includes(x))go(x)});
 
+document.querySelectorAll(".hero-video .vframe").forEach(b=>b.addEventListener("click",()=>{b.insertAdjacentHTML("beforeend",`<iframe src="https://www.youtube-nocookie.com/embed/${b.dataset.yt}?autoplay=1&rel=0&playsinline=1" title="Client video review" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;z-index:2"></iframe>`)},{once:true}));
 /* video reviews carousel: auto-slides right-to-left, pauses on hover/touch and while a video plays */
 (()=>{const tr=document.getElementById("vtrack");if(!tr)return;let playing=false,hover=false;
 const step=()=>{const c=tr.querySelector(".vcard");return c?c.getBoundingClientRect().width+18:300};
