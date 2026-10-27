@@ -60,7 +60,7 @@ section{padding:90px 0}
 /* Hero */
 .hero{padding:70px 0 90px;position:relative;overflow:hidden}
 .hero:before{display:none;content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 85% 20%,rgba(138,46,143,.35),transparent 60%),radial-gradient(600px 400px at 10% 100%,rgba(233,177,59,.12),transparent 60%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center;position:relative}
 .hero h1{font-size:clamp(36px,5.4vw,60px);font-weight:400;letter-spacing:-1px;margin-bottom:22px}
 .hero h1 span{color:var(--gold)}
 .hero p.sub{font-size:19px;color:#C8C8C8;max-width:620px}
@@ -222,6 +222,15 @@ footer p+p{margin-top:6px}
 .r90-shot figcaption{font-size:12.5px;color:var(--muted);padding:10px 6px 2px}
 @media (max-width:980px){.r90{grid-template-columns:1fr}}
 
+
+/* hero screenshot */
+.hero-shot{margin:0}
+.hero-shot-img{background:#fff;border-radius:16px;padding:8px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.hero-shot-img img{width:100%;height:auto;border-radius:10px}
+.hero-shot figcaption{margin-top:18px;text-align:center}
+.hero-shot figcaption b{display:block;font-family:Offside,sans-serif;font-weight:400;font-size:clamp(20px,2.2vw,26px);color:var(--gold);line-height:1.25}
+.hero-shot figcaption span{display:block;font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:#9A9A9A;margin-top:8px;letter-spacing:.02em}
+
 /* Mobile sticky CTA */
 .mcta{display:none}
 
@@ -289,20 +298,13 @@ footer p+p{margin-top:6px}
       </div>
     </div>
 
-    <div class="acct" aria-label="Live account results">
-      <div class="acct-top"><span>Live collision account · Last 12 months</span><span class="live"><i></i>Active</span></div>
-      <div class="acct-big">838<small>leads</small></div>
-      <div class="acct-desc">Calls &amp; form requests from Google Search for a collision &amp; bumper repair shop.</div>
-      <div class="acct-grid">
-        <div class="acct-cell"><b>$20.28</b><span>avg. cost per lead</span></div>
-        <div class="acct-cell"><b>9.3%</b><span>click-to-lead rate</span></div>
-        <div class="acct-cell"><b>9.45%</b><span>click-through rate</span></div>
-        <div class="acct-cell"><b>$1.89</b><span>avg. cost per click</span></div>
-      </div>
-      <div class="bars" aria-hidden="true">
-        <i style="height:34%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:55%"></i><i style="height:61%"></i><i style="height:58%"></i><i style="height:72%"></i><i style="height:69%"></i><i style="height:80%"></i><i style="height:76%"></i><i style="height:88%"></i><i style="height:100%"></i>
-      </div>
-    </div>
+    <figure class="hero-shot">
+      <div class="hero-shot-img"><img src="/auto-body/results-90-days.jpg" alt="Google Ads overview, Jul 1 – Sep 30, 2026: 203 lead forms, 68 phone calls, $21.30 cost per conversion" width="1600" height="798" loading="eager"></div>
+      <figcaption>
+        <b>200+ Leads in Just 3 Months for a Collision Shop</b>
+        <span>203 lead forms + 68 phone calls · $21.30 per lead · Live Google Ads account, Jul 1 – Sep 30, 2026</span>
+      </figcaption>
+    </figure>
   </div>
 </header>
 
@@ -315,30 +317,6 @@ footer p+p{margin-top:6px}
     <div class="stat"><b>Month-to-Month</b><span>No long contracts, no setup traps</span></div>
   </div>
 </div>
-
-<!-- 90-DAY RESULTS -->
-<section id="results">
-  <div class="wrap r90">
-    <div>
-      <div class="eyebrow">Real Results · 90 Days</div>
-      <h2>271 Leads in Just <em>90 Days</em> for a Collision Shop</h2>
-      <p class="lead">In just three months — July to September 2026 — this collision &amp; bumper repair shop got 271 leads straight from Google Search: 203 quote request forms and 68 phone calls, at only $21.30 per lead.</p>
-      <p class="lead" style="margin-top:14px">We rebuilt the campaigns around high-intent collision searches, cut the wasted clicks, and tracked every form and phone call so the budget only went to what was bringing in cars.</p>
-      <div class="r90-nums">
-        <div class="hl"><b>271 leads</b><span>in 3 months (Jul 1 – Sep 30, 2026)</span></div>
-        <div><b>203</b><span>lead forms submitted</span></div>
-        <div><b>68</b><span>phone calls from ads</span></div>
-        <div><b>$21.30</b><span>average cost per lead</span></div>
-        <div><b>$1.87</b><span>average cost per click</span></div>
-      </div>
-      <div class="cta-row"><a href="#book" class="btn">Book a Free Call</a></div>
-    </div>
-    <figure class="r90-shot">
-      <img src="/auto-body/results-90-days.jpg" alt="Google Ads overview, Jul 1 – Sep 30, 2026: 203.32 lead forms, 68 phone calls, $21.30 cost per conversion, $1.87 average CPC" loading="eager" width="1600" height="798">
-      <figcaption>Screenshot from the live Google Ads account · Jul 1 – Sep 30, 2026</figcaption>
-    </figure>
-  </div>
-</section>
 
 <!-- REAL EXPERIENCE -->
 <section>
