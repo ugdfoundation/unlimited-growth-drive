@@ -207,6 +207,21 @@ section{padding:90px 0}
 footer{background:#000;border-top:1px solid rgba(255,255,255,.08);color:#8A8A8A;font-size:13px;padding:30px 0;text-align:center}
 footer p+p{margin-top:6px}
 
+
+/* 90-day results */
+.r90{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.r90-nums{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.r90-nums div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.r90-nums b{display:block;font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:500;line-height:1.2}
+.r90-nums span{font-size:13.5px;color:var(--muted)}
+.r90-nums .hl{background:#000;border-color:#000;color:#fff;grid-column:1/-1}
+.r90-nums .hl b{color:var(--gold);font-size:34px}
+.r90-nums .hl span{color:#B0B0B0}
+.r90-shot{margin:0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:0 24px 60px rgba(0,0,0,.12)}
+.r90-shot img{width:100%;height:auto;border-radius:10px}
+.r90-shot figcaption{font-size:12.5px;color:var(--muted);padding:10px 6px 2px}
+@media (max-width:980px){.r90{grid-template-columns:1fr}}
+
 /* Mobile sticky CTA */
 .mcta{display:none}
 
@@ -300,6 +315,30 @@ footer p+p{margin-top:6px}
     <div class="stat"><b>Month-to-Month</b><span>No long contracts, no setup traps</span></div>
   </div>
 </div>
+
+<!-- 90-DAY RESULTS -->
+<section id="results">
+  <div class="wrap r90">
+    <div>
+      <div class="eyebrow">Real Results · First 90 Days</div>
+      <h2>271 Leads in Just <em>90 Days</em> for a Collision Shop</h2>
+      <p class="lead">No 12-month ramp-up. No "give it time." In only three months, this collision &amp; bumper repair shop went from a quiet phone to a steady flow of repair requests — straight from Google Search.</p>
+      <p class="lead" style="margin-top:14px">We rebuilt the campaigns around high-intent collision searches, cut the wasted clicks, and tracked every form and phone call so the budget only went to what was bringing in cars.</p>
+      <div class="r90-nums">
+        <div class="hl"><b>271 leads</b><span>in 3 months (Jul 1 – Sep 30, 2026)</span></div>
+        <div><b>203</b><span>lead forms submitted</span></div>
+        <div><b>68</b><span>phone calls from ads</span></div>
+        <div><b>$21.30</b><span>average cost per lead</span></div>
+        <div><b>$1.87</b><span>average cost per click</span></div>
+      </div>
+      <div class="cta-row"><a href="#book" class="btn">Book a Free Call</a></div>
+    </div>
+    <figure class="r90-shot">
+      <img src="/auto-body/results-90-days.jpg" alt="Google Ads overview, Jul 1 – Sep 30, 2026: 203.32 lead forms, 68 phone calls, $21.30 cost per conversion, $1.87 average CPC" loading="eager" width="1600" height="798">
+      <figcaption>Screenshot from the live Google Ads account · Jul 1 – Sep 30, 2026</figcaption>
+    </figure>
+  </div>
+</section>
 
 <!-- REAL EXPERIENCE -->
 <section>
