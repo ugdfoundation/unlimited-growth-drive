@@ -232,6 +232,21 @@ footer p+p{margin-top:6px}
 .hero-shot figcaption b{display:block;font-family:Offside,sans-serif;font-weight:400;font-size:clamp(20px,2.2vw,26px);color:var(--gold);line-height:1.25}
 .hero-shot figcaption span{display:block;font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:#9A9A9A;margin-top:8px;letter-spacing:.02em}
 
+
+/* review additions */
+.roi{margin-top:24px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px 20px}
+.roi p{font-size:16px}
+.roi span{display:block;font-size:12.5px;color:var(--muted);margin-top:8px}
+.steps3{grid-template-columns:repeat(3,1fr)}
+.included{margin:28px auto 0;max-width:900px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 28px;text-align:center}
+.included ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 18px;text-align:left}
+.included li{padding-left:24px;position:relative;font-size:15.5px}
+.included li:before{content:"✓";position:absolute;left:0;color:var(--gold-d);font-weight:700}
+.guarantee .budget{margin-top:20px}
+.dark .problem p{color:var(--ink)}
+@media (max-width:980px){.steps3{grid-template-columns:1fr}.included ul{grid-template-columns:1fr 1fr}.reviews{grid-template-columns:1fr !important}}
+@media (max-width:640px){.included ul{grid-template-columns:1fr}}
+
 /* Mobile sticky CTA */
 .mcta{display:none}
 
@@ -309,15 +324,19 @@ footer p+p{margin-top:6px}
   </div>
 </header>
 
-<!-- REAL EXPERIENCE -->
+<!-- RESULTS -->
 <section>
   <div class="wrap two">
     <div>
-      <div class="eyebrow">Real Experience</div>
-      <h2>Real Collision Shop <em>Ad Management</em> Experience</h2>
-      <p class="lead">We don't learn the collision industry on your budget. Our team already runs live Google Ads accounts for auto body and bumper repair shops — figuring out why a campaign stalls, building the tracking that proves a lead was real, and moving spend toward the searches that turn into repair orders.</p>
-      <p class="lead" style="margin-top:14px">Look at the keywords bringing in the leads: <b>"auto collision repair"</b>, <b>"dent and scratch repair near me"</b>, <b>"same day bumper"</b>. These are people with a damaged car, ready to book — not tire-kickers. "Same day bumper" brought in leads for just <b>$6.76 each</b> with a perfect 10/10 Quality Score.</p>
-      <p class="lead" style="margin-top:14px">That's the difference: we bid on the searches that turn into repair orders, and cut the ones that don't.</p>
+      <div class="eyebrow">Real Results</div>
+      <h2>The Searches That Bring <em>Damaged Cars</em> To Your Shop</h2>
+      <p class="lead">This is the keyword report from a live collision &amp; bumper repair account we manage. The leads came from people searching <b>"auto collision repair"</b>, <b>"dent and scratch repair near me"</b> and <b>"same day bumper"</b> — drivers with a damaged car, ready to book.</p>
+      <p class="lead" style="margin-top:14px">"Same day bumper" alone brought in calls and estimate requests for just <b>$6.76 each</b>. We bid on the searches that turn into repair orders, and cut the ones that don't.</p>
+      <div class="roi">
+        <div class="eyebrow" style="margin-bottom:8px">Quick math for your shop</div>
+        <p>At <b>$21 per lead</b>, if 1 in 4 leads books a repair, each booked job costs about <b>$85 in ads</b>. If your average repair ticket is $2,500, that's a strong return on every job.</p>
+        <span>Example only — we'll run the numbers for your shop on the call.</span>
+      </div>
       <div class="cta-row"><a href="#book" class="btn">Book a Free Call</a></div>
     </div>
     <figure class="r90-shot">
@@ -327,14 +346,84 @@ footer p+p{margin-top:6px}
   </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- PROBLEMS -->
+<section class="dark">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Why Body Shop Ads Waste Money</div>
+      <h2>Running Google Ads Isn't Hard. <em>Running Them Profitably Is.</em></h2>
+      <p class="lead">Someone who just got into a fender bender searches once and calls fast. Every wasted click or missed call is a repair job that went to the shop down the road.</p>
+    </div>
+    <div class="problems">
+      <div class="problem"><b>01</b><p>Paying for clicks from DIY dent kits, job seekers and "how much does it cost" searches</p></div>
+      <div class="problem"><b>02</b><p>Calls coming in from towns your shop doesn't actually serve</p></div>
+      <div class="problem"><b>03</b><p>No idea which ads actually brought cars into your bays</p></div>
+      <div class="problem"><b>04</b><p>Hiring an agency and never speaking to the person running your account</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS + INCLUDED -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">How It Works</div>
+      <h2>From Free Call To <em>Cars In Your Bays</em></h2>
+    </div>
+    <div class="steps steps3">
+      <div class="step"><div class="n">01</div><h3>Free Strategy Call</h3><p>We learn your shop — services, insurance vs. customer-pay work, service area and budget — and look at search demand near you. You get a straight answer on whether Google Ads fits.</p></div>
+      <div class="step"><div class="n">02</div><h3>Build &amp; Launch</h3><p>Campaigns by repair type, targeting the ZIP codes your customers drive from, with call tracking and a photo-estimate landing page.</p></div>
+      <div class="step"><div class="n">03</div><h3>Optimize Every Week</h3><p>We cut wasted searches, check call quality and move budget toward what books jobs. You get a monthly report in plain English.</p></div>
+    </div>
+    <div class="included">
+      <div class="eyebrow" style="margin-bottom:14px">Everything included</div>
+      <ul>
+        <li>Campaign setup &amp; ad copy</li>
+        <li>Photo-estimate landing page</li>
+        <li>Call &amp; form tracking</li>
+        <li>Weekly optimization</li>
+        <li>Monthly plain-English report</li>
+        <li>Direct line to your specialist</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE + BUDGET -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="guarantee">
+      <div class="seal"><div><b>200+</b><span>Leads · 90 Days</span></div></div>
+      <div>
+        <div class="eyebrow">Our 90-Day Lead Guarantee</div>
+        <h2>200+ Qualified Leads in 90 Days.<br><em>Or We Work for Free Until You Do.</em></h2>
+        <p>We can make this promise because we track every lead. You see each call and estimate request in your report — so there's never any guessing about whether we hit the number.</p>
+        <div class="budget"><b>$1,500+/mo</b><span>recommended ad spend for a single-location shop, paid directly to Google. Management starts from $1,000/month. Month-to-month, no long contracts.</span></div>
+        <details class="terms">
+          <summary>See guarantee terms</summary>
+          <ul>
+            <li>For new Google Ads management clients.</li>
+            <li>The agreed ad budget (minimum $1,500/month, paid directly to Google) stays active for the full 90 days.</li>
+            <li>A qualified lead is a unique phone call of 60+ seconds or a form request from someone in your service area asking about your services. Spam, duplicates, job seekers and sales pitches don't count.</li>
+            <li>You give us access to your ad account, landing page and tracking, and reply to change requests within 3 business days.</li>
+            <li>If you don't reach 200 qualified leads within 90 days of launch, we keep managing your campaigns with no management fee until you do.</li>
+            <li>In higher-cost markets, we agree the lead target with you in writing before launch.</li>
+          </ul>
+        </details>
+        <div class="cta-row" style="margin-top:24px"><a href="#book" class="btn">Book a Free Call</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS + TEAM -->
 <section class="dark">
   <div class="wrap">
     <div class="center">
       <div class="eyebrow">What Clients Say</div>
       <h2>Don't take our word for it. <em>Take our clients'.</em></h2>
     </div>
-    <div class="reviews">
+    <div class="reviews" style="grid-template-columns:repeat(2,1fr)">
       <div class="review">
         <div class="stars">★★★★★</div>
         <p>“The optimizations he made had a real impact, and I've been seeing noticeable improvements in performance and overall results since implementing his strategies.”</p>
@@ -345,200 +434,26 @@ footer p+p{margin-top:6px}
         <p>“He helped us reduce our Google Ads budget by approximately 30% while making every remaining advertising dollar about 40% more productive.”</p>
         <div class="who"><div class="avatar">C</div><div><b>Clarity Hearing Care</b>United States · Fiverr review</div></div>
       </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p>“Communication has always been smooth, deadlines were respected, and he was always willing to explain things clearly and provide valuable insights along the way.”</p>
-        <div class="who"><div class="avatar">M</div><div><b>marianaspb</b>United States · Fiverr review</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AGENCY POSITIONING -->
-<section>
-  <div class="wrap">
-    <div class="center">
-      <div class="eyebrow">Built Around Your Shop</div>
-      <h2>A Full Team Behind Your Ads. <em>One Person Accountable.</em></h2>
-      <p class="lead">Most body shops get stuck between two bad options: a big agency where the salesperson never touches the account, or a solo freelancer with no backup, no tracking help and no one to build the landing page. Unlimited Growth Drive gives you a specialist team — and a direct line to the person running your campaigns.</p>
-    </div>
-    <div class="compare">
-      <div class="col">
-        <h3>Typical Big Agency</h3>
-        <div class="chain"><span>Salesperson</span><em>→</em><span>Account manager</span><em>→</em><span>Junior buyer</span><em>→</em><span>Your budget</span></div>
-        <ul>
-          <li>Long contracts and setup fees</li>
-          <li>Never speak to who runs your ads</li>
-          <li>Generic templates across industries</li>
-          <li>Reports full of impressions, not jobs</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3>Solo Freelancer</h3>
-        <div class="chain"><span>One person</span><em>→</em><span>Everything</span></div>
-        <ul>
-          <li>Ads only — no landing page or tracking team</li>
-          <li>Account goes quiet when they're busy or away</li>
-          <li>No second set of eyes on your spend</li>
-          <li>Calls often untracked</li>
-        </ul>
-      </div>
-      <div class="col us">
-        <h3>Unlimited Growth Drive</h3>
-        <div class="chain"><span>You</span><em>⟷</em><span>Your dedicated Google Ads specialist</span><em>+</em><span>Tracking &amp; landing page team</span></div>
-        <ul>
-          <li>Already running live collision accounts</li>
-          <li>Ads, landing page &amp; call tracking under one roof</li>
-          <li>Weekly hands-on optimization</li>
-          <li>Google Ads, GA4 &amp; Meta certified team</li>
-          <li>Month-to-month — we earn your business monthly</li>
-          <li>You talk to the person making the decisions</li>
-        </ul>
-      </div>
     </div>
     <figure class="team-photo">
       <img src="/assets/hero/ugd-team.jpg" alt="The Unlimited Growth Drive team" loading="lazy" onerror="this.parentElement.style.display='none'">
-      <figcaption><b>The UGD team.</b> Strategy, Google Ads, tracking and web design — one team accountable for your lead flow since 2021.</figcaption>
+      <figcaption><b>The UGD team.</b> A full team behind your ads — and one specialist you talk to directly. No salesperson in the middle.</figcaption>
     </figure>
   </div>
 </section>
 
-<!-- GUARANTEE -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="guarantee">
-      <div class="seal"><div><b>200+</b><span>Leads · 90 Days</span></div></div>
-      <div>
-        <div class="eyebrow">Our 90-Day Lead Guarantee</div>
-        <h2>200+ Qualified Leads in 90 Days.<br><em>Or We Work for Free Until You Do.</em></h2>
-        <p>We can make this promise because we track every lead. You see each call and form request in your report — so there's never any guessing about whether we hit the number.</p>
-        <details class="terms">
-          <summary>See guarantee terms</summary>
-          <ul>
-            <li>For new Google Ads management clients.</li>
-            <li>The ad budget agreed in your growth plan stays active for the full 90 days. You pay ad spend directly to Google.</li>
-            <li>A qualified lead is a unique phone call of 60+ seconds or a form request from someone in your service area asking about your services. Spam, duplicates, job seekers and sales pitches don't count.</li>
-            <li>You give us access to your ad account, landing page and tracking, and reply to change requests within 3 business days.</li>
-            <li>If you don't reach 200 qualified leads within 90 days of launch, we keep managing your campaigns with no management fee until you do.</li>
-          </ul>
-        </details>
-        <div class="cta-row" style="margin-top:24px"><a href="#book" class="btn">Book a Free Call</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section style="padding-top:20px">
-  <div class="wrap">
-    <div class="center">
-      <div class="eyebrow">What Happens Next</div>
-      <h2>From Free Call To <em>Active Campaign Management</em></h2>
-    </div>
-    <div class="steps">
-      <div class="step"><div class="n">01</div><h3>Free 30-Minute Strategy Call</h3><p>We learn your shop: services, insurance work vs. customer-pay, service radius, current advertising, budget and growth goals. You get a straight answer on whether paid search fits.</p></div>
-      <div class="step"><div class="n">02</div><h3>Collision Market Assessment</h3><p>We review search demand and competitors in your area, your existing account if you have one, your tracking, and how leads currently move from ad to repair order.</p></div>
-      <div class="step"><div class="n">03</div><h3>Campaign &amp; Landing Page Build</h3><p>Campaign structure, keywords by repair type, ZIP-code targeting, ad copy, call tracking and a photo-estimate landing page — built or rebuilt around your numbers.</p></div>
-      <div class="step"><div class="n">04</div><h3>Optimize Against Real Lead Data</h3><p>Weekly review of search terms, recorded calls, lead quality, bids and budget. Changes are made against what booked in your shop — not what looked good in Google.</p></div>
-    </div>
-    <div class="center cta-row"><a href="#book" class="btn">Book a Free Call</a></div>
-  </div>
-</section>
-
-<!-- IS PPC RIGHT -->
-<section class="dark">
-  <div class="wrap">
-    <div class="fit">
-      <div>
-        <div class="eyebrow">Is PPC the Right Move Yet?</div>
-        <h2><span>More Calls.</span><span>More Repair Orders.</span><span>Less Wasted Spend.</span></h2>
-        <p class="lead">Being straight with you up front is cheaper than finding out in month three. We generally recommend having at least the budget below available for ad spend alone — separate from management — so the account gathers enough data for Google's bidding to learn, compete and win your local auctions.</p>
-        <div class="budget"><b>$1,500+/mo</b><span>recommended ad spend for a single-location collision shop, paid directly to Google. Management starts from $1,000/month.</span></div>
-      </div>
-      <div class="timing">
-        <div class="eyebrow">Timing, Honestly</div>
-        <div class="timeline">
-          <div><b>Week 1–2</b><span>Campaigns, tracking and landing page go live. First calls usually come in within the first couple of weeks.</span></div>
-          <div><b>Month 1–2</b><span>The account gathers data, the bidding learns, and we cut wasted searches and out-of-area clicks every week.</span></div>
-          <div><b>Month 3+</b><span>Efficient, predictable lead flow. We keep monitoring and scale budget toward what books jobs.</span></div>
-        </div>
-      </div>
-    </div>
-    <p class="fit-quote">If you're looking for a one-day lead switch, PPC isn't the right fit. If you want a measurable, predictable source of repair jobs for your shop — let's talk.</p>
-    <div class="cta-row"><a href="#book" class="btn">Book a Free Call</a></div>
-  </div>
-</section>
-
-<!-- PROBLEMS -->
+<!-- FAQ -->
 <section>
   <div class="wrap">
     <div class="center">
-      <div class="eyebrow">The PPC Problem</div>
-      <h2>Running Google Ads Isn't Hard. <em>Running Them Profitably Is.</em></h2>
-      <p class="lead">Collision repair is high-intent and high-competition. Someone who just got into a fender bender searches once and calls fast — so every wasted click, out-of-area call and untracked phone lead is a repair job that went to the shop down the road.</p>
-    </div>
-    <div class="problems">
-      <div class="problem"><b>01</b><p>Paying for clicks from people looking for DIY dent kits, used bumpers or "how much does it cost" articles</p></div>
-      <div class="problem"><b>02</b><p>Calls coming in from towns your shop doesn't actually serve</p></div>
-      <div class="problem"><b>03</b><p>Budget spent on job seekers searching "auto body technician jobs" and "body shop hiring"</p></div>
-      <div class="problem"><b>04</b><p>Every conversion counted the same — a $4,000 insurance repair and a wrong number look identical</p></div>
-      <div class="problem"><b>05</b><p>Google's automation making budget decisions with no idea which repairs are profitable for you</p></div>
-      <div class="problem"><b>06</b><p>No idea which campaign actually brought in the cars that hit your bays</p></div>
-      <div class="problem"><b>07</b><p>Evenings spent inside Google Ads instead of running the shop and writing estimates</p></div>
-      <div class="problem"><b>08</b><p>Hiring an agency and never once speaking to the person touching your account</p></div>
-    </div>
-    <div class="center cta-row"><a href="#book" class="btn">Book a Free Call</a></div>
-  </div>
-</section>
-
-<!-- WHAT GOES IN -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="center">
-      <div class="eyebrow">What's Included</div>
-      <h2>What Goes Into Managing <em>Your Collision Campaigns</em></h2>
-      <p class="lead">Four jobs, running on a loop. Nothing here is an add-on or an upsell — it's what managing a lead-generation account for a body shop actually takes.</p>
-    </div>
-    <div class="work">
-      <div class="job">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z"/></svg></div>
-        <h3>Build</h3><p>The account is architected around your repair services and market before a dollar runs.</p>
-        <ul><li>Ad account setup &amp; configuration</li><li>Keyword research by repair type</li><li>Collision, bumper, dent &amp; paint campaigns</li><li>Call-only &amp; Search campaigns</li><li>ZIP-code &amp; radius targeting</li><li>Ad copy &amp; extensions</li><li>Photo-estimate landing page</li></ul>
-      </div>
-      <div class="job">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></div>
-        <h3>Measure</h3><p>If a lead can't be traced, it can't be optimized toward.</p>
-        <ul><li>Conversion tracking</li><li>Google Tag Manager</li><li>GA4 configuration</li><li>Call tracking by campaign</li><li>Server-side tracking</li><li>CRM / shop software integration where possible</li></ul>
-      </div>
-      <div class="job">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
-        <h3>Optimize</h3><p>The ongoing work: cutting waste and pushing budget toward what books repairs.</p>
-        <ul><li>Weekly search term review</li><li>Negative keyword management</li><li>Bidding strategy</li><li>Budget allocation</li><li>Ad copy testing</li><li>Call recording &amp; lead quality review</li><li>Landing page CRO</li></ul>
-      </div>
-      <div class="job">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 15v2M12 11v6M16 8v9"/></svg></div>
-        <h3>Report</h3><p>Reporting in body-shop terms, not platform terms.</p>
-        <ul><li>Monthly performance report</li><li>Cost per lead &amp; cost per repair job</li><li>Conversion rate trends</li><li>Spend vs. lead volume</li><li>What changed and why</li><li>Direct calls with your specialist</li></ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section style="padding-top:20px">
-  <div class="wrap">
-    <div class="center">
       <div class="eyebrow">FAQ</div>
-      <h2>Questions Body Shop Owners Usually Ask <em>Before Investing in PPC</em></h2>
+      <h2>Questions Body Shop Owners <em>Usually Ask</em></h2>
     </div>
     <div class="faq">
-      <details open><summary>How much should I budget for Google Ads?</summary><p>We generally recommend at least $1,500 per month in ad spend for a single-location collision shop, paid directly to Google and separate from management. Below that there usually isn't enough click volume to collect data, train the bidding and optimize toward booked repairs instead of guesses. Management starts from $1,000/month and depends on your spend level and number of locations — we'll go through it on the call.</p></details>
-      <details><summary>How quickly can Google Ads start generating leads?</summary><p>Campaigns can start producing calls within the first couple of weeks. Efficient, stable performance usually takes 1–2 months while the account gathers data, the bidding learns, and we cut out wasted searches.</p></details>
-      <details><summary>Do you work with insurance (DRP) work or only customer-pay jobs?</summary><p>Both. We build campaigns around the jobs you want more of — insurance claims, customer-pay collision repair, bumper repair, dents, paint or fleet work — and write ads and landing pages that speak to that customer.</p></details>
-      <details><summary>Will I talk to the person actually running my ads?</summary><p>Yes. You get a dedicated Google Ads specialist who builds and optimizes your account and joins your strategy calls — backed by our tracking and landing page team. No salesperson in the middle.</p></details>
-      <details><summary>Can you track phone calls?</summary><p>Yes. Most collision leads come in by phone, so call tracking is part of every setup. We track calls by campaign and keyword, and count only real calls from your service area as leads.</p></details>
-      <details><summary>What if we've already run Google Ads and it didn't work?</summary><p>That's common. We'll audit your old account on the call — usually the problems are broad keywords, missing negative keywords, untracked calls or a weak landing page. We rebuild from what the data shows, not from scratch for the sake of it.</p></details>
-      <details><summary>Do you help with landing pages?</summary><p>Yes. A conversion-focused landing page with click-to-call and a photo-estimate form is included in the build. Sending ad traffic to a generic homepage is one of the biggest reasons body shop ads underperform.</p></details>
+      <details open><summary>How much should I budget for Google Ads?</summary><p>We recommend at least $1,500 per month in ad spend for a single-location shop, paid directly to Google and separate from management. Below that there usually aren't enough clicks to learn what books jobs. Management starts from $1,000/month — we'll go through it on the call.</p></details>
+      <details><summary>How quickly will my phone start ringing?</summary><p>First calls usually come in within the first couple of weeks. Steady, efficient lead flow typically takes 1–2 months while we cut wasted searches and the account learns what works.</p></details>
+      <details><summary>Do you work with insurance (DRP) work or only customer-pay jobs?</summary><p>Both. We build campaigns around the jobs you want more of — insurance claims, customer-pay collision, bumper repair, dents or paint — and write ads and landing pages for that customer.</p></details>
+      <details><summary>What if we've already run Google Ads and it didn't work?</summary><p>That's common. We'll look at your old account on the call — usually the problems are broad keywords, untracked calls or a weak landing page. We fix what the data shows.</p></details>
       <details><summary>Am I locked into a contract?</summary><p>No. We work month-to-month. You own your Google Ads account, your data and your landing page.</p></details>
     </div>
   </div>
