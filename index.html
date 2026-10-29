@@ -1,4 +1,5 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>Unlimited Growth Drive | Digital Marketing Agency</title><meta name="description" content="Unlimited Growth Drive is a full-service digital marketing agency for local and high-ticket businesses in the USA and Canada.">
+<!doctype html><html><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.ind-grid a{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;text-decoration:none;color:var(--fg);font-weight:500;line-height:1.3;transition:border-color .15s,transform .15s}.ind-grid a span{color:var(--brand);font-weight:700}.ind-grid a:hover{border-color:var(--brand);transform:translateY(-2px)}@media (max-width:900px){.ind-grid{grid-template-columns:1fr 1fr}}@media (max-width:520px){.ind-grid{grid-template-columns:1fr}}
+</style><title>Unlimited Growth Drive | Digital Marketing Agency</title><meta name="description" content="Unlimited Growth Drive is a full-service digital marketing agency for local and high-ticket businesses in the USA and Canada.">
 </head><body>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1185,6 +1186,7 @@ const SVC_PAGES={
 };
 
 const CAL_URL="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call";
+const GA_INDUSTRIES=[["law-firms","Law Firms"],["dentists","Dentists"],["medical-clinics","Medical Clinics"],["automotive","Automotive"],["home-services","Home Services"],["hvac","HVAC"],["plumbers","Plumbers"],["electricians","Electricians"],["roofing","Roofing"],["contractors-remodeling","Contractors &amp; Remodeling"],["landscaping","Landscaping"],["cleaning-services","Cleaning Services"],["pest-control","Pest Control"],["towing","Towing &amp; Roadside"],["auto-detailing","Auto Detailing"],["med-spas","Med Spas"],["chiropractors","Chiropractors"],["veterinarians","Veterinarians"],["real-estate","Real Estate"],["moving-companies","Moving Companies"],["appliance-repair","Appliance Repair"],["garage-door-repair","Garage Door Repair"],["locksmiths","Locksmiths"],["physical-therapy","Physical Therapy"]];
 function renderService(id){const s=SERVICES.find(x=>x.id===id)||SERVICES[0],d=SVC_PAGES[s.id],idx=SERVICES.indexOf(s);
  const visual=IMG[s.ico]?`<div class="shot">${IMG[s.ico]}</div>`:"";
  const panel=`<div class="sp-panel"><div class="ptop"><span class="bigico"><svg><use href="#i-${s.ico}"/></svg></span><div><b>${s.name}</b><div class="tag" style="margin-top:4px">What you get</div></div></div><ul>${s.points.slice(0,4).map(p=>`<li>${p}</li>`).join("")}</ul></div>`;
@@ -1224,7 +1226,12 @@ function renderService(id){const s=SERVICES.find(x=>x.id===id)||SERVICES[0],d=SV
   <div class="faq">${d.faq.map(([q,a],i)=>`<details${i===0?" open":""}><summary>${q}</summary><p>${a}</p></details>`).join("")}</div>
  </div></div>
 
- <div class="band alt"><div class="wrap">
+ ${s.id==="s-google"?`<div class="band alt" id="industries"><div class="wrap">
+  <div class="head"><span class="eyebrow">Industries we serve</span><h2>Google Ads for <span class="mark">local service businesses.</span></h2></div>
+  <div class="ind-grid">${GA_INDUSTRIES.map(([sl,n])=>`<a href="/google-ads/${sl}">Google Ads for ${n}<span aria-hidden="true">→</span></a>`).join("")}</div>
+ </div></div>
+
+`:""} <div class="band alt"><div class="wrap">
   <div class="head"><span class="eyebrow">Related services</span><h2>Works even better <span class="mark">together.</span></h2></div>
   <div class="grid g3">${rel.map(svcCard).join("")}</div>
  </div></div>
