@@ -1212,7 +1212,7 @@ const SVC_PAGES={
 };
 
 const CAL_URL="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call";
-const GA_INDUSTRIES=[["law-firms","Law Firms"],["dentists","Dentists"],["medical-clinics","Medical Clinics"],["automotive","Automotive"],["home-services","Home Services"],["hvac","HVAC"],["plumbers","Plumbers"],["electricians","Electricians"],["roofing","Roofing"],["contractors-remodeling","Contractors &amp; Remodeling"],["landscaping","Landscaping"],["cleaning-services","Cleaning Services"],["pest-control","Pest Control"],["towing","Towing &amp; Roadside"],["auto-detailing","Auto Detailing"],["med-spas","Med Spas"],["chiropractors","Chiropractors"],["veterinarians","Veterinarians"],["real-estate","Real Estate"],["moving-companies","Moving Companies"],["appliance-repair","Appliance Repair"],["garage-door-repair","Garage Door Repair"],["locksmiths","Locksmiths"],["physical-therapy","Physical Therapy"]];
+const GA_INDUSTRIES=[["law-firms","Law Firms"],["dentists","Dentists"],["medical-clinics","Medical Clinics"],["home-services","Home Services"],["automotive","Automotive"],["real-estate","Real Estate"],["med-spas","Med Spas"],["veterinarians","Veterinarians"]];
 function renderService(id){const s=SERVICES.find(x=>x.id===id)||SERVICES[0],d=SVC_PAGES[s.id],idx=SERVICES.indexOf(s);
  const visual=IMG[s.ico]?`<div class="shot">${IMG[s.ico]}</div>`:"";
  const panel=`<div class="sp-panel"><div class="ptop"><span class="bigico"><svg><use href="#i-${s.ico}"/></svg></span><div><b>${s.name}</b><div class="tag" style="margin-top:4px">What you get</div></div></div><ul>${s.points.slice(0,4).map(p=>`<li>${p}</li>`).join("")}</ul></div>`;
