@@ -1,4 +1,15 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.ind-grid a{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;text-decoration:none;color:var(--fg);font-weight:500;line-height:1.3;transition:border-color .15s,transform .15s}.ind-grid a span{color:var(--brand);font-weight:700}.ind-grid a:hover{border-color:var(--brand);transform:translateY(-2px)}@media (max-width:900px){.ind-grid{grid-template-columns:1fr 1fr}}@media (max-width:520px){.ind-grid{grid-template-columns:1fr}}
+.drop{width:min(600px,92vw);padding:14px;gap:6px;border-radius:14px}
+.menu .drop a{display:flex!important;flex-direction:row;align-items:center;gap:12px;padding:10px 12px;text-decoration:none;border-radius:10px}
+.drop a b{display:grid;gap:2px;font-weight:600;font-size:.95rem;color:var(--fg);line-height:1.25}
+.drop a b span{font-weight:400;font-size:.8rem;color:var(--muted)}
+.drop .di{flex:none;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:var(--bg2);color:var(--fg)}
+.drop .di svg{width:20px;height:20px}
+.drop-ind .di{background:var(--brand);color:#fff}
+.drop .d-all .di{background:var(--bg2);color:var(--fg)}
+.drop .d-all b{font-weight:600}
+.drop:before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
+@media (hover:hover) and (min-width:981px){.has-drop:hover>.drop[hidden]{display:grid!important}}
 </style><title>Unlimited Growth Drive | Digital Marketing Agency</title><meta name="description" content="Unlimited Growth Drive is a full-service digital marketing agency for local and high-ticket businesses in the USA and Canada.">
 </head><body>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -604,15 +615,29 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
         <li><a href="#home" data-go="home">Home</a></li>
         <li class="has-drop"><button type="button" id="svcBtn" aria-expanded="false" aria-controls="svcDrop">Services ▾</button>
           <div class="drop" id="svcDrop" hidden>
-            <a href="#services" data-go="service" data-to="s-google">Google Ads<span>Search, PMax, Local Services</span></a>
-            <a href="#services" data-go="service" data-to="s-meta">Meta Ads<span>Facebook & Instagram</span></a>
-            <a href="#services" data-go="service" data-to="s-web">Website Design<span>Fast, conversion-first sites</span></a>
-            <a href="#services" data-go="service" data-to="s-track">Conversion Tracking<span>GA4, GTM, server-side, calls</span></a>
-            <a href="#services" data-go="service" data-to="s-cro">Landing Pages & CRO<span>More leads from the same clicks</span></a>
-            <a href="#services" data-go="service" data-to="s-seo">SEO & Local SEO<span>Google Business Profile, rankings</span></a>
-            <a href="#services" data-go="service" data-to="s-social">Social Media<span>Content & community</span></a>
-            <a href="#services" data-go="service" data-to="s-auto">CRM & Automation<span>Follow-up that never sleeps</span></a>
-            <a href="#services" data-go="services" style="grid-column:1/-1;text-align:center;border-top:1px solid var(--line);border-radius:0;color:var(--accent);font-weight:600">View all services →</a>
+            <a href="#services" data-go="service" data-to="s-google"><span class="di"><svg><use href="#i-google"/></svg></span><b>Google Ads<span>Search, PMax, Local Services</span></b></a>
+            <a href="#services" data-go="service" data-to="s-meta"><span class="di"><svg><use href="#i-meta"/></svg></span><b>Meta Ads<span>Facebook &amp; Instagram</span></b></a>
+            <a href="#services" data-go="service" data-to="s-web"><span class="di"><svg><use href="#i-web"/></svg></span><b>Website Design<span>Fast, conversion-first sites</span></b></a>
+            <a href="#services" data-go="service" data-to="s-track"><span class="di"><svg><use href="#i-track"/></svg></span><b>Conversion Tracking<span>GA4, GTM, server-side, calls</span></b></a>
+            <a href="#services" data-go="service" data-to="s-cro"><span class="di"><svg><use href="#i-cro"/></svg></span><b>Landing Pages &amp; CRO<span>More leads from the same clicks</span></b></a>
+            <a href="#services" data-go="service" data-to="s-seo"><span class="di"><svg><use href="#i-seo"/></svg></span><b>SEO &amp; Local SEO<span>Google Business Profile, rankings</span></b></a>
+            <a href="#services" data-go="service" data-to="s-social"><span class="di"><svg><use href="#i-social"/></svg></span><b>Social Media<span>Content &amp; community</span></b></a>
+            <a href="#services" data-go="service" data-to="s-auto"><span class="di"><svg><use href="#i-auto"/></svg></span><b>CRM &amp; Automation<span>Follow-up that never sleeps</span></b></a>
+            <a href="#services" data-go="services" class="d-all"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><b>View all services</b></a>
+          </div>
+        </li>
+        <li class="has-drop"><button type="button" id="indBtn" aria-expanded="false" aria-controls="indDrop">Industries ▾</button>
+          <div class="drop drop-ind" id="indDrop" hidden>
+            <a href="/google-ads/law-firms"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14M8 7l-3 6a3 3 0 0 0 6 0L8 7zM16 7l-3 6a3 3 0 0 0 6 0l-3-6z"/></svg></span><b>Law Firms<span>Google Ads for attorneys</span></b></a>
+            <a href="/google-ads/dentists"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 3C5 3 4 5 4 7.5c0 2 1 3.5 1.5 5.5.5 2 .5 8 2.5 8s2-5 4-5 2 5 4 5 2-6 2.5-8c.5-2 1.5-3.5 1.5-5.5C20 5 19 3 16.5 3 14.5 3 13.5 4.5 12 4.5S9.5 3 7.5 3z"/></svg></span><b>Dental<span>Google Ads for dentists</span></b></a>
+            <a href="/google-ads/medical-clinics"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v8M8 12h8"/></svg></span><b>Medical Clinics<span>Google Ads for clinics</span></b></a>
+            <a href="/google-ads/home-services"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><b>Home Services<span>Google Ads for home services</span></b></a>
+            <a href="/google-ads/automotive"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3z"/><circle cx="7.5" cy="13" r="1"/><circle cx="16.5" cy="13" r="1"/></svg></span><b>Automotive<span>Google Ads for auto shops</span></b></a>
+            <a href="/google-ads/roofing"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l10-8 10 8"/><path d="M5 10v10h14V10"/><path d="M16 5v3"/></svg></span><b>Roofing<span>Google Ads for roofers</span></b></a>
+            <a href="/google-ads/plumbers"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><b>Plumbing<span>Google Ads for plumbers</span></b></a>
+            <a href="/google-ads/hvac"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 7l14.2 10M4.9 17L19.1 7"/><path d="M9 4l3 2 3-2M9 20l3-2 3 2"/></svg></span><b>HVAC<span>Google Ads for HVAC</span></b></a>
+            <a href="/google-ads/real-estate"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6M9 10h.01M15 10h.01"/></svg></span><b>Real Estate<span>Google Ads for real estate</span></b></a>
+            <a href="/#service/google-ads" data-go="service" data-to="s-google" data-ind-all class="d-all"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><b>All industries</b></a>
           </div>
         </li>
         <li><a href="#work" data-go="work">Our Work</a></li>
@@ -627,7 +652,7 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
       <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">☰</button>
     </nav>
     <div class="mobile" id="mobileNav" hidden>
-      <a href="#home" data-go="home">Home</a><a href="#services" data-go="services">Services</a><a href="#work" data-go="work">Our Work</a><a href="#about" data-go="about">About</a><a href="#team" data-go="team">Team</a><a href="#pricing" data-go="pricing">Pricing</a><a href="#contact" data-go="contact">Contact</a>
+      <a href="#home" data-go="home">Home</a><a href="#services" data-go="services">Services</a><a href="/#service/google-ads" data-go="service" data-to="s-google" data-ind-all>Industries</a><a href="#work" data-go="work">Our Work</a><a href="#about" data-go="about">About</a><a href="#team" data-go="team">Team</a><a href="#pricing" data-go="pricing">Pricing</a><a href="#contact" data-go="contact">Contact</a>
       <a class="btn btn-primary" style="margin-top:10px;border:0" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Book a free call</a>
     </div>
   </div>
@@ -1255,15 +1280,18 @@ function go(view,to){
   $$(".menu a[data-go]").forEach(a=>a.classList.toggle("on",a.dataset.go===view));
   $("#mobileNav").hidden=true;$("#burger").setAttribute("aria-expanded","false");
   $("#svcDrop").hidden=true;$("#svcBtn").setAttribute("aria-expanded","false");
+  $("#indDrop").hidden=true;$("#indBtn").setAttribute("aria-expanded","false");
   requestAnimationFrame(()=>{const t=view!=="service"&&to&&document.getElementById(to);if(t){t.scrollIntoView({block:"start"});window.scrollBy(0,-80)}else window.scrollTo(0,0)});
   try{const sl=view==="service"?"service/"+(SVC_PAGES[to]||SVC_PAGES["s-google"]).slug:view;history.replaceState(null,"","#"+sl)}catch(e){}
   runCounters();
 }
 document.addEventListener("click",e=>{const a=e.target.closest("[data-go]");if(!a)return;e.preventDefault();go(a.dataset.go,a.dataset.to)});
 $("#burger").addEventListener("click",()=>{const m=$("#mobileNav");m.hidden=!m.hidden;$("#burger").setAttribute("aria-expanded",String(!m.hidden))});
-$("#svcBtn").addEventListener("click",e=>{e.stopPropagation();const d=$("#svcDrop");d.hidden=!d.hidden;$("#svcBtn").setAttribute("aria-expanded",String(!d.hidden))});
-document.addEventListener("click",e=>{if(!e.target.closest(".has-drop"))$("#svcDrop").hidden=true});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#svcDrop").hidden=true});
+[["svcBtn","svcDrop"],["indBtn","indDrop"]].forEach(([b,d],_,all)=>$("#"+b).addEventListener("click",e=>{e.stopPropagation();const el=$("#"+d),open=el.hidden;all.forEach(([b2,d2])=>{$("#"+d2).hidden=true;$("#"+b2).setAttribute("aria-expanded","false")});el.hidden=!open;$("#"+b).setAttribute("aria-expanded",String(open))}));
+const closeDrops=()=>{["svcDrop","indDrop"].forEach(d=>$("#"+d).hidden=true);["svcBtn","indBtn"].forEach(b=>$("#"+b).setAttribute("aria-expanded","false"))};
+document.addEventListener("click",e=>{if(!e.target.closest(".has-drop"))closeDrops()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrops()});
+document.addEventListener("click",e=>{if(!e.target.closest("[data-ind-all]"))return;setTimeout(()=>{const t=document.getElementById("industries");if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-90,behavior:"instant"})}},150)});
 
 /* counters (final value is already in the markup; animation is a flourish) */
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
