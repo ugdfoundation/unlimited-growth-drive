@@ -873,9 +873,13 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
 .tcard:hover{transform:translateY(-6px);border-color:#d8cfe0!important;box-shadow:0 22px 46px rgba(14,27,51,.10)!important}
 .tcard:hover:after{width:100%}
 .tcard .with{display:inline-flex;align-items:center;gap:8px;padding:4px 12px 4px 4px}
-.tcard .with:not(:has(img)){padding:4px 11px}
+.tcard .with:not(:has(img,.ugd-ic)){padding:4px 11px}
 .tst-track{padding-top:10px!important;padding-bottom:34px!important;margin-bottom:-14px}
 .tcard .with img{width:22px;height:22px;border-radius:50%;object-fit:cover}
+
+.ugd-ic{width:22px!important;height:22px!important;flex:none;transition:none!important}
+.tst-filter .ugd-ic{margin-left:-6px}
+.tst-filter button[aria-pressed="true"] .ugd-ic{background:#fff!important}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1010,7 +1014,7 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
         </div>
       </div>
       <div class="tst-filter" role="group" aria-label="Filter reviews by team member">
-        <button type="button" aria-pressed="true" data-w="all">All reviews</button><button type="button" aria-pressed="false" data-w="Google">Google</button><button type="button" aria-pressed="false" data-w="Samad"><img src="/assets/team/abdus-samad.jpg" alt="" width="22" height="22">Samad</button><button type="button" aria-pressed="false" data-w="Alim"><img src="/assets/team/abdul-alim.jpg?v=2" alt="" width="22" height="22">Alim</button><button type="button" aria-pressed="false" data-w="Mostakim"><img src="/assets/team/nill-mostakim.jpg?v=2" alt="" width="22" height="22">Mostakim</button>
+        <button type="button" aria-pressed="true" data-w="all">All reviews</button><button type="button" aria-pressed="false" data-w="Google"><span class="logo-mark ugd-ic" aria-hidden="true"></span>Google</button><button type="button" aria-pressed="false" data-w="Samad"><img src="/assets/team/abdus-samad.jpg" alt="" width="22" height="22">Samad</button><button type="button" aria-pressed="false" data-w="Alim"><img src="/assets/team/abdul-alim.jpg?v=2" alt="" width="22" height="22">Alim</button><button type="button" aria-pressed="false" data-w="Mostakim"><img src="/assets/team/nill-mostakim.jpg?v=2" alt="" width="22" height="22">Mostakim</button>
       </div>
       <div class="tst-track" id="tstTrack" tabindex="0" aria-label="Client reviews"></div>
       <div class="tst-ctrl">
@@ -1709,7 +1713,7 @@ const TESTI=[["Yeg Detailerzz", "", "I’ve had a great experience working with 
  const COL=["#1B2A55","#8A5A00","#2E6E5B","#7E2C8E","#9A3B2E","#22577A","#5B4B8A","#3D5A40"];
  const esc=x=>x.replace(/&/g,"&amp;").replace(/</g,"&lt;");
  const TPH={Samad:"/assets/team/abdus-samad.jpg",Alim:"/assets/team/abdul-alim.jpg?v=2",Mostakim:"/assets/team/nill-mostakim.jpg?v=2"};
- const card=([n,c,t,p,w],i)=>`<article class="tcard" data-w="${w}"><div class="top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="pf ${p}">${p==="fiverr"?'fiverr<i>.</i>':p==="google"?'<b style="color:#4285F4">G</b><b style="color:#EA4335">o</b><b style="color:#FBBC05">o</b><b style="color:#4285F4">g</b><b style="color:#34A853">l</b><b style="color:#EA4335">e</b>':"upwork"}</span></div><span class="with">${TPH[w]?`<img src="${TPH[w]}" alt="" width="22" height="22" loading="lazy">`:""}${w==="Google"?"Google Business Profile review":"Worked with "+w}</span><blockquote>“${esc(t)}”</blockquote>${t.length>230?'<button type="button" class="more">Read full review</button>':""}<footer><span class="av" style="background:${COL[(n.charCodeAt(0)+n.length)%COL.length]}">${esc(n[0].toUpperCase())}</span><span class="who"><b>${esc(n)}</b><small>${p==="google"?"Google review"+(c?" · "+esc(c):""):c?(FLAG[c]||"")+" "+esc(c):(p==="upwork"?"Verified Upwork client":"")}</small></span></footer></article>`;
+ const card=([n,c,t,p,w],i)=>`<article class="tcard" data-w="${w}"><div class="top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="pf ${p}">${p==="fiverr"?'fiverr<i>.</i>':p==="google"?'<b style="color:#4285F4">G</b><b style="color:#EA4335">o</b><b style="color:#FBBC05">o</b><b style="color:#4285F4">g</b><b style="color:#34A853">l</b><b style="color:#EA4335">e</b>':"upwork"}</span></div><span class="with">${w==="Google"?'<span class="logo-mark ugd-ic" aria-hidden="true"></span>':""}${TPH[w]?`<img src="${TPH[w]}" alt="" width="22" height="22" loading="lazy">`:""}${w==="Google"?"Google Business Profile review":"Worked with "+w}</span><blockquote>“${esc(t)}”</blockquote>${t.length>230?'<button type="button" class="more">Read full review</button>':""}<footer><span class="av" style="background:${COL[(n.charCodeAt(0)+n.length)%COL.length]}">${esc(n[0].toUpperCase())}</span><span class="who"><b>${esc(n)}</b><small>${p==="google"?"Google review"+(c?" · "+esc(c):""):c?(FLAG[c]||"")+" "+esc(c):(p==="upwork"?"Verified Upwork client":"")}</small></span></footer></article>`;
  tr.innerHTML=TESTI.map(card).join("");
  const cards=()=>[...tr.children].filter(c=>!c.hidden);
  const step=()=>{const c=cards()[0];return c?c.getBoundingClientRect().width+20:300};
