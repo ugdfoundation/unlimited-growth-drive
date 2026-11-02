@@ -667,6 +667,24 @@ body.lock{overflow:hidden}
 .pfm-box.noimg .pfm-media{display:none}
 @media (max-width:960px){.pf-live iframe{transform:scale(.36)}}
 @media (max-width:640px){.pf-live iframe{transform:scale(.28)}}
+.pf-scroll{background:#fff}
+.pf-scroll::after{background:linear-gradient(180deg,rgba(0,0,0,0) 70%,rgba(0,0,0,.25))}
+.scrollimg{display:block;width:100%;height:auto;will-change:transform}
+.scrollimg.run{animation:autoScroll linear infinite}
+.pf-card:hover .scrollimg.run{animation-play-state:paused}
+@keyframes autoScroll{0%,5%{transform:translateY(0)}90%,94%{transform:translateY(var(--d))}100%{transform:translateY(0)}}
+.pfm-media{position:relative}
+.pfm-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#1c1c1f;border-bottom:1px solid #2a2a2e}
+.pfm-bar i{width:9px;height:9px;border-radius:50%;background:#3a3a40}
+.pfm-bar span{margin-left:10px;font-size:12px;color:#a8a59c;background:#0f0f11;border-radius:999px;padding:3px 14px}
+.pfm-stage{scrollbar-width:thin;overscroll-behavior:contain}
+@media (prefers-reduced-motion:reduce){.scrollimg.run{animation:none}}
+.pfm-box{height:min(780px,calc(100vh - 48px));grid-template-rows:100%}
+.pfm-box.noimg{height:auto}
+.pfm-media{height:100%;min-height:0}
+.pfm-stage{min-height:0}
+@media (max-width:960px){.pfm-box{display:block;height:auto}.pfm-media{height:auto}.pfm-stage{height:55vh;flex:none}}
+@media (max-width:640px){.pfm-box{height:100%}}
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -928,6 +946,7 @@ body.lock{overflow:hidden}
   <div class="pfm-box" role="dialog" aria-modal="true" aria-labelledby="pfmTitle">
     <button class="pfm-x" data-close aria-label="Close">✕</button>
     <div class="pfm-media">
+      <div class="pfm-bar" id="pfmBar"><i></i><i></i><i></i><span></span></div>
       <div class="pfm-stage"><img id="pfmImg" alt=""><div class="pfm-ph" id="pfmPh"></div>
         <button class="pfm-nav prev" aria-label="Previous image">‹</button><button class="pfm-nav next" aria-label="Next image">›</button></div>
       <div class="pfm-thumbs" id="pfmThumbs"></div>
@@ -1160,6 +1179,12 @@ body.lock{overflow:hidden}
   // Add a case study = add one object. sample:true shows a red "Sample" badge (mockup only).
   var U='https://images.unsplash.com/';
   var CASES=[
+    {id:'sdb-website',service:'web',name:'Same Day Bumper',type:'Website design · Mobile auto body repair, Raleigh, NC',url:'samedaybumper.com',
+     coverScroll:'/autobodyshop-ads/cases/same-day-bumper-site-card.webp',metric:'Full website',metricLabel:'designed & built by UGD',
+     images:[{scroll:'/autobodyshop-ads/cases/same-day-bumper-site.webp'}],
+     stats:[['Mobile','first design'],['1-tap','call in English & Spanish'],['Quote','form with damage photos']],
+     problem:'A mobile dent, scratch and bumper repair business in Raleigh needed a site that turns local searches and ad clicks into calls and quote requests.',
+     did:['Hero with "Call Now" buttons in English and Spanish','Services, service areas and before/after gallery sections','Request-a-quote form with vehicle details and photos of the damage'],quote:''},
     {id:'ugd-autobody',service:'web',name:'UGD Auto Body Page',type:'Collision & auto body landing page',
      coverLive:'https://www.unlimitedgrowthdrive.com/auto-body/',metric:'Live',metricLabel:'page built for body shops',
      images:[{live:'https://www.unlimitedgrowthdrive.com/auto-body/'}],
@@ -1192,11 +1217,15 @@ body.lock{overflow:hidden}
       var list = tab==='all' ? ['web','google','meta'].reduce(function(a,sv){ return a.concat(CASES.filter(function(x){return x.service===sv;}).slice(0,2)); },[]) : CASES.filter(function(x){return x.service===tab;});
       grid.innerHTML=list.map(function(c,i){
         return '<button class="pf-card" data-id="'+c.id+'" style="animation-delay:'+(i*60)+'ms">'+(c.sample?'<span class="sample">Sample</span>':'')+
-          (c.coverLive?'<div class="pf-img pf-live"><iframe src="'+c.coverLive+'" tabindex="-1" loading="lazy" scrolling="no" title=""></iframe><span class="pf-open">View case study →</span></div>':c.cover?'<div class="pf-img" style="background-image:url(\''+c.cover+'\')"><span class="pf-open">View case study →</span></div>':'<div class="pf-img pf-none pf-'+c.service+'"><span class="pf-big">'+esc(c.metric)+'</span><span class="pf-open">View case study →</span></div>')+
+          (c.coverScroll?'<div class="pf-img pf-scroll"><img class="scrollimg" src="'+c.coverScroll+'" alt="'+esc(c.name)+' website design" loading="lazy"><span class="pf-open">View case study →</span></div>':c.coverLive?'<div class="pf-img pf-live"><iframe src="'+c.coverLive+'" tabindex="-1" loading="lazy" scrolling="no" title=""></iframe><span class="pf-open">View case study →</span></div>':c.cover?'<div class="pf-img" style="background-image:url(\''+c.cover+'\')"><span class="pf-open">View case study →</span></div>':'<div class="pf-img pf-none pf-'+c.service+'"><span class="pf-big">'+esc(c.metric)+'</span><span class="pf-open">View case study →</span></div>')+
           '<div class="pf-body"><span class="pf-tag">'+LABEL[c.service]+'</span><b>'+esc(c.name)+'</b><small>'+esc(c.type)+'</small>'+
           '<div class="pf-metric"><strong class="gold">'+esc(c.metric)+'</strong><span>'+esc(c.metricLabel)+'</span></div></div></button>';
       }).join('');
       pills.forEach(function(p){ p.setAttribute('aria-selected',p.dataset.tab===tab?'true':'false'); });
+      [].forEach.call(grid.querySelectorAll('.scrollimg'),function(im){
+        function go(){ var box=im.parentNode, d=im.offsetHeight-box.clientHeight; if(d<=0) return; im.style.setProperty('--d',(-d)+'px'); im.style.animationDuration=Math.max(12,d/45)+'s'; im.classList.add('run'); }
+        if(im.complete) go(); else im.addEventListener('load',go);
+      });
     }
     pills.forEach(function(p){ p.addEventListener('click',function(){ render(p.dataset.tab); if(p.dataset.tab!=='all') track('trackCustom','CaseStudyTab',{service:p.dataset.tab}); }); });
     render('all');
@@ -1205,15 +1234,33 @@ body.lock{overflow:hidden}
     var m=document.getElementById('pfm'), stage=m.querySelector('.pfm-stage'), img=document.getElementById('pfmImg'), ph=document.getElementById('pfmPh'), th=document.getElementById('pfmThumbs'), cur=null, idx=0, lastFocus=null;
     function showImg(i){
       var ims=cur.images; if(!ims.length) return; idx=(i+ims.length)%ims.length; var it=ims[idx];
-      stage.classList.toggle('is-ph',!it.src);
-      if(it.src){ img.src=it.src; img.alt=cur.name+' — image '+(idx+1); }
+      stopAuto(); stage.scrollTop=0;
+      stage.classList.toggle('is-ph',!it.src&&!it.scroll);
+      if(it.src||it.scroll){ img.src=it.src||it.scroll; img.alt=cur.name+' — image '+(idx+1); }
+      if(it.scroll){ if(img.complete) startAuto(); else img.onload=startAuto; }
       else if(it.live){ ph.className='pfm-ph'; ph.innerHTML='<iframe src="'+it.live+'" title="'+esc(cur.name)+'" style="width:100%;height:100%;border:0;background:#000"></iframe>'; }
       else { ph.className='pfm-ph ph-shot'; ph.innerHTML='<div>🖼<br>'+esc(it.ph)+'<br><small>(your original goes here)</small></div>'; }
       [].forEach.call(th.children,function(b,j){ b.classList.toggle('on',j===idx); });
       m.querySelectorAll('.pfm-nav').forEach(function(n){ n.style.display=ims.length>1?'':'none'; });
     }
+    // auto-scroll for full-page website designs (loops; pauses when the visitor scrolls)
+    var raf=null, last=0, pauseUntil=0, holdUntil=0, SPEED=70;
+    function step(t){
+      if(!last) last=t; var dt=(t-last)/1000; last=t;
+      if(t>pauseUntil&&t>holdUntil){
+        var max=stage.scrollHeight-stage.clientHeight;
+        if(stage.scrollTop>=max-1){ holdUntil=t+1600; setTimeout(function(){ if(raf){ stage.scrollTo({top:0,behavior:'smooth'}); holdUntil=performance.now()+1800; } },1500); }
+        else stage.scrollTop=Math.min(max,stage.scrollTop+SPEED*dt);
+      }
+      raf=requestAnimationFrame(step);
+    }
+    function startAuto(){ if(matchMedia('(prefers-reduced-motion: reduce)').matches) return; stopAuto(); last=0; holdUntil=performance.now()+1200; raf=requestAnimationFrame(step); }
+    function stopAuto(){ if(raf) cancelAnimationFrame(raf); raf=null; }
+    ['wheel','touchstart','pointerdown','keydown'].forEach(function(ev){ stage.addEventListener(ev,function(){ pauseUntil=performance.now()+4000; },{passive:true}); });
+
     function open(id){
       cur=CASES.filter(function(x){return x.id===id;})[0]; if(!cur) return; lastFocus=document.activeElement;
+      var bar=document.getElementById('pfmBar'); bar.style.display=cur.url?'':'none'; bar.querySelector('span').textContent=cur.url||'';
       document.getElementById('pfmTag').textContent=LABEL[cur.service];
       document.getElementById('pfmTitle').textContent=cur.name+(cur.sample?' (sample)':'');
       document.getElementById('pfmType').textContent=cur.type;
@@ -1227,10 +1274,10 @@ body.lock{overflow:hidden}
       m.querySelector('.pfm-box').classList.toggle('noimg',!cur.images.length);
       if(cur.images.length){ showImg(0); stage.scrollTop=0; }
       m.classList.add('on'); m.setAttribute('aria-hidden','false'); document.body.classList.add('lock');
-      m.querySelector('.pfm-x').focus();
+      m.querySelector('.pfm-x').focus({preventScroll:true}); m.querySelector('.pfm-box').scrollTop=0;
       track('trackCustom','CaseStudyOpen',{service:cur.service,name:cur.name});
     }
-    function close(){ m.classList.remove('on'); m.setAttribute('aria-hidden','true'); document.body.classList.remove('lock'); ph.innerHTML=''; if(lastFocus) lastFocus.focus(); }
+    function close(){ stopAuto(); m.classList.remove('on'); m.setAttribute('aria-hidden','true'); document.body.classList.remove('lock'); ph.innerHTML=''; if(lastFocus) lastFocus.focus(); }
     grid.addEventListener('click',function(e){ var c=e.target.closest('.pf-card'); if(c) open(c.dataset.id); });
     m.addEventListener('click',function(e){ if(e.target.closest('[data-close]')) close(); });
     m.querySelector('.prev').addEventListener('click',function(){ showImg(idx-1); });
