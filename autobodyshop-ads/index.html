@@ -545,6 +545,13 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 .ast{color:var(--gold);text-decoration:none;font-size:.45em;vertical-align:super;margin-left:4px}
 .fine{margin-top:-8px;font-size:12px;color:#77746c;max-width:560px}
 .fine a{color:#a8a59c}
+.hero-book{display:inline-flex;align-items:center;gap:10px;margin-top:22px;color:#d8d5cd;text-decoration:none;font-size:15px;border:1px solid var(--dline);background:rgba(255,255,255,.03);border-radius:999px;padding:10px 18px 10px 12px;transition:.15s}
+.hero-book b{color:#f6cf72;font-weight:600}
+.hero-book:hover{border-color:rgba(233,177,59,.5);background:rgba(233,177,59,.06)}
+.cal-ic{width:28px;height:28px;border-radius:50%;background:rgba(233,177,59,.12);display:grid;place-items:center;font-size:14px}
+.final-btns{display:flex;flex-direction:column;align-items:center;gap:14px}
+.ghost-link{color:#a8a59c;font-size:14px}
+.ghost-link:hover{color:#fff}
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -587,7 +594,7 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 <header>
   <div class="wrap">
     <a class="logo" href="#top"><span class="logo-mark"></span><span><b>Unlimited Growth Drive</b><small>UGD · DIGITAL AGENCY</small></span></a>
-    <a class="btn cta" href="#book">See If My Shop Qualifies</a>
+    <a class="btn cta book" href="/autobodyshop-ads/book/">Book a Call</a>
   </div>
 </header>
 
@@ -601,11 +608,12 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
       <h1>Get 200+ collision leads in 3 months. <span class="gold">Or we work for free.</span><a href="#guarantee" class="ast" aria-label="See guarantee terms">*</a></h1>
       <p class="lead">Keep your bays full and your techs busy — without waiting on DRP referrals. A website built to turn visitors into estimate requests, plus Google &amp; Meta Ads that send it drivers with damaged cars, only from the ZIP codes you serve.</p>
       <p class="fine">*Google Ads guarantee: 200+ qualified leads in 90 days with $1,500+/mo ad spend, or no management fee until you get there. <a href="#guarantee">See terms</a></p>
+      <a class="hero-book cta book" href="/autobodyshop-ads/book/"><span class="cal-ic">📅</span>Prefer to pick a time now? <b>Book a free call →</b></a>
     </div>
 
     <div class="formcard" id="book">
       <h2>See if your shop qualifies</h2>
-      <p class="fsub">30 seconds · Then book a free 30-min strategy call</p>
+      <p class="fsub">30 seconds · Then pick a time for your free 30-min call</p>
       <div class="progress" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
       <form id="qform" novalidate>
         <div class="fstep on" data-step="1">
@@ -639,13 +647,8 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
           <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@yourshop.com"></div>
           <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 123-4567"></div>
           <div class="err" role="alert"></div>
-          <div class="frow"><button type="button" class="back">← Back</button><button type="submit" class="btn">Pick a call time <span class="arr">→</span></button></div>
+          <div class="frow"><button type="button" class="back">← Back</button><button type="submit" class="btn">Continue to booking <span class="arr">→</span></button></div>
           <p class="privacy">Only used to prepare for your call. No spam.</p>
-        </div>
-        <div class="fstep" data-step="3">
-          <p class="q">Last step: pick a time</p>
-          <div class="note" id="lowbudget" hidden>For Google Ads, most single-location shops need about $1,500/month in ad spend. Book anyway — we'll tell you honestly if it makes sense yet.</div>
-          <div id="cal"></div>
         </div>
       </form>
     </div>
@@ -976,8 +979,8 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
   <div class="wrap rv">
     <div class="eyebrow">Free 30-minute strategy call</div>
     <h2>Find out if we can <span class="gold">profitably fill your bays.</span></h2>
-    <p class="lead">Answer 3 quick questions, pick a time. If it's not a fit for your shop, we'll tell you straight.</p>
-    <a class="btn cta" href="#book">See If My Shop Qualifies <span class="arr">→</span></a>
+    <p class="lead">Pick a time for a free 30-minute call. If it's not a fit for your shop, we'll tell you straight.</p>
+    <div class="final-btns"><a class="btn cta book" href="/autobodyshop-ads/book/">Book a Free Call <span class="arr">→</span></a><a class="ghost-link cta" href="#book">Or answer 3 quick questions first</a></div>
   </div>
 </section>
 
@@ -985,12 +988,10 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 
 <footer>© 2026 Unlimited Growth Drive · Websites, Google Ads &amp; Meta Ads for collision &amp; auto body shops<br>This site is not part of the Facebook website or Meta Platforms, Inc.</footer>
 
-<div class="mcta" id="mcta"><a class="btn block cta" href="#book">See If My Shop Qualifies <span class="arr">→</span></a></div>
+<div class="mcta" id="mcta"><a class="btn block cta book" href="/autobodyshop-ads/book/">Book a Free Call <span class="arr">→</span></a></div>
 
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
 (function(){
-  var CALENDLY_URL='https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call';
   var WEBHOOK_URL=''; // optional: Zapier / Make / Apps Script URL to save every lead
 
   var track=function(){ try{ if(window.fbq) fbq.apply(null,arguments); }catch(e){} };
@@ -1029,7 +1030,7 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
     document.addEventListener('visibilitychange',function(){ if(document.hidden) stop(); else { var r=sec.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) start(); } });
   })();
 
-  document.querySelectorAll('.cta').forEach(function(a){ a.addEventListener('click',function(){ track('trackCustom','CTAClick'); }); });
+  document.querySelectorAll('.cta').forEach(function(a){ a.addEventListener('click',function(){ track('trackCustom', a.classList.contains('book')?'BookCallClick':'CTAClick'); }); });
 
   var mcta=document.getElementById('mcta'), card=document.getElementById('book');
   function onScroll(){ var r=card.getBoundingClientRect(); mcta.classList.toggle('show', r.bottom<0 || r.top>window.innerHeight); }
@@ -1095,23 +1096,12 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
     track('track','Lead',{content_name:'Auto Body Short Form',services:d.services,budget:d.budget,qualified:qualified});
     if(qualified) track('trackCustom','QualifiedLead',{budget:d.budget});
     if(WEBHOOK_URL){ try{ fetch(WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(d)}); }catch(x){} }
-    document.getElementById('lowbudget').hidden=d.budget!=='Under $1,000';
-    show(3); card.scrollIntoView({behavior:'smooth'});
-    var summary=d.shop+' — '+d.city+' | Needs: '+d.services+' | Budget: '+d.budget+' | Running ads: '+d.running_ads+' | Phone: '+d.phone;
-    var opts={url:CALENDLY_URL+'?hide_gdpr_banner=1',parentElement:document.getElementById('cal'),
-      prefill:{name:d.name,email:d.email,customAnswers:{a1:summary}},
-      utm:{utmSource:utm.utm_source,utmMedium:utm.utm_medium,utmCampaign:utm.utm_campaign,utmContent:utm.utm_content,utmTerm:utm.utm_term}};
-    (function tryInit(i){
-      if(window.Calendly) Calendly.initInlineWidget(opts);
-      else if(i<50) setTimeout(function(){ tryInit(i+1); },150);
-      else location.href=CALENDLY_URL+'?name='+encodeURIComponent(d.name)+'&email='+encodeURIComponent(d.email)+'&a1='+encodeURIComponent(summary);
-    })(0);
+    try{ sessionStorage.setItem('ugd_lead',JSON.stringify({name:d.name,email:d.email})); }catch(x){}
+    bars.forEach(function(b){ b.classList.add('on'); });
+    var btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.innerHTML='Opening the calendar…';
+    setTimeout(function(){ location.href='/autobodyshop-ads/book/'; },450);
   });
 
-  window.addEventListener('message',function(e){
-    if(e.origin!=='https://calendly.com'||!e.data||!e.data.event) return;
-    if(e.data.event==='calendly.event_scheduled') track('track','Schedule',{content_name:'Free Strategy Call'});
-  });
 })();
 </script>
 </body>
