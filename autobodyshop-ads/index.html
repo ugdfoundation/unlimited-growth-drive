@@ -598,6 +598,75 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 .meta-quote .who i{background:var(--gold);color:#111}
 @media (max-width:960px){.cs-cards{grid-template-columns:1fr}.site-frame{height:360px}.site-frame iframe{transform:scale(.5)}}
 @media (max-width:700px){.pill{padding:10px 16px;font-size:14px}.site-frame{height:300px}.site-frame iframe{width:390px;height:900px;transform:scale(.82)}.cs-big b{font-size:38px}}
+
+/* ===== portfolio ===== */
+.pill .cnt{font-style:normal;font-size:12px;font-weight:600;color:var(--muted);background:var(--cream);border-radius:999px;padding:1px 8px;margin-left:2px}
+.pill[aria-selected=true] .cnt{background:rgba(255,255,255,.12);color:#f6cf72}
+.pf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:34px}
+.pf-card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;font-family:Poppins,sans-serif;transition:transform .22s,box-shadow .22s;animation:csIn .45s ease both;position:relative}
+.pf-card:hover{transform:translateY(-5px);box-shadow:0 26px 50px rgba(0,0,0,.1)}
+.pf-card:focus-visible{outline:3px solid rgba(233,177,59,.55);outline-offset:3px}
+.pf-img{height:210px;background:#1c1c1f center/cover no-repeat;position:relative;overflow:hidden}
+.pf-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55))}
+.pf-card:hover .pf-img{transform:none}
+.pf-open{position:absolute;right:14px;bottom:14px;z-index:1;background:#fff;color:#111;font-size:12.5px;font-weight:600;border-radius:999px;padding:7px 13px;opacity:0;transform:translateY(6px);transition:.2s}
+.pf-card:hover .pf-open,.pf-card:focus-visible .pf-open{opacity:1;transform:none}
+.pf-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.pf-tag{align-self:flex-start;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:var(--ink);padding:5px 10px;border-radius:999px;margin-bottom:12px}
+.pf-body b{font-size:18px;color:var(--text);line-height:1.25}
+.pf-body small{color:var(--muted);font-size:13.5px;margin:3px 0 14px}
+.pf-metric{margin-top:auto;display:flex;align-items:baseline;gap:8px;padding-top:14px;border-top:1px solid var(--line)}
+.pf-metric strong{font-size:24px;font-weight:700;letter-spacing:-.02em}
+.pf-metric span{font-size:13px;color:var(--muted)}
+.sample{position:absolute;top:12px;left:12px;z-index:2;background:#e5483a;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:6px}
+.ph-shot{display:grid;place-items:center;text-align:center;color:#8f8c84;font-size:13px;background:repeating-linear-gradient(135deg,#1c1c1f 0 12px,#202024 12px 24px)}
+/* modal */
+.pfm{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px}
+.pfm.on{display:flex}
+.pfm-bg{position:absolute;inset:0;background:rgba(5,5,6,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:fadeIn .25s both}
+@keyframes fadeIn{from{opacity:0}}
+.pfm-box{position:relative;width:min(1160px,100%);max-height:calc(100vh - 48px);background:var(--paper);border-radius:26px;display:grid;grid-template-columns:1.35fr 1fr;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.5);animation:boxIn .35s cubic-bezier(.2,.9,.3,1) both}
+@keyframes boxIn{from{opacity:0;transform:translateY(24px) scale(.98)}}
+.pfm-x{position:absolute;top:14px;right:14px;z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.06);font-size:16px;cursor:pointer}
+.pfm-x:hover{background:rgba(0,0,0,.12)}
+.pfm-media{background:#0b0b0c;display:flex;flex-direction:column;min-height:0;min-width:0}
+.pfm-stage{position:relative;flex:1;min-height:420px;overflow:auto;display:flex;align-items:flex-start;justify-content:center}
+.pfm-stage img{width:100%;height:auto;display:block}
+.pfm-ph{display:none;position:absolute;inset:0}
+.pfm-stage.is-ph img{display:none}.pfm-stage.is-ph .pfm-ph{display:grid}
+.pfm-nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:22px;line-height:1;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.pfm-nav.prev{left:14px}.pfm-nav.next{right:14px}
+.pfm-thumbs{display:flex;gap:8px;padding:12px;background:#111;overflow-x:auto}
+.pfm-thumbs button{flex:none;width:76px;height:52px;border-radius:8px;border:2px solid transparent;background:#222 center/cover;cursor:pointer;opacity:.6}
+.pfm-thumbs button.on{border-color:var(--gold);opacity:1}
+.pfm-info{padding:36px 34px 30px;overflow-y:auto;display:flex;flex-direction:column}
+.pfm-info h3{font-size:28px;margin:2px 0 4px;padding-right:40px}
+.pfm-type{color:var(--muted);font-size:14px;margin-bottom:20px}
+.pfm-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px}
+.pfm-stats div{background:var(--cream);border-radius:14px;padding:12px}
+.pfm-stats b{display:block;font-size:20px;line-height:1.1}
+.pfm-stats span{font-size:11.5px;color:var(--muted)}
+.pfm-block{margin-bottom:18px}
+.pfm-block h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-d);margin-bottom:6px}
+.pfm-block p,.pfm-block li{font-size:14.5px;color:#3a3a36;line-height:1.6}
+.pfm-block ul{list-style:none;display:grid;gap:7px}
+.pfm-block li{display:flex;gap:10px}
+.pfm-block li::before{content:"✓";color:var(--gold-d);font-weight:700}
+.pfm-quote{background:var(--ink);color:#f2f0eb;border-radius:16px;padding:16px 18px;font-size:14.5px;line-height:1.55;margin:4px 0 20px}
+.pfm-quote small{display:block;color:#a8a59c;margin-top:8px;font-size:12.5px}
+.pfm-quote:empty{display:none}
+.pfm-info .btn{margin-top:auto}
+body.lock{overflow:hidden}
+@media (max-width:960px){.pf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pfm-box{grid-template-columns:1fr;overflow-y:auto}.pfm-stage{min-height:300px;max-height:55vh}.pfm-info{overflow:visible}}
+@media (max-width:640px){.pf-grid{grid-template-columns:1fr}.pfm{padding:0}.pfm-box{max-height:100vh;height:100%;border-radius:0}.pfm-info{padding:24px 20px}.pfm-info h3{font-size:23px}.pfm-x{background:rgba(255,255,255,.9)}}
+.pf-live{background:#000}
+.pf-live iframe{position:absolute;top:0;left:0;width:1280px;height:900px;border:0;transform:scale(.29);transform-origin:0 0;pointer-events:none}
+.pf-none{display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,rgba(233,177,59,.25),transparent 60%),#0b0b0c}
+.pf-none .pf-big{position:relative;z-index:1;font-size:40px;letter-spacing:4px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pfm-box.noimg{grid-template-columns:1fr;width:min(640px,100%)}
+.pfm-box.noimg .pfm-media{display:none}
+@media (max-width:960px){.pf-live iframe{transform:scale(.36)}}
+@media (max-width:640px){.pf-live iframe{transform:scale(.28)}}
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -835,130 +904,46 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
   </div>
 </section>
 
-<!-- 4. RESULTS / CASE STUDIES (tabbed) -->
+<!-- 4. PORTFOLIO / CASE STUDIES -->
 <section id="results">
   <div class="wrap">
     <div class="head center rv">
-      <div class="eyebrow">Results</div>
+      <div class="eyebrow">Case studies</div>
       <h2>Real work. <span class="gold">Real body shops.</span></h2>
-      <p class="lead">Pick a service to see the case study — or look at all three.</p>
+      <p class="lead">Pick a service — then open any project to see the work and results.</p>
     </div>
-
-    <div class="pills rv" role="tablist" aria-label="Case studies by service">
-      <button class="pill" role="tab" data-tab="web" aria-selected="false"><span class="pd"></span>Website Design</button>
-      <button class="pill" role="tab" data-tab="google" aria-selected="false"><span class="pd"></span>Google Ads</button>
-      <button class="pill" role="tab" data-tab="meta" aria-selected="false"><span class="pd"></span>Meta Ads</button>
+    <div class="pills" role="tablist" aria-label="Case studies by service">
+      <button class="pill" role="tab" data-tab="all" aria-selected="true"><span class="pd"></span>All</button>
+      <button class="pill" role="tab" data-tab="web" aria-selected="false"><span class="pd"></span>Website Design <em class="cnt"></em></button>
+      <button class="pill" role="tab" data-tab="google" aria-selected="false"><span class="pd"></span>Google Ads <em class="cnt"></em></button>
+      <button class="pill" role="tab" data-tab="meta" aria-selected="false"><span class="pd"></span>Meta Ads <em class="cnt"></em></button>
     </div>
-    <div class="showall"><button type="button" id="showAll">← Show all three</button></div>
-
-    <!-- ALL: overview of the three services (default view) -->
-    <div class="cs-panel on" data-panel="all">
-      <div class="cs-cards">
-        <button class="cs-card" data-go="web">
-          <span class="cs-tag">Website Design</span>
-          <div class="cs-thumb" style="background-image:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1786489785858-b64715400a37?w=900&q=70&auto=format&fit=crop')"><span>Photo-estimate landing page</span></div>
-          <b>Pages built to turn clicks into calls</b>
-          <p>Mobile-first, click-to-call on every screen and a photo-estimate form — with tracking on every lead.</p>
-          <span class="cs-more">See the work →</span>
-        </button>
-        <button class="cs-card" data-go="google">
-          <span class="cs-tag">Google Ads</span>
-          <div class="cs-big"><b class="gold">271</b><span>leads in 90 days</span></div>
-          <div class="cs-mini"><span><b>203</b> forms</span><span><b>68</b> calls</span><span><b>$21.30</b>/lead</span></div>
-          <b>Collision &amp; bumper repair shop</b>
-          <p>Bidding only on repair searches in the shop's ZIP codes — and cutting what didn't book.</p>
-          <span class="cs-more">See the case study →</span>
-        </button>
-        <button class="cs-card" data-go="meta">
-          <span class="cs-tag">Meta Ads</span>
-          <div class="cs-big"><b class="gold" style="font-size:30px;letter-spacing:2px">★★★★★</b><span>client review</span></div>
-          <p class="cs-q">"Managing my Meta ads professionally and delivered excellent results."</p>
-          <b>Yeg Detailerzz · Auto detailing</b>
-          <p>Facebook &amp; Instagram ads that improved lead quality and overall ad performance.</p>
-          <span class="cs-more">See the case study →</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- WEBSITE -->
-    <div class="cs-panel" data-panel="web">
-      <div class="case">
-        <div>
-          <div class="eyebrow">Website Design · Auto body landing page</div>
-          <h2>A page built for one job: getting the call.</h2>
-          <p class="muted" style="margin:14px 0 22px">Every page we build for a body shop is designed around how a driver with a damaged car actually behaves — on a phone, in a hurry, wanting a quote.</p>
-          <div class="steps3">
-            <div><b>1</b><p><strong>Click-to-call everywhere.</strong> The phone number is one tap away on every screen.</p></div>
-            <div><b>2</b><p><strong>Photo-estimate form.</strong> Drivers send pictures of the damage and get a quote without coming in.</p></div>
-            <div><b>3</b><p><strong>Tracking on every lead.</strong> Each call and form is tied back to the ad or search that brought it.</p></div>
-          </div>
-          <a class="btn" style="margin-top:26px" href="https://www.unlimitedgrowthdrive.com/auto-body/" target="_blank" rel="noopener">View a live page we built <span class="arr">→</span></a>
-        </div>
-        <figure class="shot site-shot">
-          <div class="bchrome"><i></i><i></i><i></i><span>unlimitedgrowthdrive.com/auto-body</span></div>
-          <div class="site-frame"><iframe src="https://www.unlimitedgrowthdrive.com/auto-body/" title="Auto body landing page built by UGD" loading="lazy" tabindex="-1" scrolling="no"></iframe></div>
-          <figcaption>Live page — the same kind of page we build for your shop</figcaption>
-        </figure>
-      </div>
-      <!-- ADD WEBSITE CASE STUDY RESULTS HERE (before/after conversion rate, screenshots) -->
-    </div>
-
-    <!-- GOOGLE ADS -->
-    <div class="cs-panel" data-panel="google">
-    <div class="case">
-      <div>
-        <div class="eyebrow">Case study · Collision &amp; bumper repair</div>
-        <h2>203 lead forms and 68 calls in 90 days.</h2>
-        <div class="case-stats">
-          <div><b class="gold">$21.30</b><span>Average cost per lead</span></div>
-          <div><b class="gold">$6.76</b><span>Per lead from "same day bumper"</span></div>
-          <div><b>271</b><span>Total leads in 90 days</span></div>
-          <div><b>$1.87</b><span>Average cost per click</span></div>
-        </div>
-        <div class="steps3">
-          <div><b>1</b><p><strong>Bid on repair searches.</strong> "Auto collision repair", "dent and scratch repair near me", "same day bumper" — drivers with a damaged car, ready to book.</p></div>
-          <div><b>2</b><p><strong>Cut what doesn't book.</strong> DIY, job-seeker and out-of-area searches removed every week.</p></div>
-          <div><b>3</b><p><strong>Track every lead.</strong> Each call and estimate request shows in the report — no guessing.</p></div>
-        </div>
-      </div>
-      <div class="shots">
-        <figure class="shot"><img src="https://www.unlimitedgrowthdrive.com/auto-body/results-90-days.jpg" width="1600" height="798" loading="lazy" alt="Google Ads overview, Jul 1 – Sep 30, 2026: 203 lead forms, 68 phone calls, $21.30 cost per conversion"><figcaption>Account overview · Jul 1 – Sep 30, 2026</figcaption></figure>
-        <figure class="shot"><img src="https://www.unlimitedgrowthdrive.com/auto-body/keywords-90-days.jpg" width="1600" height="806" loading="lazy" alt="Google Ads keyword report, Jul 1 – Sep 30, 2026, sorted by conversions"><figcaption>Keyword report from the same account</figcaption></figure>
-      </div>
-    </div>
-    <div class="case-quote">
-      <div class="qm">“</div>
-      <div><p>My phone rings consistently and I get on average 3-5 quote request a day. He's very understanding and patient.</p><small>Same Day Bumper · Bumper &amp; collision repair</small></div>
-    </div>
-      <div class="case-quote">
-        <div class="qm">“</div>
-        <div><p>My phone rings consistently and I get on average 3-5 quote request a day. He's very understanding and patient.</p><small>Same Day Bumper · Bumper &amp; collision repair</small></div>
-      </div>
-    </div>
-
-    <!-- META ADS -->
-    <div class="cs-panel" data-panel="meta">
-      <div class="case">
-        <div>
-          <div class="eyebrow">Meta Ads · Auto detailing</div>
-          <h2>Better leads from Facebook &amp; Instagram.</h2>
-          <p class="muted" style="margin:14px 0 22px">For Yeg Detailerzz, we took over their Meta ads — understanding the business goals first, then building campaigns around the customers they wanted.</p>
-          <div class="steps3">
-            <div><b>1</b><p><strong>Goals first.</strong> We learned the business before recommending anything.</p></div>
-            <div><b>2</b><p><strong>Campaigns for quality.</strong> Ads built to bring better leads, not just more clicks.</p></div>
-            <div><b>3</b><p><strong>Quick, clear updates.</strong> Fast communication so the owner always knew what was happening.</p></div>
-          </div>
-        </div>
-        <div class="meta-quote">
-          <div class="stars">★★★★★</div>
-          <p>"I've had a great experience working with this marketing team. They have been managing my Meta ads professionally and have delivered excellent results. Communication is always quick and clear, and they take the time to understand my business goals before making recommendations. Their strategies have helped increase the quality of leads and improve my overall ad performance. I highly recommend them."</p>
-          <div class="who"><i>Y</i><div><strong>Yeg Detailerzz</strong><span>Auto detailing · Meta Ads client</span></div></div>
-        </div>
-      </div>
-      <!-- ADD META ADS RESULTS HERE (ads manager screenshot: leads, cost per lead) -->
-    </div>
+    <div class="pf-grid" id="pfGrid"></div>
   </div>
 </section>
+
+<!-- CASE STUDY MODAL -->
+<div class="pfm" id="pfm" aria-hidden="true">
+  <div class="pfm-bg" data-close></div>
+  <div class="pfm-box" role="dialog" aria-modal="true" aria-labelledby="pfmTitle">
+    <button class="pfm-x" data-close aria-label="Close">✕</button>
+    <div class="pfm-media">
+      <div class="pfm-stage"><img id="pfmImg" alt=""><div class="pfm-ph" id="pfmPh"></div>
+        <button class="pfm-nav prev" aria-label="Previous image">‹</button><button class="pfm-nav next" aria-label="Next image">›</button></div>
+      <div class="pfm-thumbs" id="pfmThumbs"></div>
+    </div>
+    <div class="pfm-info">
+      <span class="pf-tag" id="pfmTag"></span>
+      <h3 id="pfmTitle"></h3>
+      <div class="pfm-type" id="pfmType"></div>
+      <div class="pfm-stats" id="pfmStats"></div>
+      <div class="pfm-block"><h4>The challenge</h4><p id="pfmProblem"></p></div>
+      <div class="pfm-block"><h4>What we did</h4><ul id="pfmDid"></ul></div>
+      <blockquote class="pfm-quote" id="pfmQuote"></blockquote>
+      <a class="btn block cta book" href="/autobodyshop-ads/book/">Get results like this — Book a call <span class="arr">→</span></a>
+    </div>
+  </div>
+</div>
 
 <!-- 5. LEAD QUALITY -->
 <section class="dark">
@@ -1170,19 +1155,87 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
   })();
 
 
-  // ===== tabbed case studies =====
+
+  // ===== portfolio data =====
+  // Add a case study = add one object. sample:true shows a red "Sample" badge (mockup only).
+  var U='https://images.unsplash.com/';
+  var CASES=[
+    {id:'ugd-autobody',service:'web',name:'UGD Auto Body Page',type:'Collision & auto body landing page',
+     coverLive:'https://www.unlimitedgrowthdrive.com/auto-body/',metric:'Live',metricLabel:'page built for body shops',
+     images:[{live:'https://www.unlimitedgrowthdrive.com/auto-body/'}],
+     stats:[['Mobile','first design'],['1-tap','click to call'],['Photo','estimate form']],
+     problem:'Body shop owners needed a page that turns ad clicks into calls and estimate requests — not a generic website.',
+     did:['Built around how drivers with damaged cars behave on a phone','Click-to-call and a photo-estimate form on every screen','Call & form tracking tied to each ad'],quote:''},
+
+    {id:'same-day-bumper',service:'google',name:'Same Day Bumper',type:'Bumper & collision repair',
+     cover:'https://www.unlimitedgrowthdrive.com/auto-body/results-90-days.jpg',metric:'271',metricLabel:'leads in 90 days',
+     images:[{src:'https://www.unlimitedgrowthdrive.com/auto-body/results-90-days.jpg'},{src:'https://www.unlimitedgrowthdrive.com/auto-body/keywords-90-days.jpg'}],
+     stats:[['203','lead forms'],['68','phone calls'],['$21.30','per lead']],
+     problem:'Needed a steady flow of collision and bumper repair jobs from local drivers — not wasted clicks.',
+     did:['Bid on repair searches like "same day bumper" and "auto collision repair"','Targeted only the ZIP codes the shop serves','Cut DIY, job-seeker and out-of-area searches every week'],
+     quote:'"My phone rings consistently and I get on average 3-5 quote request a day. He\'s very understanding and patient."<small>Same Day Bumper</small>'},
+
+    {id:'yeg-detailerzz',service:'meta',name:'Yeg Detailerzz',type:'Auto detailing',
+     cover:'',metric:'★★★★★',metricLabel:'client review',
+     images:[],
+     stats:[['5★','review'],['Higher','lead quality'],['Fast','communication']],
+     problem:'Wanted better-quality leads from Facebook & Instagram, not just more clicks.',
+     did:['Learned the business goals before recommending anything','Built campaigns around the customers they wanted','Quick, clear updates on performance'],
+     quote:'"They have been managing my Meta ads professionally and have delivered excellent results… Their strategies have helped increase the quality of leads and improve my overall ad performance."<small>Yeg Detailerzz</small>'}
+  ];
+
   (function(){
-    var pills=[].slice.call(document.querySelectorAll('.pill')), panels=[].slice.call(document.querySelectorAll('.cs-panel')),
-        sa=document.querySelector('.showall'), sec=document.getElementById('results');
-    function show(tab){
-      panels.forEach(function(p){ p.classList.toggle('on',p.dataset.panel===tab); });
-      pills.forEach(function(b){ b.setAttribute('aria-selected', b.dataset.tab===tab?'true':'false'); });
-      sa.classList.toggle('on',tab!=='all');
-      if(tab!=='all') track('trackCustom','CaseStudyView',{service:tab});
+    var grid=document.getElementById('pfGrid'), pills=[].slice.call(document.querySelectorAll('#results .pill')), LABEL={web:'Website Design',google:'Google Ads',meta:'Meta Ads'};
+    pills.forEach(function(p){ var c=p.querySelector('.cnt'); if(c) c.textContent=CASES.filter(function(x){return x.service===p.dataset.tab;}).length; });
+    function esc(t){ return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+    function render(tab){
+      var list = tab==='all' ? ['web','google','meta'].reduce(function(a,sv){ return a.concat(CASES.filter(function(x){return x.service===sv;}).slice(0,2)); },[]) : CASES.filter(function(x){return x.service===tab;});
+      grid.innerHTML=list.map(function(c,i){
+        return '<button class="pf-card" data-id="'+c.id+'" style="animation-delay:'+(i*60)+'ms">'+(c.sample?'<span class="sample">Sample</span>':'')+
+          (c.coverLive?'<div class="pf-img pf-live"><iframe src="'+c.coverLive+'" tabindex="-1" loading="lazy" scrolling="no" title=""></iframe><span class="pf-open">View case study →</span></div>':c.cover?'<div class="pf-img" style="background-image:url(\''+c.cover+'\')"><span class="pf-open">View case study →</span></div>':'<div class="pf-img pf-none pf-'+c.service+'"><span class="pf-big">'+esc(c.metric)+'</span><span class="pf-open">View case study →</span></div>')+
+          '<div class="pf-body"><span class="pf-tag">'+LABEL[c.service]+'</span><b>'+esc(c.name)+'</b><small>'+esc(c.type)+'</small>'+
+          '<div class="pf-metric"><strong class="gold">'+esc(c.metric)+'</strong><span>'+esc(c.metricLabel)+'</span></div></div></button>';
+      }).join('');
+      pills.forEach(function(p){ p.setAttribute('aria-selected',p.dataset.tab===tab?'true':'false'); });
     }
-    pills.forEach(function(b){ b.addEventListener('click',function(){ show(b.getAttribute('aria-selected')==='true'?'all':b.dataset.tab); }); });
-    [].forEach.call(document.querySelectorAll('.cs-card'),function(c){ c.addEventListener('click',function(){ show(c.dataset.go); var t=sec.querySelector('.pills').getBoundingClientRect().top+scrollY-20; scrollTo({top:t,behavior:'smooth'}); }); });
-    document.getElementById('showAll').addEventListener('click',function(){ show('all'); });
+    pills.forEach(function(p){ p.addEventListener('click',function(){ render(p.dataset.tab); if(p.dataset.tab!=='all') track('trackCustom','CaseStudyTab',{service:p.dataset.tab}); }); });
+    render('all');
+
+    // modal
+    var m=document.getElementById('pfm'), stage=m.querySelector('.pfm-stage'), img=document.getElementById('pfmImg'), ph=document.getElementById('pfmPh'), th=document.getElementById('pfmThumbs'), cur=null, idx=0, lastFocus=null;
+    function showImg(i){
+      var ims=cur.images; if(!ims.length) return; idx=(i+ims.length)%ims.length; var it=ims[idx];
+      stage.classList.toggle('is-ph',!it.src);
+      if(it.src){ img.src=it.src; img.alt=cur.name+' — image '+(idx+1); }
+      else if(it.live){ ph.className='pfm-ph'; ph.innerHTML='<iframe src="'+it.live+'" title="'+esc(cur.name)+'" style="width:100%;height:100%;border:0;background:#000"></iframe>'; }
+      else { ph.className='pfm-ph ph-shot'; ph.innerHTML='<div>🖼<br>'+esc(it.ph)+'<br><small>(your original goes here)</small></div>'; }
+      [].forEach.call(th.children,function(b,j){ b.classList.toggle('on',j===idx); });
+      m.querySelectorAll('.pfm-nav').forEach(function(n){ n.style.display=ims.length>1?'':'none'; });
+    }
+    function open(id){
+      cur=CASES.filter(function(x){return x.id===id;})[0]; if(!cur) return; lastFocus=document.activeElement;
+      document.getElementById('pfmTag').textContent=LABEL[cur.service];
+      document.getElementById('pfmTitle').textContent=cur.name+(cur.sample?' (sample)':'');
+      document.getElementById('pfmType').textContent=cur.type;
+      document.getElementById('pfmStats').innerHTML=cur.stats.map(function(s){return '<div><b>'+esc(s[0])+'</b><span>'+esc(s[1])+'</span></div>';}).join('');
+      document.getElementById('pfmProblem').textContent=cur.problem;
+      document.getElementById('pfmDid').innerHTML=cur.did.map(function(d){return '<li>'+esc(d)+'</li>';}).join('');
+      document.getElementById('pfmQuote').innerHTML=cur.quote||'';
+      th.innerHTML=cur.images.map(function(it,j){ return '<button aria-label="Image '+(j+1)+'" style="'+(it.src?'background-image:url(\''+it.src+'\')':'')+'"></button>'; }).join('');
+      [].forEach.call(th.children,function(b,j){ b.addEventListener('click',function(){ showImg(j); }); });
+      th.style.display=cur.images.length>1?'':'none';
+      m.querySelector('.pfm-box').classList.toggle('noimg',!cur.images.length);
+      if(cur.images.length){ showImg(0); stage.scrollTop=0; }
+      m.classList.add('on'); m.setAttribute('aria-hidden','false'); document.body.classList.add('lock');
+      m.querySelector('.pfm-x').focus();
+      track('trackCustom','CaseStudyOpen',{service:cur.service,name:cur.name});
+    }
+    function close(){ m.classList.remove('on'); m.setAttribute('aria-hidden','true'); document.body.classList.remove('lock'); ph.innerHTML=''; if(lastFocus) lastFocus.focus(); }
+    grid.addEventListener('click',function(e){ var c=e.target.closest('.pf-card'); if(c) open(c.dataset.id); });
+    m.addEventListener('click',function(e){ if(e.target.closest('[data-close]')) close(); });
+    m.querySelector('.prev').addEventListener('click',function(){ showImg(idx-1); });
+    m.querySelector('.next').addEventListener('click',function(){ showImg(idx+1); });
+    document.addEventListener('keydown',function(e){ if(!m.classList.contains('on')) return; if(e.key==='Escape') close(); if(e.key==='ArrowLeft') showImg(idx-1); if(e.key==='ArrowRight') showImg(idx+1); });
   })();
 
   document.querySelectorAll('.cta').forEach(function(a){ a.addEventListener('click',function(){ track('trackCustom', a.classList.contains('book')?'BookCallClick':'CTAClick'); }); });
