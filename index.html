@@ -852,6 +852,13 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
 .ab-founders .ab-f:nth-child(2) .ab-av{background:linear-gradient(135deg,#E9B13B,#C98A12);color:#0E1B33}
 .ab-founders .ab-f:nth-child(3) .ab-av{background:linear-gradient(135deg,var(--navy),#2c4a86);color:#fff}
 @media (max-width:960px){.ab-founders{grid-template-columns:1fr!important;max-width:620px!important}}
+
+.ab-founders .ab-av{border-radius:50%!important}
+.ab-founders .ab-ph{padding:3px;background:linear-gradient(135deg,#93308F,#E9B13B)!important;box-shadow:0 10px 24px rgba(147,48,143,.25)}
+.ab-founders .ab-ph img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;border:3px solid #fff;transition:transform .35s}
+.ab-founders .ab-f:hover .ab-ph img{transform:scale(1.05)}
+.member .ph{display:grid;place-items:center}
+.member .ph img[src*="/team/"]{width:72%!important;height:72%!important;border-radius:50%;padding:4px;background:linear-gradient(135deg,#93308F,#E9B13B);box-shadow:0 14px 34px rgba(0,0,0,.35)}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1212,8 +1219,8 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
   <div class="band alt"><div class="wrap">
     <div class="head ab-center rv"><span class="eyebrow">Leadership</span><h2>The people behind your campaigns</h2><p class="lede">Every client works directly with specialists &mdash; never a middle layer.</p></div>
     <div class="ab-founders">
-      <article class="ab-f rv" style="--d:0ms"><span class="ab-av">AS</span><div><h3>Abdus Samad</h3><span class="ab-role">Founder &amp; CEO &middot; Google Ads Mentor &amp; Coach</span><p>Founded Unlimited Growth Drive in 2021. A Google Ads mentor and coach who sets the strategy for every account and trains the team behind it.</p><div class="ab-tags"><span>Strategy</span><span>Google Ads</span><span>Mentoring</span></div></div></article>
-      <article class="ab-f rv" style="--d:120ms"><span class="ab-av">AA</span><div><h3>Abdul Alim</h3><span class="ab-role">Co-owner &middot; Account &amp; Project Management</span><p>Leads project and account management, keeps campaigns on schedule and runs Google Ads and website projects for clients in the US and Canada.</p><div class="ab-tags"><span>Account Management</span><span>Project Management</span><span>Google Ads</span></div></div></article>
+      <article class="ab-f rv" style="--d:0ms"><span class="ab-av ab-ph"><img src="/assets/team/abdus-samad.jpg" alt="Abdus Samad, Unlimited Growth Drive" width="74" height="74" loading="lazy"></span><div><h3>Abdus Samad</h3><span class="ab-role">Founder &amp; CEO &middot; Google Ads Mentor &amp; Coach</span><p>Founded Unlimited Growth Drive in 2021. A Google Ads mentor and coach who sets the strategy for every account and trains the team behind it.</p><div class="ab-tags"><span>Strategy</span><span>Google Ads</span><span>Mentoring</span></div></div></article>
+      <article class="ab-f rv" style="--d:120ms"><span class="ab-av ab-ph"><img src="/assets/team/abdul-alim.jpg" alt="Abdul Alim, Unlimited Growth Drive" width="74" height="74" loading="lazy"></span><div><h3>Abdul Alim</h3><span class="ab-role">Co-owner &middot; Account &amp; Project Management</span><p>Leads project and account management, keeps campaigns on schedule and runs Google Ads and website projects for clients in the US and Canada.</p><div class="ab-tags"><span>Account Management</span><span>Project Management</span><span>Google Ads</span></div></div></article>
       <article class="ab-f rv" style="--d:240ms"><span class="ab-av">NM</span><div><h3>Nill Mostakim</h3><span class="ab-role">Co-owner &middot; Google Ads, Web Design &amp; Tracking</span><p>Runs Google Ads campaigns, designs landing pages and websites, and sets up browser- and server-side tracking with GTM and GA4.</p><div class="ab-tags"><span>Google Ads</span><span>Web Design</span><span>GTM &amp; GA4</span></div></div></article>
     </div>
     <p class="ab-center" style="margin-top:26px"><a class="btn btn-ghost" href="#team" data-go="team">Meet the full team</a></p>
@@ -1378,8 +1385,8 @@ const REVIEWS=[
  {cat:"Google Ads",ind:"Towing",init:"T",who:"Towing company · USA"}
 ];
 const TEAM=[
- {init:"AS",name:"Abdus Samad",role:"Founder & CEO · Google Ads Mentor & Coach",bio:"Founded Unlimited Growth Drive in 2021. A Google Ads mentor and coach who sets the strategy for every account and trains the team behind it.",tags:["Strategy","Google Ads","Mentoring"]},
- {init:"AA",name:"Abdul Alim",role:"Co-owner · Account & Project Management",bio:"Leads project and account management, keeps campaigns on schedule and runs Google Ads and website projects for clients in the US and Canada.",tags:["Account Management","Project Management","Google Ads"]},
+ {init:"AS",photo:"/assets/team/abdus-samad.jpg",name:"Abdus Samad",role:"Founder & CEO · Google Ads Mentor & Coach",bio:"Founded Unlimited Growth Drive in 2021. A Google Ads mentor and coach who sets the strategy for every account and trains the team behind it.",tags:["Strategy","Google Ads","Mentoring"]},
+ {init:"AA",photo:"/assets/team/abdul-alim.jpg",name:"Abdul Alim",role:"Co-owner · Account & Project Management",bio:"Leads project and account management, keeps campaigns on schedule and runs Google Ads and website projects for clients in the US and Canada.",tags:["Account Management","Project Management","Google Ads"]},
  {init:"NM",name:"Nill Mostakim",role:"Co-owner · Google Ads, Web Design & Tracking",bio:"Runs Google Ads campaigns, designs landing pages and websites, and sets up browser- and server-side tracking with GTM and GA4.",tags:["Google Ads","Web Design","GTM & GA4"]}
 ];
 const FAQ=[
