@@ -756,6 +756,23 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
 .teamfig figcaption span{color:#D3D8E3;font-size:.95rem;line-height:1.55}
 .teamtag{position:absolute;top:18px;left:18px;z-index:1;background:#fff;color:var(--navy);font-weight:600;font-size:.82rem;padding:7px 12px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
 @media (max-width:900px){.teamfig{aspect-ratio:4/3}}
+
+/* ---- floating animated buttons (site-wide) ---- */
+.btn{animation:ugBob 3.2s ease-in-out infinite;will-change:translate;position:relative;overflow:hidden}
+.btn+.btn{animation-delay:-1.6s}
+.btn:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:ugShine 4s ease-in-out infinite;pointer-events:none}
+.btn-ghost:after,.ab-out:after{opacity:.5}
+.btn-primary{box-shadow:0 10px 26px rgba(14,27,51,.28)}
+.btn-gold,.ab-gold,.hx-cta{box-shadow:0 10px 26px rgba(233,177,59,.38)}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+@keyframes ugBob{0%,100%{translate:0 0}50%{translate:0 -5px}}
+@keyframes ugShine{0%,70%{left:-60%}100%{left:130%}}
+.float a{animation:ugBob 3s ease-in-out infinite;position:relative}
+.float a+a{animation-delay:-1.5s}
+.float a:before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;opacity:0;animation:ugRing 2.6s ease-out infinite;pointer-events:none}
+.float .bk:before{border-color:#93308F;animation-delay:1.3s}
+@keyframes ugRing{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){.btn,.btn:after,.float a,.float a:before{animation:none!important}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
