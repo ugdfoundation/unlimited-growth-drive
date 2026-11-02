@@ -74,6 +74,112 @@
 .bx-feat .bx-more{position:relative;z-index:2}
 @media (max-width:1240px){.bx-mock{display:none}}
 @media (prefers-reduced-motion:reduce){.bx-mock,.bm-ping{animation:none}}
+
+/* ===== ABOUT v2 ===== */
+.ab .ab-hl{color:var(--brand)}
+.ab-center{text-align:center;margin-left:auto;margin-right:auto}
+.ab-hero{position:relative;overflow:hidden;padding:64px 0 80px;background:radial-gradient(60% 70% at 100% 0%,rgba(233,177,59,.18),transparent 60%),radial-gradient(50% 60% at 0% 100%,rgba(147,48,143,.10),transparent 60%)}
+.ab-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.ab-hero h1{font-size:clamp(2.1rem,4.2vw,3.3rem);line-height:1.1;margin:14px 0 18px;letter-spacing:-.02em}
+.ab-hero .lede{font-size:1.15rem;line-height:1.7}
+.ab-hero-l>*{animation:abUp .8s both}.ab-hero-l>*:nth-child(2){animation-delay:.08s}.ab-hero-l>*:nth-child(3){animation-delay:.16s}.ab-hero-l>*:nth-child(4){animation-delay:.24s}.ab-hero-l>*:nth-child(5){animation-delay:.32s}
+@keyframes abUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.ab-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.ab-trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-size:.92rem;color:var(--muted)}
+.ab-stars{color:var(--gold);letter-spacing:2px;font-size:.95rem}
+.ab-collage{position:relative;height:520px}
+.abc{position:absolute;margin:0;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px rgba(14,27,51,.18);border:6px solid #fff;animation:abFloat 7s ease-in-out infinite}
+.abc img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.abc:hover img{transform:scale(1.06)}
+.abc-1{left:0;top:30px;width:68%;height:300px;animation-delay:0s;z-index:2}
+.abc-2{right:0;top:0;width:44%;height:220px;animation-delay:-2s;z-index:1}
+.abc-3{right:4%;bottom:0;width:56%;height:230px;animation-delay:-4s;z-index:3}
+@keyframes abFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.ab-float{position:absolute;z-index:4;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:0 18px 40px rgba(14,27,51,.16);display:grid;gap:2px;animation:abFloat 6s ease-in-out infinite}
+.ab-float b{font-size:1.05rem}.ab-float span{font-size:.8rem;color:var(--muted)}
+.af-1{left:-10px;bottom:70px;animation-delay:-1s;border-left:4px solid var(--gold)}
+.af-2{right:-6px;top:200px;animation-delay:-3s;padding-left:30px}
+.af-2 i{position:absolute;left:12px;top:18px;width:9px;height:9px;border-radius:50%;background:#22a06b;box-shadow:0 0 0 0 rgba(34,160,107,.6);animation:abPulse 2s infinite}
+@keyframes abPulse{70%{box-shadow:0 0 0 9px rgba(34,160,107,0)}100%{box-shadow:0 0 0 0 rgba(34,160,107,0)}}
+.ab-stats{background:var(--navy);color:#fff;padding:34px 0}
+.ab-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ab-stat{display:grid;gap:4px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+.ab-stat:last-child{border-right:0}
+.ab-stat b{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:900;color:var(--gold);line-height:1.1}
+.ab-stat span{font-size:.9rem;color:#C9D0DE}
+.ab-marq-wrap{padding:30px 0 10px}
+.ab-marq-t{text-align:center;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.ab-marq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.ab-track{display:flex;gap:18px;width:max-content;animation:abSlide 80s linear infinite}
+.ab-marq:hover .ab-track{animation-play-state:paused}
+.ab-track .ltile{border:1px solid var(--line);filter:grayscale(.2)}
+@keyframes abSlide{to{transform:translateX(-50%)}}
+.ab-story{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.ab-story h2{margin:12px 0 16px}
+.ab-story .lede+.lede{margin-top:14px}
+.ab-story-img{position:relative;margin:0;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(14,27,51,.16)}
+.ab-story-img img{width:100%;height:460px;object-fit:cover;transition:transform 1.2s}
+.ab-story-img:hover img{transform:scale(1.05)}
+.ab-story-img figcaption{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(14,27,51,.86);backdrop-filter:blur(8px);color:#fff;border-radius:14px;padding:14px 16px;display:grid;gap:2px}
+.ab-story-img figcaption b{color:var(--gold)}.ab-story-img figcaption span{font-size:.88rem;color:#C9D0DE}
+.ab-quote{margin:22px 0 0;padding:16px 20px;border-left:4px solid var(--gold);background:var(--bg2);border-radius:0 12px 12px 0;font-size:1.08rem;font-weight:500}
+.ab-why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.ab-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:10px;align-content:start;transition:transform .3s,box-shadow .3s,border-color .3s}
+.ab-card:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(14,27,51,.12);border-color:#d9c9dc}
+.ab-card p{color:var(--muted);font-size:.95rem}
+.ab-ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:#F5EAF4;color:var(--brand);transition:transform .3s}
+.ab-ic svg{width:26px;height:26px}
+.ab-card:hover .ab-ic{transform:rotate(-8deg) scale(1.08)}
+.ab-ic.gold{background:#F7EED8;color:var(--accent)}
+.ab-values{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.ab-values h2{margin:12px 0 14px}
+.ab-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:700;color:var(--brand);text-decoration:none}
+.ab-link svg{width:18px;height:18px;transition:transform .25s}.ab-link:hover svg{transform:translateX(4px)}
+.ab-vlist{display:grid;gap:14px}
+.ab-v{display:flex;gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .3s,box-shadow .3s}
+.ab-v:hover{transform:translateX(6px);box-shadow:0 16px 40px rgba(14,27,51,.08)}
+.ab-v p{color:var(--muted);margin-top:4px}
+.ab-dark{background:linear-gradient(160deg,#0E1B33,#1E3360);color:#fff}
+.ab-dark h2{color:#fff}.ab-dark .eyebrow{color:var(--gold)}
+.ab-tl{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;position:relative;padding:0;margin-top:20px}
+.ab-tl:before{content:"";position:absolute;left:0;right:0;top:15px;height:2px;background:linear-gradient(90deg,var(--gold),var(--brand))}
+.ab-tl li{position:relative;padding-top:44px}
+.ab-tl li:before{content:"";position:absolute;top:6px;left:0;width:20px;height:20px;border-radius:50%;background:var(--navy);border:3px solid var(--gold);box-shadow:0 0 0 6px rgba(233,177,59,.15)}
+.ab-tl b{display:inline-block;font-size:.85rem;font-weight:800;color:var(--navy);background:var(--gold);padding:3px 10px;border-radius:999px}
+.ab-tl h3{color:#fff;margin:12px 0 6px;font-size:1.08rem}
+.ab-tl p{color:#C9D0DE;font-size:.92rem}
+.ab-inds{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.ab-inds a{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border-radius:999px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--fg);font-weight:600;transition:all .25s}
+.ab-inds a i{font-style:normal;color:var(--brand);transition:transform .25s}
+.ab-inds a:hover{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-3px)}
+.ab-inds a:hover i{color:var(--gold);transform:translateX(4px)}
+.ab-founders{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:980px;margin:0 auto}
+.ab-f{display:flex;gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;transition:transform .3s,box-shadow .3s}
+.ab-f:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(14,27,51,.1)}
+.ab-av{flex:none;width:74px;height:74px;border-radius:20px;display:grid;place-items:center;font-weight:900;font-size:1.4rem;color:#fff;background:linear-gradient(135deg,var(--brand),#5b1f68)}
+.ab-f:nth-child(2) .ab-av{background:linear-gradient(135deg,var(--navy),#2c4a86)}
+.ab-role{display:block;font-size:.85rem;font-weight:700;color:var(--accent);margin:2px 0 8px}
+.ab-f p{color:var(--muted);font-size:.95rem}
+.ab-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.ab-tags span{font-size:.78rem;background:var(--bg2);border-radius:999px;padding:4px 10px}
+.ab-tests{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ab-t{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px;position:relative;overflow:hidden}
+.ab-t:before{content:"\201C";position:absolute;right:20px;top:-20px;font-size:9rem;font-weight:900;color:#F5EAF4;line-height:1}
+.ab-t blockquote{margin:12px 0 16px;font-size:1.08rem;line-height:1.65;position:relative}
+.ab-t figcaption{font-weight:800}
+.ab-cta{background:radial-gradient(80% 120% at 100% 0%,rgba(147,48,143,.5),transparent 60%),var(--navy);color:#fff;border-radius:26px;padding:56px;display:grid;grid-template-columns:1.3fr auto;gap:32px;align-items:center}
+.ab-cta h2{color:#fff}.ab-cta p{color:#C9D0DE;margin-top:10px}
+.ab-cta-b{display:grid;gap:12px}
+.ab-gold{background:var(--gold);color:var(--navy)!important;font-weight:700}
+.ab-out{border:1px solid rgba(255,255,255,.4);color:#fff!important}
+.ab .rv{opacity:0;transform:translateY(26px);transition:opacity .75s ease var(--d,0ms),transform .75s cubic-bezier(.2,.8,.2,1) var(--d,0ms)}
+.ab .rv.in{opacity:1;transform:none}
+@media (max-width:1060px){.ab-why{grid-template-columns:1fr 1fr}.ab-tl{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:900px){.ab-hero-grid,.ab-story,.ab-values,.ab-founders,.ab-tests,.ab-cta{grid-template-columns:1fr}.ab-collage{height:420px}.ab-stats-grid{grid-template-columns:1fr 1fr}.ab-stat:nth-child(2){border-right:0}.ab-tl{grid-template-columns:1fr;gap:6px}.ab-tl:before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto}.ab-tl li{padding:4px 0 18px 44px}.ab-tl li:before{top:6px}}
+@media (max-width:560px){.ab-why{grid-template-columns:1fr}.ab-collage{height:340px}.abc-1{height:210px}.abc-2{height:150px}.abc-3{height:160px}.af-2{display:none}.ab-cta{padding:32px 22px}.ab-f{flex-direction:column}.ab-story-img img{height:320px}}
+@media (prefers-reduced-motion:reduce){.abc,.ab-float,.ab-track,.ab-hero-l>*{animation:none!important}.ab .rv{opacity:1;transform:none}}
+.ab-stat b *{font-size:inherit!important;font-weight:inherit!important;color:inherit!important;line-height:inherit}
+.ab-center .eyebrow{justify-self:center}
+.ab .head.ab-center{justify-items:center}
 </style><title>Unlimited Growth Drive | Digital Marketing Agency</title><meta name="description" content="Unlimited Growth Drive is a full-service digital marketing agency for local and high-ticket businesses in the USA and Canada.">
 </head><body>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -929,41 +1035,112 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section class="view" data-view="about" hidden>
-  <div class="phead"><div class="wrap"><p class="crumb">Home / About</p><span class="eyebrow">About us</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">We help business owners grow from the ground up.</h1><p class="lede">Unlimited Growth Drive started in Rajshahi, Bangladesh in 2021 and now runs campaigns for local and high-ticket businesses across the USA and Canada.</p></div></div>
-  <div class="band"><div class="wrap split">
-    <div style="display:grid;gap:18px">
+<section class="view ab" data-view="about" hidden>
+  <!-- HERO -->
+  <div class="ab-hero"><div class="wrap ab-hero-grid">
+    <div class="ab-hero-l">
+      <span class="eyebrow">About Unlimited Growth Drive</span>
+      <h1>A Google Ads agency built for <span class="ab-hl">local businesses</span> that want real leads.</h1>
+      <p class="lede">Since 2021, our team in Rajshahi has planned, built and managed Google Ads, Meta Ads, landing pages and tracking for law firms, clinics, home service and automotive businesses across the USA and Canada &mdash; measured in calls, cases and booked jobs, not impressions.</p>
+      <div class="ab-ctas"><a class="btn btn-primary" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Book a Free Strategy Call &rarr;</a><a class="btn btn-ghost" href="#work" data-go="work">See our work</a></div>
+      <div class="ab-trust"><span><b class="ab-stars">★★★★★</b> 5.0 &middot; 335+ reviews on Fiverr</span><span><b class="ab-stars">★★★★★</b> 5.0 on Google</span></div>
+    </div>
+    <div class="ab-collage" aria-hidden="false">
+      <figure class="abc abc-1"><img src="assets/hero/ugd-team.jpg" alt="The Unlimited Growth Drive team working together" loading="lazy"></figure>
+      <figure class="abc abc-2"><img src="assets/hero/ugd-office-sign.jpg" alt="Unlimited Growth Drive office sign in Rajshahi" loading="lazy"></figure>
+      <figure class="abc abc-3"><img src="assets/hero/ugd-office.jpg" alt="Inside the Unlimited Growth Drive office" loading="lazy"></figure>
+      <div class="ab-float af-1"><b>Since 2021</b><span>Google Ads for local businesses</span></div>
+      <div class="ab-float af-2"><i></i><b>USA &amp; Canada</b><span>Working on your business hours</span></div>
+    </div>
+  </div></div>
+
+  <!-- STATS -->
+  <div class="ab-stats"><div class="wrap ab-stats-grid">
+    <div class="ab-stat"><b data-count="2021">2021</b><span>Founded in Rajshahi</span></div>
+    <div class="ab-stat"><b><span data-count="1000">1,000</span>+</b><span>Clients served</span></div>
+    <div class="ab-stat"><b><span data-count="335">335</span>+</b><span>Five-star reviews on Fiverr</span></div>
+    <div class="ab-stat"><b><span data-count="24">24</span>+</b><span>Law firm websites built</span></div>
+  </div></div>
+
+  <!-- LOGOS -->
+  <div class="ab-marq-wrap"><p class="ab-marq-t">Businesses we&rsquo;ve worked with</p><div class="ab-marq"><div class="ab-track"><span class="ltile ltile-c" style="background:#ffffff"><img src="https://static.wixstatic.com/media/1996ec_b187622d11de4318b25edf7c03b4cacd~mv2.png/v1/fill/w_336,h_180,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/PMPCanada_edited.png" alt="Pavement Marking Pros logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#000000"><img src="https://graymarketdetailing.com/wp-content/uploads/2025/09/453586552_1452145229513729_1712410576871158066_n-1.jpg" alt="Gray Market Detailing logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://bbqrescue.ca/wp-content/uploads/2025/03/logo.png" alt="BBQ Rescue logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://bloorwestdental.ca/wp-content/uploads/2022/08/Group-1.svg" alt="Bloor West Dental logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#111111"><img src="https://vibe.filesafe.space/1776551904473487421/attachments/df931b43-6ed0-451f-86d6-87aefd9f2aa9.png" alt="Asphalt Care Canada logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#003111"><img src="https://www.workinjurylawcenter.com/wp-content/uploads/2022/09/work-injury-law-center-logo.webp" alt="Work Injury Law Center logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://cdn.prod.website-files.com/681a3ace570c29467247180a/681a4102f346d7ba2b737c75_logo_03-1.webp" alt="Smart Insulation Systems logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#000000"><img src="https://premierautolosangeles.com/wp-content/uploads/2018/04/Premier-Auto-Rental-Los-AngelesLogo.webp" alt="Premier Auto Los Angeles logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#2b2b2b"><img src="https://homeoptionsmadeeasy.ca/images/layout/logo-white.png" alt="Home Options Made Easy logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://ivyridge.ca/assets/images/layout/barn.png" alt="Ivy Ridge logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://static.wixstatic.com/media/162145_d478cba8703342769d150e41291a5983~mv2.png" alt="Window Rescue logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://betterwaterco.com/assets/images/layout/logo.png" alt="Better Water Company logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://igodental.com/wp-content/uploads/2025/03/Logo-1055.webp" alt="IGO Dental logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#101d2d"><img src="https://mobiledetailingfrisco.com/images/logo.jpg" alt="Mobile Detailing Frisco logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://www.siargaospa.cz/files/siargaospa-logo.svg" alt="Siargao Spa logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://trusmilenow.com/wp-content/uploads/2025/07/Logo-0719.webp" alt="TruSmile Now logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-1.webp" alt="Lincoln Dental Group logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-2.webp" alt="Clarity Hearing Care logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-3.webp" alt="Same Day Fiberglass logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-4.webp" alt="Same Day Tint logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-5.webp" alt="Same Day Bumper and Auto Body Repairs logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-6.webp" alt="Client logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-7.webp" alt="DFW Mobile Home Buyers logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-8.webp" alt="USA Wrap Co. logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-9.webp" alt="Blupepper logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-10.webp" alt="Yokum Gear logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-11.webp" alt="Henegar Dental &amp; Associates logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-12.webp" alt="SEVA Healthcare logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-13.webp" alt="Best UK Mortgages logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-14.webp" alt="Blackout Auto Tint logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-15.webp" alt="LifeStem Regenerative Medicine logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-16.webp" alt="Thesh Maxicab Transport logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-17.webp" alt="Pathway Recovery Group logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-18.webp" alt="Mountain Roots Holistic Healthcare logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-19.webp" alt="Redguard Fire Safety logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-20.webp" alt="Ascent Consultancy logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-21.webp" alt="AsC Racking logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-22.webp" alt="Client logo" loading="lazy" width="160" height="80"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://static.wixstatic.com/media/1996ec_b187622d11de4318b25edf7c03b4cacd~mv2.png/v1/fill/w_336,h_180,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/PMPCanada_edited.png" alt="Pavement Marking Pros logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#000000"><img src="https://graymarketdetailing.com/wp-content/uploads/2025/09/453586552_1452145229513729_1712410576871158066_n-1.jpg" alt="Gray Market Detailing logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://bbqrescue.ca/wp-content/uploads/2025/03/logo.png" alt="BBQ Rescue logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://bloorwestdental.ca/wp-content/uploads/2022/08/Group-1.svg" alt="Bloor West Dental logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#111111"><img src="https://vibe.filesafe.space/1776551904473487421/attachments/df931b43-6ed0-451f-86d6-87aefd9f2aa9.png" alt="Asphalt Care Canada logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#003111"><img src="https://www.workinjurylawcenter.com/wp-content/uploads/2022/09/work-injury-law-center-logo.webp" alt="Work Injury Law Center logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://cdn.prod.website-files.com/681a3ace570c29467247180a/681a4102f346d7ba2b737c75_logo_03-1.webp" alt="Smart Insulation Systems logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#000000"><img src="https://premierautolosangeles.com/wp-content/uploads/2018/04/Premier-Auto-Rental-Los-AngelesLogo.webp" alt="Premier Auto Los Angeles logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#2b2b2b"><img src="https://homeoptionsmadeeasy.ca/images/layout/logo-white.png" alt="Home Options Made Easy logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://ivyridge.ca/assets/images/layout/barn.png" alt="Ivy Ridge logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://static.wixstatic.com/media/162145_d478cba8703342769d150e41291a5983~mv2.png" alt="Window Rescue logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://betterwaterco.com/assets/images/layout/logo.png" alt="Better Water Company logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://igodental.com/wp-content/uploads/2025/03/Logo-1055.webp" alt="IGO Dental logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#101d2d"><img src="https://mobiledetailingfrisco.com/images/logo.jpg" alt="Mobile Detailing Frisco logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://www.siargaospa.cz/files/siargaospa-logo.svg" alt="Siargao Spa logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile ltile-c" style="background:#ffffff"><img src="https://trusmilenow.com/wp-content/uploads/2025/07/Logo-0719.webp" alt="TruSmile Now logo" loading="lazy" referrerpolicy="no-referrer"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-1.webp" alt="Lincoln Dental Group logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-2.webp" alt="Clarity Hearing Care logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-3.webp" alt="Same Day Fiberglass logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-4.webp" alt="Same Day Tint logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-5.webp" alt="Same Day Bumper and Auto Body Repairs logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-6.webp" alt="Client logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-7.webp" alt="DFW Mobile Home Buyers logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-8.webp" alt="USA Wrap Co. logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-9.webp" alt="Blupepper logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-10.webp" alt="Yokum Gear logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-11.webp" alt="Henegar Dental &amp; Associates logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-12.webp" alt="SEVA Healthcare logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-13.webp" alt="Best UK Mortgages logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-14.webp" alt="Blackout Auto Tint logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-15.webp" alt="LifeStem Regenerative Medicine logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-16.webp" alt="Thesh Maxicab Transport logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-17.webp" alt="Pathway Recovery Group logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-18.webp" alt="Mountain Roots Holistic Healthcare logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-19.webp" alt="Redguard Fire Safety logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-20.webp" alt="Ascent Consultancy logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-21.webp" alt="AsC Racking logo" loading="lazy" width="160" height="80"></span><span class="ltile"><img src="https://dev.nillmostakim.com/assets/logos/logo-22.webp" alt="Client logo" loading="lazy" width="160" height="80"></span></div></div></div>
+
+  <!-- STORY -->
+  <div class="band"><div class="wrap ab-story">
+    <figure class="ab-story-img rv"><img src="assets/hero/ugd-team.jpg" alt="The UGD team planning a client campaign" loading="lazy"><figcaption><b>Rajshahi &rarr; USA &amp; Canada</b><span>A remote team serving clients across time zones since 2021.</span></figcaption></figure>
+    <div class="rv">
       <span class="eyebrow">Our story</span>
-      <h2>Partners in your growth, not just marketers.</h2>
-      <p class="lede">Every business has unique potential. Our approach starts with understanding you, your goals and your challenges. From there we build a tailored plan that produces measurable results, not reports full of impressions.</p>
-      <p class="lede">We began with Google Ads for law firms and local service businesses. Today our team covers paid ads, websites, tracking, SEO, social media and automation, so clients get one team accountable for the whole journey.</p>
+      <h2>Partners in your growth, <span class="ab-hl">not just marketers.</span></h2>
+      <p class="lede">We started in 2021 as a Google Ads service for US local businesses on Fiverr. Business owners kept telling us the same thing: their last agency sent reports full of clicks and impressions, but nobody could say which ad brought in a paying customer.</p>
+      <p class="lede">So we built UGD around one idea &mdash; every dollar should be tied to a real call, form or booking. We added landing pages, server-side tracking, Meta Ads, SEO and automation over the years, so today one accountable team owns your whole lead journey.</p>
+      <blockquote class="ab-quote">&ldquo;We measure success in calls, cases and revenue. If a channel isn&rsquo;t paying off, we say so.&rdquo;</blockquote>
     </div>
-    <div style="display:grid;gap:18px"><div class="about-img" id="aboutImg" role="img" aria-label="Illustration of the UGD team planning a campaign"></div><div class="grid g2">
-      <div class="card"><span class="big" data-count="2021">2021</span><span class="tag">Founded</span></div>
-      <div class="card"><span class="big"><span data-count="1000">1,000</span>+</span><span class="tag">Clients served</span></div>
-      <div class="card"><span class="big"><span data-count="24">24</span>+</span><span class="tag">Law firm websites</span></div>
-      <div class="card"><span class="big">2</span><span class="tag">Countries served</span></div>
-    </div></div>
   </div></div>
+
+  <!-- DIFFERENT -->
   <div class="band alt"><div class="wrap">
-    <div class="head"><span class="eyebrow">Mission & values</span><h2>What we stand for</h2></div>
-    <div class="grid g3">
-      <div class="card"><h3>Transparency</h3><p style="color:var(--muted)">You see what we see. Full account access and honest reporting, including what didn't work.</p></div>
-      <div class="card"><h3>Accountability</h3><p style="color:var(--muted)">We measure success in calls, cases and revenue. If a channel isn't paying off, we say so.</p></div>
-      <div class="card"><h3>Long-term partnership</h3><p style="color:var(--muted)">We grow when you grow. Most of our work comes from clients who stay and refer others.</p></div>
+    <div class="head ab-center rv"><span class="eyebrow">Why business owners choose UGD</span><h2>What makes our <span class="ab-hl">PPC agency</span> different</h2><p class="lede">Most agencies hand you a login and a monthly PDF. Here&rsquo;s how we work instead.</p></div>
+    <div class="ab-why">
+      <article class="ab-card rv" style="--d:0ms"><span class="ab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.2A5 5 0 0 1 21 19"/></svg></span><h3>One team, every channel</h3><p>Google Ads, Meta Ads, landing pages and tracking specialists under one roof &mdash; no finger-pointing between vendors.</p></article>
+      <article class="ab-card rv" style="--d:90ms"><span class="ab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><h3>Tracking you can trust</h3><p>Browser and server-side tracking through GTM and GA4, so every call and form ties back to a campaign and keyword.</p></article>
+      <article class="ab-card rv" style="--d:180ms"><span class="ab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M8 15v2M12 11v6M16 8v9"/></svg></span><h3>Plain-English reporting</h3><p>A short monthly report and a call: leads, cost per lead, what changed and what&rsquo;s next. You own every account.</p></article>
+      <article class="ab-card rv" style="--d:270ms"><span class="ab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><h3>Month-to-month</h3><p>No long contracts after onboarding. We keep clients with results, and most of our work comes from referrals.</p></article>
     </div>
   </div></div>
-  <div class="band"><div class="wrap split">
-    <div><span class="eyebrow">Our journey</span><h2 style="margin-top:14px">How UGD grew</h2></div>
-    <div class="tl">
-      <div><b>2021</b><h3>Founded in Rajshahi</h3><p>Started as a Google Ads service for US local businesses on Fiverr.</p></div>
-      <div><b>2022</b><h3>Law firm specialization</h3><p>Built a dedicated playbook for attorneys: PPC plus conversion-focused websites.</p></div>
-      <div><b>2023</b><h3>Tracking & web team</h3><p>Added server-side tracking and an in-house web design team.</p></div>
-      <div><b>2024</b><h3>200+ clients</h3><p>Expanded into dental, medical, automotive and towing across the USA and Canada.</p></div>
-      <div><b>2026</b><h3>Full-service agency</h3><p>Meta Ads, SEO, social media and CRM automation now under one roof.</p></div>
+
+  <!-- VALUES -->
+  <div class="band"><div class="wrap ab-values">
+    <div class="rv"><span class="eyebrow">Mission &amp; values</span><h2>What we stand for</h2><p class="lede">Our mission is simple: help local business owners grow from the ground up with marketing they can measure.</p>
+      <a class="ab-link" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Talk to our team <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="ab-vlist">
+      <div class="ab-v rv" style="--d:0ms"><span class="ab-ic gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><div><h3>Transparency</h3><p>You see what we see: full account access and honest reporting, including what didn&rsquo;t work.</p></div></div>
+      <div class="ab-v rv" style="--d:90ms"><span class="ab-ic gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="5"/></svg></span><div><h3>Accountability</h3><p>Success is measured in calls, cases and revenue. If a channel isn&rsquo;t paying off, we tell you.</p></div></div>
+      <div class="ab-v rv" style="--d:180ms"><span class="ab-ic gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 12l3 3 7-7"/><circle cx="12" cy="12" r="9"/></svg></span><div><h3>Long-term partnership</h3><p>We grow when you grow. Most of our clients stay and refer other business owners.</p></div></div>
     </div>
   </div></div>
-  <div class="band alt"><div class="wrap" data-cta></div></div>
+
+  <!-- JOURNEY -->
+  <div class="band ab-dark"><div class="wrap">
+    <div class="head ab-center rv"><span class="eyebrow">Our journey</span><h2>How UGD grew</h2></div>
+    <ol class="ab-tl">
+      <li class="rv" style="--d:0ms"><b>2021</b><h3>Founded in Rajshahi</h3><p>Started as a Google Ads service for US local businesses on Fiverr.</p></li>
+      <li class="rv" style="--d:120ms"><b>2022</b><h3>Law firm specialization</h3><p>Built a dedicated playbook for attorneys: PPC plus conversion-focused websites.</p></li>
+      <li class="rv" style="--d:240ms"><b>2023</b><h3>Tracking &amp; web team</h3><p>Added server-side tracking and an in-house web design team.</p></li>
+      <li class="rv" style="--d:360ms"><b>2024</b><h3>200+ clients</h3><p>Expanded into dental, medical, automotive and towing across the USA and Canada.</p></li>
+      <li class="rv" style="--d:480ms"><b>2026</b><h3>Full-service agency</h3><p>Meta Ads, SEO, social media and CRM automation now under one roof.</p></li>
+    </ol>
+  </div></div>
+
+  <!-- INDUSTRIES -->
+  <div class="band"><div class="wrap">
+    <div class="head ab-center rv"><span class="eyebrow">Industries we know</span><h2>Google Ads for the industries <span class="ab-hl">we specialize in</span></h2></div>
+    <div class="ab-inds rv"><a href="/google-ads/law-firms">Google Ads for Law Firms <i>&rarr;</i></a><a href="/google-ads/dentists">Google Ads for Dentists <i>&rarr;</i></a><a href="/google-ads/medical-clinics">Google Ads for Medical Clinics <i>&rarr;</i></a><a href="/google-ads/home-services">Google Ads for Home Services <i>&rarr;</i></a><a href="/google-ads/automotive">Google Ads for Automotive <i>&rarr;</i></a><a href="/google-ads/real-estate">Google Ads for Real Estate <i>&rarr;</i></a><a href="/google-ads/med-spas">Google Ads for Med Spas <i>&rarr;</i></a><a href="/google-ads/veterinarians">Google Ads for Veterinarians <i>&rarr;</i></a></div>
+  </div></div>
+
+  <!-- FOUNDERS -->
+  <div class="band alt"><div class="wrap">
+    <div class="head ab-center rv"><span class="eyebrow">Leadership</span><h2>The people behind your campaigns</h2><p class="lede">Every client works directly with specialists &mdash; never a middle layer.</p></div>
+    <div class="ab-founders">
+      <article class="ab-f rv"><span class="ab-av">S</span><div><h3>Samad</h3><span class="ab-role">Founder &amp; CEO</span><p>Founded Unlimited Growth Drive in 2021. Leads strategy and Google Ads for our clients.</p><div class="ab-tags"><span>Strategy</span><span>Google Ads</span></div></div></article>
+      <article class="ab-f rv" style="--d:120ms"><span class="ab-av">NM</span><div><h3>Nill Mostakim</h3><span class="ab-role">Co-owner &middot; Google Ads &amp; Tracking</span><p>Runs Google Ads for law firms, dental and medical practices and auto body shops in the US and Canada, with browser- and server-side tracking.</p><div class="ab-tags"><span>PPC</span><span>GTM</span><span>GA4</span></div></div></article>
+    </div>
+    <p class="ab-center" style="margin-top:26px"><a class="btn btn-ghost" href="#team" data-go="team">Meet the full team</a></p>
+  </div></div>
+
+  <!-- TESTIMONIALS -->
+  <div class="band"><div class="wrap">
+    <div class="head ab-center rv"><span class="eyebrow">In our clients&rsquo; words</span><h2>Real results from real business owners</h2></div>
+    <div class="ab-tests">
+      <figure class="ab-t rv"><div class="ab-stars">★★★★★</div><blockquote>&ldquo;When I started my campaigns with Nill (October-ish), I was a one man show with my tools and a van doing mobile autobody work. NOW, after 3 months I&rsquo;ve hired 2 helpers and signed a lease to open a brick and mortar shop!&rdquo;</blockquote><figcaption>Same Day Bumper</figcaption></figure>
+      <figure class="ab-t rv" style="--d:120ms"><div class="ab-stars">★★★★★</div><blockquote>&ldquo;He helped us reduce our Google Ads budget by approximately 30% while making every remaining advertising dollar about 40% more productive.&rdquo;</blockquote><figcaption>Clarity Hearing Care</figcaption></figure>
+    </div>
+  </div></div>
+
+  <!-- CTA -->
+  <div class="band" style="padding-top:0"><div class="wrap"><div class="ab-cta rv">
+    <div><h2>Let&rsquo;s grow your business together.</h2><p>Book a free 30-minute strategy call. We&rsquo;ll look at your ads, website and tracking, and tell you honestly what we&rsquo;d do first.</p></div>
+    <div class="ab-cta-b"><a class="btn ab-gold" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Book a Free Strategy Call &rarr;</a><a class="btn ab-out" href="#contact" data-go="contact">Get a Free Audit</a></div>
+  </div></div></div>
 </section>
 
 <!-- ============ TEAM ============ -->
@@ -1228,7 +1405,7 @@ const svcCard=s=>`<a class="card svc" href="#services" data-go="service" data-to
 const FAM=[["google","Paid Search","Google Ads that show up the moment buyers search for you.","s-google"],["meta","Paid Social","Facebook & Instagram ads that create demand and retarget.","s-meta"],["web","Websites","Fast, trust-building sites built to get the call.","s-web"],["track","Tracking","Every call, form and booking tied to its campaign.","s-track"]];
 
 if(0)$("#founderPh").innerHTML=AVATARS[0].replace('viewBox="0 0 200 200"','viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block"');
-$("#aboutImg").innerHTML=`<div class="mono" style="aspect-ratio:16/9;border-radius:14px;font-size:1.1rem;color:#C5CCDA;padding:28px;text-align:center;line-height:1.6"><div><b style="display:block;color:#fff;font-size:1.6rem;margin-bottom:6px">Rajshahi → USA &amp; Canada</b>A remote team serving clients across time zones since 2021.</div></div>`;
+if($("#aboutImg"))$("#aboutImg").innerHTML=`<div class="mono" style="aspect-ratio:16/9;border-radius:14px;font-size:1.1rem;color:#C5CCDA;padding:28px;text-align:center;line-height:1.6"><div><b style="display:block;color:#fff;font-size:1.6rem;margin-bottom:6px">Rajshahi → USA &amp; Canada</b>A remote team serving clients across time zones since 2021.</div></div>`;
 
 $("#footSvcs").innerHTML=SERVICES.slice(0,6).map(s=>`<li><a href="#services" data-go="service" data-to="${s.id}">${s.name.replace(" Management","").replace(" (Facebook & Instagram)","")}</a></li>`).join("");
 $("#svcDetail").innerHTML=SERVICES.map((s,i)=>`<div class="sd" id="${s.id}"><div><span class="num">${String(i+1).padStart(2,"0")} / ${String(SERVICES.length).padStart(2,"0")}</span><h2 style="font-size:1.5rem;margin-top:8px">${s.name}</h2><div class="chips" style="margin-top:12px">${s.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div>${IMG[s.ico]?`<div class="shot" style="margin-top:18px">${IMG[s.ico]}</div>`:""}</div><div><p class="lede">${s.short}</p><ul>${s.points.map(p=>`<li>${p}</li>`).join("")}</ul><a class="btn btn-primary btn-sm" style="margin-top:16px;margin-right:8px" href="#service" data-go="service" data-to="${s.id}">See full service →</a><a class="btn btn-ghost btn-sm" style="margin-top:16px" href="#contact" data-go="contact">Get a quote for ${s.name.split(" ")[0]==="Google"||s.name.split(" ")[0]==="Meta"?s.name.split(" (")[0]:"this service"}</a></div></div>`).join("");
@@ -1446,6 +1623,9 @@ const vc=document.getElementById("vc");["mouseenter","touchstart","focusin"].for
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 if(!reduce)setInterval(()=>{if(!playing&&!hover&&!document.hidden)next()},3200);
 tr.querySelectorAll(".vframe[data-yt]").forEach(b=>b.addEventListener("click",()=>{playing=true;const id=b.dataset.yt;b.insertAdjacentHTML("beforeend",`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="Client video review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);b.style.cursor="default"},{once:true}));})();
+
+(function(){var els=document.querySelectorAll(".ab .rv");if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});})();
 </script>
 
 </body></html>
