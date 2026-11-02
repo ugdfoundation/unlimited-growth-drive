@@ -316,6 +316,85 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 .feat{display:flex;flex-wrap:wrap;gap:6px;padding-top:18px;border-top:1px solid var(--dline)}
 .feat span{font-size:12px;color:#d8d5cd;border:1px solid var(--dline);background:rgba(255,255,255,.03);border-radius:999px;padding:5px 10px}
 
+
+/* ===== live journey ===== */
+.scr.live{height:196px;padding:12px;isolation:isolate}
+.url{font-style:normal;font-size:9px;color:#6d6a62;margin-left:6px;background:#1c1c20;border-radius:999px;padding:1px 8px}
+.scr .bar{align-items:center}
+.livetag{display:inline-flex;align-items:center;gap:6px;margin-left:8px;color:#f08c78;letter-spacing:.1em}
+.livetag i{width:7px;height:7px;border-radius:50%;background:#f0604a;animation:lv 1.4s ease-in-out infinite}
+@keyframes lv{0%,100%{box-shadow:0 0 0 0 rgba(240,96,74,.6)}50%{box-shadow:0 0 0 5px rgba(240,96,74,0)}}
+.tap{position:absolute;right:14%;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:rgba(255,255,255,.85);opacity:0;pointer-events:none;box-shadow:0 0 0 0 rgba(255,255,255,.5)}
+.call,.mini-btn{position:relative}
+.toast{position:absolute;left:10px;right:10px;bottom:10px;z-index:3;display:flex;gap:9px;align-items:center;background:#f7f5f0;color:#16161a;border-radius:12px;padding:9px 10px;box-shadow:0 12px 30px rgba(0,0,0,.55);opacity:0;transform:translateY(120%)}
+.toast .ti{width:26px;height:26px;border-radius:8px;background:var(--grad);display:grid;place-items:center;flex:none}
+.toast .ti svg{width:13px;height:13px}
+.toast b{display:block;font-size:11px;font-weight:700;line-height:1.2}
+.toast small{font-size:9.5px;color:#61615c}
+@keyframes tapIt{0%{opacity:0;transform:scale(1.6)}35%{opacity:.95;transform:scale(1)}55%{box-shadow:0 0 0 10px rgba(255,255,255,0);transform:scale(.85)}100%{opacity:0;transform:scale(.85)}}
+@keyframes toastIn{0%{opacity:0;transform:translateY(120%)}18%,100%{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes thumbIn{0%{opacity:0;transform:scale(.3)}70%{transform:scale(1.15)}100%{opacity:1;transform:scale(1)}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(143,224,176,0)}50%{box-shadow:0 0 0 4px rgba(143,224,176,.18)}}
+@keyframes feedUp{from{transform:translateY(46px)}to{transform:translateY(-28px)}}
+@keyframes heart{0%{transform:scale(0);opacity:0}50%{transform:scale(1.35);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes rtIn{0%{opacity:0;transform:translateY(-8px)}15%,100%{opacity:1;transform:none}}
+
+/* website flow */
+[data-flow=web][data-s="1"] .ld>*{animation:fadeUp .5s both}
+[data-flow=web][data-s="1"] .ld>*:nth-child(2){animation-delay:.15s}
+[data-flow=web][data-s="1"] .ld>*:nth-child(3){animation-delay:.3s}
+[data-flow=web][data-s="1"] .ld>*:nth-child(4){animation-delay:.45s}
+[data-flow=web] .thumbs i{opacity:0}
+[data-flow=web][data-s="2"] .thumbs i{animation:thumbIn .45s both}
+[data-flow=web][data-s="2"] .thumbs i:nth-child(1){animation-delay:.3s}
+[data-flow=web][data-s="2"] .thumbs i:nth-child(2){animation-delay:.7s}
+[data-flow=web][data-s="2"] .thumbs i:nth-child(3){animation-delay:1.1s}
+[data-flow=web][data-s="3"] .thumbs i{opacity:1}
+[data-flow=web][data-s="2"] .call .tap{animation:tapIt .9s 1.7s both}
+[data-flow=web][data-s="3"] .toast{animation:toastIn 2.8s both}
+
+/* google flow */
+.results{transition:opacity .4s,transform .4s}
+[data-flow=google][data-s="1"] .results{opacity:0;transform:translateY(8px)}
+[data-flow=google][data-s="2"] .res.ad,[data-flow=google][data-s="3"] .res.ad{animation:glow 1.6s ease-in-out infinite}
+[data-flow=google][data-s="2"] .call .tap{animation:tapIt .9s 1.7s both}
+[data-flow=google][data-s="3"] .toast{animation:toastIn 2.8s both}
+.typed{white-space:nowrap;overflow:hidden}
+
+/* meta flow */
+.feed{height:100%;overflow:hidden;position:relative}
+.feed .ghost{background:#16161a;border-radius:9px;padding:9px;margin-bottom:8px}
+.feed .ghost .ln{height:5px;border-radius:3px;background:#2c2c30;margin-bottom:5px}.feed .ghost .ln.s{width:55%}
+.feed>*{transform:translateY(-28px)}
+[data-flow=meta][data-s="1"] .feed>*{animation:feedUp 1.2s cubic-bezier(.3,.7,.2,1) both}
+.post-h{position:relative}
+.heart{position:absolute;right:2px;top:2px;color:#f0604a;font-size:14px;opacity:0}
+[data-flow=meta][data-s="1"] .heart{animation:heart .5s 1.4s both}
+[data-flow=meta][data-s="2"] .heart,[data-flow=meta][data-s="3"] .heart{opacity:1}
+.rt{position:absolute;left:10px;right:10px;top:10px;z-index:2;display:flex;align-items:center;gap:8px;background:rgba(20,22,35,.92);border:1px solid rgba(159,180,255,.4);color:#cdd7ff;font-size:10px;border-radius:10px;padding:7px 9px;opacity:0;backdrop-filter:blur(4px)}
+.rt span{width:20px;height:20px;border-radius:6px;background:rgba(159,180,255,.15);display:grid;place-items:center;flex:none}
+.rt svg{width:12px;height:12px}.rt b{color:#fff}
+[data-flow=meta][data-s="2"] .rt{animation:rtIn 2.8s both}
+[data-flow=meta][data-s="2"] .mini-btn .tap{animation:tapIt .9s 1.8s both}
+[data-flow=meta][data-s="3"] .toast{animation:toastIn 2.8s both}
+
+/* steps sync */
+.sj li{transition:opacity .35s}
+.sj::after{content:"";position:absolute;left:13px;top:14px;width:2px;height:0;background:var(--gold);box-shadow:0 0 8px rgba(233,177,59,.6);transition:height .6s ease}
+[data-s="1"] .sj::after{height:0}
+[data-s="2"] .sj::after{height:calc(50% - 14px)}
+[data-s="3"] .sj::after{height:calc(100% - 28px)}
+.svc[data-s] .sj li{opacity:.4}
+.svc[data-s="1"] .sj li:nth-child(1),.svc[data-s="2"] .sj li:nth-child(-n+2),.svc[data-s="3"] .sj li{opacity:1}
+[data-s="1"] .sj li:nth-child(1)::before,[data-s="2"] .sj li:nth-child(2)::before,[data-s="3"] .sj li:nth-child(3)::before{box-shadow:0 0 0 5px rgba(233,177,59,.18);border-color:var(--gold)}
+.sj li{z-index:1}
+
+@media (prefers-reduced-motion:reduce){
+  .scr.live *{animation:none!important}
+  .svc[data-s] .sj li{opacity:1}
+}
+
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -455,18 +534,21 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
       <p class="lead">Ads only work if the page they land on turns visitors into calls. That's why we start with your website.</p>
     </div>
     <div class="svcs">
-      <div class="svc featured rv">
+      <div class="svc featured rv" data-flow="web" data-s="1">
         <div class="num"><span>01</span><span class="badge">Start here</span></div>
         <div class="svc-top"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></div>
         <div><h3>Website &amp; Landing Pages</h3><div class="tagline">Turn clicks into estimate requests</div></div></div>
-        <div class="scr" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i></div>
-          <div class="lp-h">Get your free photo estimate</div>
-          <div class="lp-s">Your Body Shop · Same-day quotes</div>
-          <div class="drop"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Upload damage photos<div class="thumbs"><i></i><i></i><i></i></div></div>
-          <div class="call"><svg viewBox="0 0 24 24" fill="#111"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Tap to call</div>
+        <div class="scr live" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i><em class="url">yourbodyshop.com</em></div>
+          <div class="ld">
+            <div class="lp-h">Get your free photo estimate</div>
+            <div class="lp-s">Your Body Shop · Same-day quotes</div>
+            <div class="drop"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span class="dl">Upload damage photos</span><div class="thumbs"><i></i><i></i><i></i></div></div>
+            <div class="call"><svg viewBox="0 0 24 24" fill="#111"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Tap to call<span class="tap"></span></div>
+          </div>
+          <div class="toast"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><div><b>New estimate request</b><small>Rear bumper · 3 photos · via Google Ads</small></div></div>
         </div>
-        <div class="jt">The customer's journey</div>
+        <div class="jt">The customer's journey <span class="livetag"><i></i>Live</span></div>
         <ol class="sj">
           <li><b>Lands on your page</b><span>From a Google search or a Facebook ad.</span></li>
           <li><b>Calls or sends photos</b><span>One tap to call, or upload the damage in seconds.</span></li>
@@ -475,16 +557,19 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
         <div class="feat"><span>Photo-estimate form</span><span>Click-to-call</span><span>Mobile-first</span><span>Lead tracking</span></div>
       </div>
 
-      <div class="svc rv">
+      <div class="svc rv" data-flow="google" data-s="1">
         <div class="num"><span>02</span></div>
         <div class="svc-top"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div>
         <div><h3>Google Ads</h3><div class="tagline">Catch drivers searching right now</div></div></div>
-        <div class="scr" aria-hidden="true">
-          <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>collision repair near me<span class="caret"></span></div>
-          <div class="res ad"><small>Sponsored</small><b>Your Body Shop — Free Photo Estimates</b><span>Open now · 2.1 mi away</span><div class="call sm"><svg viewBox="0 0 24 24" fill="#111"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call</div></div>
-          <div class="res org"><div class="ln"></div><div class="ln s"></div></div>
+        <div class="scr live" aria-hidden="true">
+          <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span class="typed"></span><span class="caret"></span></div>
+          <div class="results">
+            <div class="res ad"><small>Sponsored</small><b>Your Body Shop — Free Photo Estimates</b><span>Open now · 2.1 mi away</span><div class="call sm"><svg viewBox="0 0 24 24" fill="#111"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call<span class="tap"></span></div></div>
+            <div class="res org"><div class="ln"></div><div class="ln s"></div></div>
+          </div>
+          <div class="toast"><span class="ti"><svg viewBox="0 0 24 24" fill="#111"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></span><div><b>Calling Your Body Shop…</b><small>From "collision repair near me"</small></div></div>
         </div>
-        <div class="jt">The customer's journey</div>
+        <div class="jt">The customer's journey <span class="livetag"><i></i>Live</span></div>
         <ol class="sj">
           <li><b>Gets in a wreck &amp; searches</b><span>"Collision repair near me", "same day bumper".</span></li>
           <li><b>Sees your shop at the top</b><span>Only in the ZIP codes you actually serve.</span></li>
@@ -493,16 +578,23 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
         <div class="feat"><span>Your ZIP codes only</span><span>Weekly optimization</span><span>200+ leads guarantee</span></div>
       </div>
 
-      <div class="svc rv">
+      <div class="svc rv" data-flow="meta" data-s="1">
         <div class="num"><span>03</span></div>
         <div class="svc-top"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11v2a1 1 0 0 0 1 1h2l5 4V6L7 10H5a1 1 0 0 0-1 1z"/><path d="M16 9a3 3 0 0 1 0 6M18.5 6.5a7 7 0 0 1 0 11"/></svg></div>
         <div><h3>Meta Ads</h3><div class="tagline">Stay top of mind with local drivers</div></div></div>
-        <div class="scr" aria-hidden="true">
-          <div class="post-h"><span class="av"></span><div><b>Your Body Shop</b><small>Sponsored · 3 mi away</small></div></div>
-          <div class="ba"><div class="b">BEFORE</div><div class="a">AFTER</div></div>
-          <span class="mini-btn">Get a photo estimate</span>
+        <div class="scr live" aria-hidden="true">
+          <div class="feed">
+            <div class="ghost"><div class="ln"></div><div class="ln s"></div></div>
+            <div class="post">
+              <div class="post-h"><span class="av"></span><div><b>Your Body Shop</b><small>Sponsored · 3 mi away</small></div><span class="heart">♥</span></div>
+              <div class="ba"><div class="b">BEFORE</div><div class="a">AFTER</div></div>
+              <span class="mini-btn">Get a photo estimate<span class="tap"></span></span>
+            </div>
+          </div>
+          <div class="rt"><span><svg viewBox="0 0 24 24" fill="none" stroke="#9fb4ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg></span>Visited your site, didn't call — <b>shown again</b></div>
+          <div class="toast"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><div><b>New quote request</b><small>Came back via Instagram</small></div></div>
         </div>
-        <div class="jt">The customer's journey</div>
+        <div class="jt">The customer's journey <span class="livetag"><i></i>Live</span></div>
         <ol class="sj">
           <li><b>Sees your repairs on Facebook</b><span>Before/after posts to drivers near your shop.</span></li>
           <li><b>Visited, didn't call? Sees you again</b><span>Retargeting on Facebook &amp; Instagram.</span></li>
@@ -731,6 +823,26 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
     var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{rootMargin:'0px 0px -8% 0px'});
     rv.forEach(function(el){ io.observe(el); });
   } else rv.forEach(function(el){ el.classList.add('in'); });
+
+  // ===== live customer journeys in service cards =====
+  (function(){
+    var cards=[].slice.call(document.querySelectorAll('.svc[data-flow]'));
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var Q='collision repair near me', DUR=2800;
+    function typeIt(el){ el.textContent=''; var i=0; clearInterval(el._t); el._t=setInterval(function(){ el.textContent=Q.slice(0,++i); if(i>=Q.length) clearInterval(el._t); },55); }
+    function set(card,st){ card.setAttribute('data-s',st); if(card.dataset.flow==='google'){ var t=card.querySelector('.typed'); if(st===1) typeIt(t); else { clearInterval(t._t); t.textContent=Q; } } }
+    if(reduce){ cards.forEach(function(c){ set(c,3); }); return; }
+    var stage=1, timer=null, visible=false;
+    function tick(){ stage=stage%3+1; cards.forEach(function(c){ set(c,stage); }); }
+    function start(){ if(timer) return; stage=1; cards.forEach(function(c){ set(c,1); }); timer=setInterval(tick,DUR); }
+    function stop(){ clearInterval(timer); timer=null; }
+    var sec=cards[0]&&cards[0].closest('section');
+    if(!sec) return;
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ es[0].isIntersecting?start():stop(); },{threshold:.2}).observe(sec);
+    } else start();
+    document.addEventListener('visibilitychange',function(){ if(document.hidden) stop(); else { var r=sec.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) start(); } });
+  })();
 
   document.querySelectorAll('.cta').forEach(function(a){ a.addEventListener('click',function(){ track('trackCustom','CTAClick'); }); });
 
