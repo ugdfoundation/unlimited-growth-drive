@@ -43,7 +43,7 @@ header b{font-size:14px}
 
 /* HERO = form above the fold */
 .hero{background:#000;color:#f3f1ec;padding:22px 0 40px}
-.hero-grid{display:grid;grid-template-columns:1fr 420px;grid-template-areas:"txt form" "img form";column-gap:40px;row-gap:0;align-items:start}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;grid-template-areas:"txt form";column-gap:40px;row-gap:0;align-items:start}
 .hero-txt{grid-area:txt}.formcard{grid-area:form}.hero-proof{grid-area:img}
 .hero-grid>*{min-width:0}
 .eyebrow{font:700 12px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
@@ -118,7 +118,7 @@ footer{background:#000;color:#8b887f;font-size:12px;text-align:center;padding:24
 
 .mcta{display:none}
 @media (max-width:860px){
-  .hero-grid{grid-template-columns:1fr;grid-template-areas:"txt" "form" "img";row-gap:20px}
+  .hero-grid{grid-template-columns:1fr;grid-template-areas:"txt" "form";row-gap:20px}
   .three{grid-template-columns:1fr}
   .mcta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(0,0,0,.92);transform:translateY(110%);transition:transform .25s}
   .mcta.show{transform:none}
@@ -187,10 +187,6 @@ footer{background:#000;color:#8b887f;font-size:12px;text-align:center;padding:24
         </div>
       </form>
     </div>
-      <figure class="hero-proof">
-        <img src="https://www.unlimitedgrowthdrive.com/auto-body/results-90-days.jpg" width="1600" height="798" alt="Google Ads overview, Jul 1 – Sep 30, 2026: 203 lead forms, 68 phone calls, $21.30 cost per conversion">
-        <figcaption>Live collision shop account · Jul 1 – Sep 30, 2026</figcaption>
-      </figure>
   </div>
 </section>
 
