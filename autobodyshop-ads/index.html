@@ -358,8 +358,6 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 .results{transition:opacity .4s,transform .4s}
 [data-flow=google][data-s="1"] .results{opacity:0;transform:translateY(8px)}
 [data-flow=google][data-s="2"] .res.ad,[data-flow=google][data-s="3"] .res.ad{animation:glow 1.6s ease-in-out infinite}
-[data-flow=google][data-s="2"] .call .tap{animation:tapIt .9s 1.7s both}
-[data-flow=google][data-s="3"] .toast{animation:toastIn 2.8s both}
 .typed{white-space:nowrap;overflow:hidden}
 
 /* meta flow */
@@ -381,13 +379,7 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 
 /* steps sync */
 .sj li{transition:opacity .35s}
-.sj::after{content:"";position:absolute;left:13px;top:14px;width:2px;height:0;background:var(--gold);box-shadow:0 0 8px rgba(233,177,59,.6);transition:height .6s ease}
-[data-s="1"] .sj::after{height:0}
-[data-s="2"] .sj::after{height:calc(50% - 14px)}
-[data-s="3"] .sj::after{height:calc(100% - 28px)}
-.svc[data-s] .sj li{opacity:.4}
-.svc[data-s="1"] .sj li:nth-child(1),.svc[data-s="2"] .sj li:nth-child(-n+2),.svc[data-s="3"] .sj li{opacity:1}
-[data-s="1"] .sj li:nth-child(1)::before,[data-s="2"] .sj li:nth-child(2)::before,[data-s="3"] .sj li:nth-child(3)::before{box-shadow:0 0 0 5px rgba(233,177,59,.18);border-color:var(--gold)}
+
 .sj li{z-index:1}
 
 @media (prefers-reduced-motion:reduce){
@@ -472,8 +464,6 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 .hang svg{width:18px;height:18px;transform:rotate(135deg)}
 [data-flow=google][data-s="1"] .results{opacity:0;transform:translateY(8px)}
 [data-flow=google][data-s="2"] .g-ad{animation:fadeUp .5s both}
-[data-flow=google][data-s="2"] .g-callx .tap{right:auto;left:40%;animation:tapIt .8s 1.9s both}
-[data-flow=google][data-s="3"] .callscr{animation:fadeUp .35s both;opacity:1}
 /* meta */
 .fb{background:#f0f2f5!important}
 .fb-top{height:30px;background:#fff;border-bottom:1px solid #e4e6eb;display:flex;align-items:center;padding:0 10px;font-size:12px}
@@ -509,6 +499,28 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 @keyframes btnBlue{to{background:#1877f2;color:#fff}}
 [data-flow=meta][data-s="3"] .fb-form{transform:none;transition:transform .5s cubic-bezier(.3,.7,.2,1)}
 [data-flow=meta][data-s="3"] .toast{animation:toastIn 2.8s .9s both}
+
+
+.sj::after{content:"";position:absolute;left:13px;top:14px;width:2px;height:var(--fill,0px);background:var(--gold);box-shadow:0 0 8px rgba(233,177,59,.6);transition:height .6s ease}
+.svc[data-s] .sj li{opacity:.4}
+.svc[data-s] .sj li.on{opacity:1}
+.sj li.cur::before{box-shadow:0 0 0 5px rgba(233,177,59,.18);border-color:var(--gold)}
+/* google -> website */
+.g-title{position:relative}
+.g-land{position:absolute;inset:0;background:#fff;z-index:3;transform:translateX(100%);font-family:Poppins,sans-serif}
+.g-land .chrome{height:28px;background:#f1f3f4;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;justify-content:center;gap:5px;font-size:10px;color:#3c4043;font-family:Arial,sans-serif}
+.w-hero.sm{height:118px}
+.g-cta{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px}
+.gc{position:relative;display:flex;align-items:center;justify-content:center;gap:5px;font-weight:600;font-size:10px;padding:9px 4px;border-radius:8px;white-space:nowrap}
+.gc svg{width:11px;height:11px}
+.gc.call-now{background:var(--grad);color:#111}
+.gc.req{background:#0b0b0c;color:#f6cf72}
+[data-flow=google][data-s="2"] .g-title .tap{right:auto;left:45%;animation:tapIt .8s 1.8s both}
+[data-flow=google][data-s="3"] .g-land,[data-flow=google][data-s="4"] .g-land{transform:none;transition:transform .55s cubic-bezier(.3,.7,.2,1)}
+[data-flow=google][data-s="3"] .gc{animation:glowG 1.4s .6s ease-in-out 2}
+@keyframes glowG{50%{box-shadow:0 0 0 4px rgba(233,177,59,.3)}}
+[data-flow=google][data-s="4"] .call-now .tap{animation:tapIt .8s .2s both}
+[data-flow=google][data-s="4"] .toast{animation:toastIn 2.8s .9s both}
 
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
@@ -683,7 +695,7 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
         <div class="feat"><span>Photo-estimate form</span><span>Click-to-call</span><span>Mobile-first</span><span>Lead tracking</span></div>
       </div>
 
-      <div class="svc rv" data-flow="google" data-s="1">
+      <div class="svc rv" data-flow="google" data-steps="4" data-s="1">
         <div class="num"><span>02</span></div>
         <div class="svc-top"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div>
         <div><h3>Google Ads</h3><div class="tagline">Catch drivers searching right now</div></div></div>
@@ -694,20 +706,31 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
             <div class="g-ad">
               <div class="g-sp">Sponsored</div>
               <div class="g-site"><span class="fav">Y</span><div><b>Your Body Shop</b><small>https://www.yourbodyshop.com</small></div></div>
-              <a class="g-title">Collision Repair Near You | Free Photo Estimates</a>
+              <a class="g-title">Collision Repair Near You | Free Photo Estimates<span class="tap"></span></a>
               <p class="g-desc">Same-day bumper &amp; dent repair. Insurance claims welcome. Lifetime warranty on repairs.</p>
               <div class="g-links"><span>Get a Quote</span><span>Same-Day Bumper</span><span>Directions</span></div>
               <div class="g-callx"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg><span>Call (555) 014-2290</span><span class="tap"></span></div>
             </div>
             <div class="g-org"><div class="ln w40"></div><div class="ln b w80"></div><div class="ln"></div><div class="ln w60"></div></div>
           </div>
-          <div class="callscr"><div class="ava">Y</div><b>Your Body Shop</b><small>Calling…</small><span class="hang"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></span></div>
+          <div class="g-land">
+            <div class="chrome"><span class="lock">🔒</span>yourbodyshop.com</div>
+            <div class="w-nav"><b>YOUR BODY SHOP</b><span class="w-call"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call</span></div>
+            <div class="w-hero sm" style="background-image:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.75)),url('https://images.unsplash.com/photo-1786489785858-b64715400a37?w=640&q=70&auto=format&fit=crop')"><small>Collision · Bumper · Paint</small><h5>Collision repair done right.</h5></div>
+            <div class="g-cta">
+              <span class="gc call-now"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call now<span class="tap"></span></span>
+              <span class="gc req"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Request estimate</span>
+            </div>
+            <div class="w-trust"><span>Insurance claims welcome</span><span>Same-day quotes</span></div>
+          </div>
+          <div class="toast"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><div><b>New call from Google Ads</b><small>Search → ad → your website → call</small></div></div>
         </div>
         <div class="jt">The customer's journey <span class="livetag"><i></i>Live</span></div>
         <ol class="sj">
           <li><b>Searches after a wreck</b><span>"Collision repair near me" — on their phone, right then.</span></li>
-          <li><b>Your ad is on top</b><span>Only in the ZIP codes you actually serve.</span></li>
-          <li class="end"><b>Taps to call your shop</b><span>Straight from the ad — ready to book.</span></li>
+          <li><b>Clicks your ad</b><span>Top of Google, only in the ZIP codes you serve.</span></li>
+          <li><b>Lands on your website</b><span>A page built to turn the click into a customer.</span></li>
+          <li class="end"><b>Calls or requests an estimate</b><span>One tap to call — or send photos for a quote.</span></li>
         </ol>
         <div class="feat"><span>Your ZIP codes only</span><span>Weekly optimization</span><span>200+ leads guarantee</span></div>
       </div>
@@ -975,11 +998,15 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
     function typeIt(el){ el.textContent=''; var i=0; clearInterval(el._t); el._t=setInterval(function(){ el.textContent=Q.slice(0,++i); if(i>=Q.length) clearInterval(el._t); },55); }
     function typeField(card,st){ [].forEach.call(card.querySelectorAll('.tw'),function(el,i){ clearTimeout(el._t1); clearInterval(el._t); if(st===1){ el.textContent=''; return; } if(st===3){ el.textContent=el.dataset.text; return; } el.textContent=''; el._t1=setTimeout(function(){ var k=0, txt=el.dataset.text; el._t=setInterval(function(){ el.textContent=txt.slice(0,++k); if(k>=txt.length) clearInterval(el._t); },45); },300+i*600); }); }
     function set(card,st){ card.setAttribute('data-s',st); if(card.dataset.flow==='web') typeField(card,st); if(card.dataset.flow==='google'){ var t=card.querySelector('.typed'); if(st===1) typeIt(t); else { clearInterval(t._t); t.textContent=Q; } } }
-    if(reduce){ cards.forEach(function(c){ set(c,3); }); return; }
-    var stage=1, timer=null, visible=false;
-    function tick(){ stage=stage%3+1; cards.forEach(function(c){ set(c,stage); }); }
-    function start(){ if(timer) return; stage=1; cards.forEach(function(c){ set(c,1); }); timer=setInterval(tick,DUR); }
+    function steps(c){ return +(c.dataset.steps||3); }
+    function sync(c,st){ var lis=[].slice.call(c.querySelectorAll('.sj li')); lis.forEach(function(li,i){ li.classList.toggle('on',i<st); li.classList.toggle('cur',i===st-1); }); var cur=lis[st-1]; c.querySelector('.sj').style.setProperty('--fill',(cur?cur.offsetTop:0)+'px'); }
+    var _set=set; set=function(c,st){ _set(c,st); sync(c,st); };
+    if(reduce){ cards.forEach(function(c){ set(c,steps(c)); }); return; }
+    var timer=null;
+    function tick(){ cards.forEach(function(c){ var st=+c.getAttribute('data-s'); set(c, st%steps(c)+1); }); }
+    function start(){ if(timer) return; cards.forEach(function(c){ set(c,1); }); timer=setInterval(tick,DUR); }
     function stop(){ clearInterval(timer); timer=null; }
+    window.addEventListener('resize',function(){ cards.forEach(function(c){ sync(c,+c.getAttribute('data-s')); }); });
     var sec=cards[0]&&cards[0].closest('section');
     if(!sec) return;
     if('IntersectionObserver' in window){
