@@ -552,6 +552,52 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 .final-btns{display:flex;flex-direction:column;align-items:center;gap:14px}
 .ghost-link{color:#a8a59c;font-size:14px}
 .ghost-link:hover{color:#fff}
+
+/* ===== tabbed case studies ===== */
+.pills{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:-14px 0 14px}
+.pill{display:inline-flex;align-items:center;gap:9px;font:600 15px Poppins,sans-serif;color:var(--text);background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:12px 22px;cursor:pointer;transition:.18s}
+.pill:hover{border-color:#cfc9bb;transform:translateY(-1px)}
+.pill .pd{width:8px;height:8px;border-radius:50%;background:#d6d1c5;transition:.18s}
+.pill[aria-selected=true]{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.pill[aria-selected=true] .pd{background:var(--gold);box-shadow:0 0 0 4px rgba(233,177,59,.25)}
+.showall{text-align:center;height:28px;margin-bottom:24px}
+.showall button{background:none;border:0;font:500 14px Poppins,sans-serif;color:var(--muted);cursor:pointer;opacity:0;pointer-events:none;transition:.2s}
+.showall.on button{opacity:1;pointer-events:auto}
+.showall button:hover{color:var(--text)}
+.cs-panel{display:none}
+.cs-panel.on{display:block;animation:csIn .45s ease both}
+@keyframes csIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.cs-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cs-card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:24px;transition:transform .2s,box-shadow .2s,border-color .2s;font-family:Poppins,sans-serif}
+.cs-card:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(0,0,0,.08);border-color:#d9d3c6}
+.cs-card:focus-visible{outline:3px solid rgba(233,177,59,.5);outline-offset:2px}
+.cs-tag{align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:var(--ink);padding:5px 11px;border-radius:999px;margin-bottom:18px}
+.cs-thumb{height:132px;border-radius:14px;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:12px;margin-bottom:18px}
+.cs-thumb span{color:#fff;font-size:13px;font-weight:600}
+.cs-big{display:flex;align-items:baseline;gap:10px;margin-bottom:8px;min-height:52px}
+.cs-big b{font-size:44px;line-height:1;font-weight:700;letter-spacing:-.02em}
+.cs-big span{color:var(--muted);font-size:14px}
+.cs-mini{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.cs-mini span{font-size:12.5px;color:var(--muted);background:var(--cream);border-radius:999px;padding:5px 10px}
+.cs-mini b{color:var(--text)}
+.cs-q{font-size:14.5px!important;color:var(--text)!important;font-style:italic;margin-bottom:16px;line-height:1.5}
+.cs-card>b{font-size:17px;color:var(--text);margin-bottom:6px;line-height:1.3}
+.cs-card>p{font-size:14.5px;color:var(--muted);line-height:1.55;flex:1}
+.cs-more{margin-top:18px;font-weight:600;font-size:14px;color:var(--gold-d)}
+.site-shot{padding:0;overflow:hidden}
+.bchrome{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#f1efe9;border-bottom:1px solid var(--line)}
+.bchrome i{width:9px;height:9px;border-radius:50%;background:#d6d1c5}
+.bchrome span{margin-left:10px;font-size:12px;color:var(--muted);background:#fff;border-radius:999px;padding:3px 12px}
+.site-frame{position:relative;height:440px;overflow:hidden;background:#000}
+.site-frame iframe{position:absolute;top:0;left:0;width:1280px;height:1600px;border:0;transform:scale(.45);transform-origin:0 0;pointer-events:none}
+.site-shot figcaption{padding:12px 16px}
+.meta-quote{background:var(--ink);color:#f2f0eb;border-radius:24px;padding:34px}
+.meta-quote p{font-size:17px;line-height:1.6;margin:8px 0 0}
+.meta-quote .who{border-top-color:var(--dline)}
+.meta-quote .who span{color:#a8a59c}
+.meta-quote .who i{background:var(--gold);color:#111}
+@media (max-width:960px){.cs-cards{grid-template-columns:1fr}.site-frame{height:360px}.site-frame iframe{transform:scale(.5)}}
+@media (max-width:700px){.pill{padding:10px 16px;font-size:14px}.site-frame{height:300px}.site-frame iframe{width:390px;height:900px;transform:scale(.82)}.cs-big b{font-size:38px}}
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -789,11 +835,78 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
   </div>
 </section>
 
-<!-- 4. CASE STUDY -->
-<section>
+<!-- 4. RESULTS / CASE STUDIES (tabbed) -->
+<section id="results">
   <div class="wrap">
+    <div class="head center rv">
+      <div class="eyebrow">Results</div>
+      <h2>Real work. <span class="gold">Real body shops.</span></h2>
+      <p class="lead">Pick a service to see the case study — or look at all three.</p>
+    </div>
+
+    <div class="pills rv" role="tablist" aria-label="Case studies by service">
+      <button class="pill" role="tab" data-tab="web" aria-selected="false"><span class="pd"></span>Website Design</button>
+      <button class="pill" role="tab" data-tab="google" aria-selected="false"><span class="pd"></span>Google Ads</button>
+      <button class="pill" role="tab" data-tab="meta" aria-selected="false"><span class="pd"></span>Meta Ads</button>
+    </div>
+    <div class="showall"><button type="button" id="showAll">← Show all three</button></div>
+
+    <!-- ALL: overview of the three services (default view) -->
+    <div class="cs-panel on" data-panel="all">
+      <div class="cs-cards">
+        <button class="cs-card" data-go="web">
+          <span class="cs-tag">Website Design</span>
+          <div class="cs-thumb" style="background-image:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1786489785858-b64715400a37?w=900&q=70&auto=format&fit=crop')"><span>Photo-estimate landing page</span></div>
+          <b>Pages built to turn clicks into calls</b>
+          <p>Mobile-first, click-to-call on every screen and a photo-estimate form — with tracking on every lead.</p>
+          <span class="cs-more">See the work →</span>
+        </button>
+        <button class="cs-card" data-go="google">
+          <span class="cs-tag">Google Ads</span>
+          <div class="cs-big"><b class="gold">271</b><span>leads in 90 days</span></div>
+          <div class="cs-mini"><span><b>203</b> forms</span><span><b>68</b> calls</span><span><b>$21.30</b>/lead</span></div>
+          <b>Collision &amp; bumper repair shop</b>
+          <p>Bidding only on repair searches in the shop's ZIP codes — and cutting what didn't book.</p>
+          <span class="cs-more">See the case study →</span>
+        </button>
+        <button class="cs-card" data-go="meta">
+          <span class="cs-tag">Meta Ads</span>
+          <div class="cs-big"><b class="gold" style="font-size:30px;letter-spacing:2px">★★★★★</b><span>client review</span></div>
+          <p class="cs-q">"Managing my Meta ads professionally and delivered excellent results."</p>
+          <b>Yeg Detailerzz · Auto detailing</b>
+          <p>Facebook &amp; Instagram ads that improved lead quality and overall ad performance.</p>
+          <span class="cs-more">See the case study →</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- WEBSITE -->
+    <div class="cs-panel" data-panel="web">
+      <div class="case">
+        <div>
+          <div class="eyebrow">Website Design · Auto body landing page</div>
+          <h2>A page built for one job: getting the call.</h2>
+          <p class="muted" style="margin:14px 0 22px">Every page we build for a body shop is designed around how a driver with a damaged car actually behaves — on a phone, in a hurry, wanting a quote.</p>
+          <div class="steps3">
+            <div><b>1</b><p><strong>Click-to-call everywhere.</strong> The phone number is one tap away on every screen.</p></div>
+            <div><b>2</b><p><strong>Photo-estimate form.</strong> Drivers send pictures of the damage and get a quote without coming in.</p></div>
+            <div><b>3</b><p><strong>Tracking on every lead.</strong> Each call and form is tied back to the ad or search that brought it.</p></div>
+          </div>
+          <a class="btn" style="margin-top:26px" href="https://www.unlimitedgrowthdrive.com/auto-body/" target="_blank" rel="noopener">View a live page we built <span class="arr">→</span></a>
+        </div>
+        <figure class="shot site-shot">
+          <div class="bchrome"><i></i><i></i><i></i><span>unlimitedgrowthdrive.com/auto-body</span></div>
+          <div class="site-frame"><iframe src="https://www.unlimitedgrowthdrive.com/auto-body/" title="Auto body landing page built by UGD" loading="lazy" tabindex="-1" scrolling="no"></iframe></div>
+          <figcaption>Live page — the same kind of page we build for your shop</figcaption>
+        </figure>
+      </div>
+      <!-- ADD WEBSITE CASE STUDY RESULTS HERE (before/after conversion rate, screenshots) -->
+    </div>
+
+    <!-- GOOGLE ADS -->
+    <div class="cs-panel" data-panel="google">
     <div class="case">
-      <div class="rv">
+      <div>
         <div class="eyebrow">Case study · Collision &amp; bumper repair</div>
         <h2>203 lead forms and 68 calls in 90 days.</h2>
         <div class="case-stats">
@@ -808,16 +921,42 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
           <div><b>3</b><p><strong>Track every lead.</strong> Each call and estimate request shows in the report — no guessing.</p></div>
         </div>
       </div>
-      <div class="shots rv">
+      <div class="shots">
         <figure class="shot"><img src="https://www.unlimitedgrowthdrive.com/auto-body/results-90-days.jpg" width="1600" height="798" loading="lazy" alt="Google Ads overview, Jul 1 – Sep 30, 2026: 203 lead forms, 68 phone calls, $21.30 cost per conversion"><figcaption>Account overview · Jul 1 – Sep 30, 2026</figcaption></figure>
         <figure class="shot"><img src="https://www.unlimitedgrowthdrive.com/auto-body/keywords-90-days.jpg" width="1600" height="806" loading="lazy" alt="Google Ads keyword report, Jul 1 – Sep 30, 2026, sorted by conversions"><figcaption>Keyword report from the same account</figcaption></figure>
       </div>
     </div>
-    <div class="case-quote rv">
+    <div class="case-quote">
       <div class="qm">“</div>
       <div><p>My phone rings consistently and I get on average 3-5 quote request a day. He's very understanding and patient.</p><small>Same Day Bumper · Bumper &amp; collision repair</small></div>
     </div>
-    <!-- VIDEO TESTIMONIAL: add a 30–60s owner video here when available -->
+      <div class="case-quote">
+        <div class="qm">“</div>
+        <div><p>My phone rings consistently and I get on average 3-5 quote request a day. He's very understanding and patient.</p><small>Same Day Bumper · Bumper &amp; collision repair</small></div>
+      </div>
+    </div>
+
+    <!-- META ADS -->
+    <div class="cs-panel" data-panel="meta">
+      <div class="case">
+        <div>
+          <div class="eyebrow">Meta Ads · Auto detailing</div>
+          <h2>Better leads from Facebook &amp; Instagram.</h2>
+          <p class="muted" style="margin:14px 0 22px">For Yeg Detailerzz, we took over their Meta ads — understanding the business goals first, then building campaigns around the customers they wanted.</p>
+          <div class="steps3">
+            <div><b>1</b><p><strong>Goals first.</strong> We learned the business before recommending anything.</p></div>
+            <div><b>2</b><p><strong>Campaigns for quality.</strong> Ads built to bring better leads, not just more clicks.</p></div>
+            <div><b>3</b><p><strong>Quick, clear updates.</strong> Fast communication so the owner always knew what was happening.</p></div>
+          </div>
+        </div>
+        <div class="meta-quote">
+          <div class="stars">★★★★★</div>
+          <p>"I've had a great experience working with this marketing team. They have been managing my Meta ads professionally and have delivered excellent results. Communication is always quick and clear, and they take the time to understand my business goals before making recommendations. Their strategies have helped increase the quality of leads and improve my overall ad performance. I highly recommend them."</p>
+          <div class="who"><i>Y</i><div><strong>Yeg Detailerzz</strong><span>Auto detailing · Meta Ads client</span></div></div>
+        </div>
+      </div>
+      <!-- ADD META ADS RESULTS HERE (ads manager screenshot: leads, cost per lead) -->
+    </div>
   </div>
 </section>
 
@@ -1028,6 +1167,22 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
       new IntersectionObserver(function(es){ es[0].isIntersecting?start():stop(); },{threshold:.2}).observe(sec);
     } else start();
     document.addEventListener('visibilitychange',function(){ if(document.hidden) stop(); else { var r=sec.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) start(); } });
+  })();
+
+
+  // ===== tabbed case studies =====
+  (function(){
+    var pills=[].slice.call(document.querySelectorAll('.pill')), panels=[].slice.call(document.querySelectorAll('.cs-panel')),
+        sa=document.querySelector('.showall'), sec=document.getElementById('results');
+    function show(tab){
+      panels.forEach(function(p){ p.classList.toggle('on',p.dataset.panel===tab); });
+      pills.forEach(function(b){ b.setAttribute('aria-selected', b.dataset.tab===tab?'true':'false'); });
+      sa.classList.toggle('on',tab!=='all');
+      if(tab!=='all') track('trackCustom','CaseStudyView',{service:tab});
+    }
+    pills.forEach(function(b){ b.addEventListener('click',function(){ show(b.getAttribute('aria-selected')==='true'?'all':b.dataset.tab); }); });
+    [].forEach.call(document.querySelectorAll('.cs-card'),function(c){ c.addEventListener('click',function(){ show(c.dataset.go); var t=sec.querySelector('.pills').getBoundingClientRect().top+scrollY-20; scrollTo({top:t,behavior:'smooth'}); }); });
+    document.getElementById('showAll').addEventListener('click',function(){ show('all'); });
   })();
 
   document.querySelectorAll('.cta').forEach(function(a){ a.addEventListener('click',function(){ track('trackCustom', a.classList.contains('book')?'BookCallClick':'CTAClick'); }); });
