@@ -12,6 +12,68 @@
 .drop .d-all b{font-weight:600}
 .drop:before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
 @media (hover:hover) and (min-width:981px){.has-drop:hover>.drop[hidden]{display:grid!important}}
+
+/* ===== premium services bento ===== */
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:minmax(230px,auto);gap:18px;border:0}
+.bento .bx{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:26px;border-radius:22px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--fg);isolation:isolate;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+.bento .bx:hover{transform:translateY(-6px);box-shadow:0 26px 60px rgba(14,27,51,.14);border-color:transparent}
+.bento .bx:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:linear-gradient(135deg,var(--brand),var(--gold),var(--brand));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .35s;z-index:2;pointer-events:none}
+.bento .bx:hover:before{opacity:1}
+.bx-glow{position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .3s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(147,48,143,.10),transparent 45%)}
+.bx:hover .bx-glow{opacity:1}
+.bx-top{display:flex;justify-content:space-between;align-items:flex-start}
+.bx-logo{width:52px;height:52px;border-radius:14px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;box-shadow:0 6px 16px rgba(14,27,51,.06);transition:transform .35s}
+.bx-logo svg{width:26px;height:26px}
+.bx:hover .bx-logo{transform:rotate(-6deg) scale(1.06)}
+.bx-n{font-size:.8rem;font-weight:700;color:var(--muted);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.bento .bx h3{font-size:1.18rem;line-height:1.25;margin-top:8px}
+.bento .bx p{color:var(--muted);font-size:.95rem;line-height:1.55}
+.bx-more{margin-top:auto;padding-top:10px;display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.9rem;color:var(--brand)}
+.bx-more svg{width:16px;height:16px;transition:transform .3s}
+.bx:hover .bx-more svg{transform:translateX(5px)}
+.bx-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.bx-chips span{font-size:.78rem;font-weight:500;padding:5px 10px;border-radius:999px;background:var(--bg2);color:var(--fg)}
+.bx-pts{list-style:none;display:grid;gap:9px;margin:6px 0 4px}
+.bx-pts li{position:relative;padding-left:26px;font-size:.93rem}
+.bx-pts li:before{content:"";position:absolute;left:0;top:3px;width:16px;height:16px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E1B33' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/10px no-repeat}
+/* featured */
+.bx-feat{grid-column:span 2;grid-row:span 2;background:radial-gradient(120% 90% at 100% 0%,rgba(147,48,143,.45),transparent 55%),radial-gradient(90% 80% at 0% 100%,rgba(233,177,59,.22),transparent 60%),var(--navy)!important;color:#fff!important;border-color:var(--navy)!important;padding:34px!important}
+.bx-feat h3{font-size:1.9rem!important;color:#fff}
+.bx-feat p{color:#C9D0DE!important;font-size:1.05rem!important;max-width:520px}
+.bx-feat .bx-n{color:#8f9bb3}
+.bx-feat .bx-logo{width:64px;height:64px;border-radius:18px;border-color:transparent}
+.bx-feat .bx-logo svg{width:32px;height:32px}
+.bx-feat .bx-pts li{color:#E6EAF2}
+.bx-feat .bx-chips span{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.14)}
+.bx-feat .bx-more{align-self:flex-start;background:var(--gold);color:var(--navy);padding:12px 18px;border-radius:12px;margin-top:auto}
+.bx-feat .bx-glow{background:radial-gradient(480px circle at var(--mx,50%) var(--my,50%),rgba(233,177,59,.16),transparent 45%)}
+.bx-badge{align-self:flex-start;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:5px 10px;border-radius:999px}
+.bx-feat:after{content:"";position:absolute;right:-60px;bottom:-60px;width:240px;height:240px;border-radius:50%;border:1px solid rgba(255,255,255,.08);box-shadow:0 0 0 40px rgba(255,255,255,.025),0 0 0 80px rgba(255,255,255,.02);z-index:-1}
+/* wide */
+.bx-wide{grid-column:span 2;background:linear-gradient(160deg,#fff 0%,#FBF7EC 100%)!important}
+.bx-wide .bx-pts{grid-template-columns:1fr 1fr;gap:8px 18px}
+/* entrance */
+.bento.bx-anim .bx{opacity:0;transform:translateY(26px)}
+.bento.bx-anim.bx-in .bx{opacity:1;transform:none;transition:opacity .7s ease calc(var(--i)*80ms),transform .7s cubic-bezier(.2,.8,.2,1) calc(var(--i)*80ms),box-shadow .35s,border-color .35s}
+.bento.bx-anim.bx-in .bx:hover{transform:translateY(-6px);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+@media (max-width:1060px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.bx-feat{grid-row:span 1}}
+@media (max-width:640px){.bento{grid-template-columns:1fr;grid-auto-rows:auto}.bx-feat,.bx-wide{grid-column:auto}.bx-wide .bx-pts{grid-template-columns:1fr}.bx-feat h3{font-size:1.55rem!important}.bento .bx{padding:22px}}
+
+.bx-pts{padding:0!important;margin-left:0!important}
+.bx-mock{position:absolute;right:28px;bottom:30px;width:280px;display:grid;gap:10px;z-index:1;animation:bmFloat 6s ease-in-out infinite;pointer-events:none}
+@keyframes bmFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.bm-bar{display:flex;align-items:center;gap:8px;background:#fff;color:#202124;border-radius:999px;padding:9px 14px;font-size:.82rem;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.bm-bar i{width:12px;height:12px;border:2px solid #9aa0a6;border-radius:50%;flex:none}
+.bm-ad{background:#fff;border-radius:14px;padding:12px 14px;display:grid;gap:6px;box-shadow:0 14px 30px rgba(0,0,0,.3)}
+.bm-ad b{font-size:.7rem;color:#202124}
+.bm-ad span{color:#1a0dab;font-size:.92rem;font-weight:500}
+.bm-ad em{display:block;height:7px;border-radius:4px;background:#e8eaee}
+.bm-ext{display:flex;gap:6px;margin-top:2px}.bm-ext u{text-decoration:none;font-size:.7rem;color:#1a0dab;border:1px solid #e3e5e8;border-radius:999px;padding:3px 8px}
+.bm-ping{justify-self:end;background:#22a06b;color:#fff;font-size:.75rem;font-weight:700;padding:6px 12px;border-radius:999px;box-shadow:0 8px 20px rgba(34,160,107,.4);animation:bmPing 3s ease-in-out infinite}
+@keyframes bmPing{0%,60%,100%{transform:scale(1)}70%{transform:scale(1.08)}}
+.bx-feat .bx-more{position:relative;z-index:2}
+@media (max-width:1240px){.bx-mock{display:none}}
+@media (prefers-reduced-motion:reduce){.bx-mock,.bm-ping{animation:none}}
 </style><title>Unlimited Growth Drive | Digital Marketing Agency</title><meta name="description" content="Unlimited Growth Drive is a full-service digital marketing agency for local and high-ticket businesses in the USA and Canada.">
 </head><body>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -1143,7 +1205,26 @@ $$(".btrack").forEach(t=>t.children&&[...t.children].slice(t.children.length/2).
 
 /* render */
 const svcCard=s=>`<a class="card svc" href="#services" data-go="service" data-to="${s.id}"><span class="ico"><svg><use href="#i-${s.ico}"/></svg></span><h3>${s.name}</h3><p>${s.short}</p><span class="more">Learn more →</span></a>`;
-$("#homeSvcs").innerHTML=SERVICES.map((s,i)=>`<a href="#service" data-go="service" data-to="${s.id}"><span class="n">${String(i+1).padStart(2,"0")}</span><h3>${s.name}</h3><p>${s.short}</p><span class="arr" aria-hidden="true">→</span></a>`).join("");
+(function(){const box=$("#homeSvcs");if(!box)return;
+ const logo=id=>{const a=document.querySelector('#svcDrop a[data-to="'+id+'"] .di');return a?a.innerHTML:""};
+ const ARR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+ const SIZE={"s-google":"bx-feat","s-meta":"bx-wide"};
+ box.className="bento";
+ box.innerHTML=SERVICES.map((s,i)=>{const n=String(i+1).padStart(2,"0"),cls=SIZE[s.id]||"bx-sm";
+  const pts=cls==="bx-feat"?s.points.slice(0,5):cls==="bx-wide"?s.points.slice(0,4):[];
+  return `<a class="bx ${cls}" href="#service" data-go="service" data-to="${s.id}" style="--i:${i}">
+   <span class="bx-glow" aria-hidden="true"></span>
+   <div class="bx-top"><span class="bx-logo">${logo(s.id)}</span><span class="bx-n">${n}</span></div>
+   ${cls==="bx-feat"?'<span class="bx-badge">Most requested</span>':''}
+   <h3>${s.name}</h3><p>${s.short}</p>
+   ${pts.length?`<ul class="bx-pts">${pts.map(p=>`<li>${p}</li>`).join("")}</ul>`:''}
+   ${cls!=="bx-sm"?`<div class="bx-chips">${(s.chips||[]).map(c=>`<span>${c}</span>`).join("")}</div>`:''}
+   ${cls==="bx-feat"?`<div class="bx-mock" aria-hidden="true"><div class="bm-bar"><i></i>plumber near me</div><div class="bm-ad"><b>Sponsored</b><span>Your Business · Same-Day Service</span><em></em><em style="width:70%"></em><div class="bm-ext"><u>📞 Call now</u><u>Get a quote</u></div></div><div class="bm-ping">+1 new lead</div></div>`:''}
+   <span class="bx-more">${cls==="bx-feat"?'Explore Google Ads':'Learn more'} ${ARR}</span>
+  </a>`}).join("");
+ box.addEventListener("pointermove",e=>{const c=e.target.closest(".bx");if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-r.left)+"px");c.style.setProperty("--my",(e.clientY-r.top)+"px")});
+ if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){box.classList.add("bx-anim");const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){box.classList.add("bx-in");io.disconnect()}}),{threshold:.15});io.observe(box)}
+})();
 const FAM=[["google","Paid Search","Google Ads that show up the moment buyers search for you.","s-google"],["meta","Paid Social","Facebook & Instagram ads that create demand and retarget.","s-meta"],["web","Websites","Fast, trust-building sites built to get the call.","s-web"],["track","Tracking","Every call, form and booking tied to its campaign.","s-track"]];
 
 if(0)$("#founderPh").innerHTML=AVATARS[0].replace('viewBox="0 0 200 200"','viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block"');
