@@ -421,3 +421,11 @@ footer a:hover{color:#fff}
  .jp-badge{right:calc(50% - 140px)}
 }
 @media (max-width:420px){.jp{width:240px}.jp-badge{right:calc(50% - 128px)}}
+
+/* sticky buttons */
+.float{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:grid;gap:10px}
+.float a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.3);text-decoration:none;transition:transform .2s}
+.float a:hover{transform:scale(1.08)}
+.float svg{width:26px;height:26px}
+.float .wa{background:#25D366;color:#fff}
+.float .bk{background:linear-gradient(135deg,#93308F,#7E2C8E);color:#fff;box-shadow:0 10px 30px rgba(147,48,143,.45)}
