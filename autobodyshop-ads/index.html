@@ -522,6 +522,26 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
 [data-flow=google][data-s="4"] .call-now .tap{animation:tapIt .8s .2s both}
 [data-flow=google][data-s="4"] .toast{animation:toastIn 2.8s .9s both}
 
+
+/* ===== friendlier form ===== */
+.opt span{display:flex;align-items:center;justify-content:center;gap:8px}
+.opt span::before{content:"";flex:none;width:16px;height:16px;border:1.8px solid #c9c3b6;background:#fff;transition:.15s}
+.opt input[type=radio]+span::before{border-radius:50%}
+.opt input[type=checkbox]+span::before{border-radius:5px}
+.opt input[type=radio]:checked+span::before{border-color:var(--gold);background:radial-gradient(circle,var(--gold-d) 0 4px,#fff 4.5px)}
+.opt input[type=checkbox]:checked+span::before{border-color:var(--gold-d);background:var(--gold-d) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/11px no-repeat}
+.opt input:checked+span{font-weight:600}
+.opt span:active{transform:scale(.97)}
+.q .hint{font-weight:400;color:var(--muted);font-size:13px}
+.q .done{display:none;color:var(--green);font-size:13px;font-weight:600;margin-left:6px}
+.q.ok .done{display:inline}
+.field input.bad{border-color:var(--red);background:#fff6f4}
+.field input.good{border-color:#9fd3b2}
+.fstep h3.f2{font-size:16px;margin-bottom:12px}
+@media (max-width:480px){.opts.c3 .opt span{font-size:12.5px;padding:12px 3px;gap:5px}.opts.c3 .opt span::before{width:13px;height:13px}.opts.c3 .opt input[type=checkbox]:checked+span::before{background-size:9px}}
+.btn.ready{animation:readyPulse 1.2s ease-in-out 2}
+@keyframes readyPulse{50%{box-shadow:0 0 0 6px rgba(233,177,59,.3),0 10px 30px rgba(233,177,59,.28)}}
+
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -593,20 +613,20 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
       <div class="progress" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
       <form id="qform" novalidate>
         <div class="fstep on" data-step="1">
-          <p class="q">What do you need? <small>(pick any)</small></p>
+          <p class="q" data-q="svc">What do you need? <span class="hint">(pick one or more)</span><span class="done">✓</span></p>
           <div class="opts c3">
             <label class="opt"><input type="checkbox" name="svc" value="Website"><span>Website</span></label>
             <label class="opt"><input type="checkbox" name="svc" value="Google Ads"><span>Google Ads</span></label>
             <label class="opt"><input type="checkbox" name="svc" value="Meta Ads"><span>Meta Ads</span></label>
           </div>
-          <p class="q">Monthly ad budget you could invest?</p>
+          <p class="q" data-q="budget">Monthly ad budget you could invest? <span class="hint">(pick one)</span><span class="done">✓</span></p>
           <div class="opts c2">
             <label class="opt"><input type="radio" name="budget" value="Under $1,000"><span>Under $1,000</span></label>
             <label class="opt"><input type="radio" name="budget" value="$1,000 – $1,500"><span>$1,000–1,500</span></label>
             <label class="opt"><input type="radio" name="budget" value="$1,500 – $3,000"><span>$1,500–3,000</span></label>
             <label class="opt"><input type="radio" name="budget" value="$3,000+"><span>$3,000+</span></label>
           </div>
-          <p class="q">Running any ads now?</p>
+          <p class="q" data-q="ads">Running any ads now? <span class="hint">(pick one)</span><span class="done">✓</span></p>
           <div class="opts c3">
             <label class="opt"><input type="radio" name="ads" value="Yes, currently"><span>Yes</span></label>
             <label class="opt"><input type="radio" name="ads" value="In the past"><span>Before</span></label>
@@ -616,11 +636,12 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
           <button type="button" class="btn block next">Continue <span class="arr">→</span></button>
         </div>
         <div class="fstep" data-step="2">
+          <h3 class="f2">Almost done — where should we send your call details?</h3>
           <div class="field"><label for="shop">Shop name</label><input id="shop" name="shop" autocomplete="organization"></div>
           <div class="field"><label for="city">City &amp; state</label><input id="city" name="city" placeholder="e.g. Dallas, TX"></div>
           <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name"></div>
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
-          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@yourshop.com"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 123-4567"></div>
           <div class="err" role="alert"></div>
           <div class="frow"><button type="button" class="back">← Back</button><button type="submit" class="btn">Pick a call time <span class="arr">→</span></button></div>
           <p class="privacy">Only used to prepare for your call. No spam.</p>
@@ -1036,11 +1057,32 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
   }
   function start(){ if(!started){ started=true; track('trackCustom','FormStart'); } }
   form.addEventListener('change',start); form.addEventListener('focusin',start);
+
+  // friendlier form: done ticks, auto-advance, live validation, phone format
+  function markQ(){ [['svc',svcs().length],['budget',val('budget')],['ads',val('ads')]].forEach(function(x){ var q=form.querySelector('[data-q='+x[0]+']'); if(q) q.classList.toggle('ok',!!x[1]); }); }
+  var advT;
+  form.addEventListener('change',function(e){
+    markQ(); var err=steps[0].querySelector('.err'); if(err.textContent) validate(1);
+    var nb=form.querySelector('.next');
+    if(svcs().length&&val('budget')&&val('ads')){ nb.classList.remove('ready'); void nb.offsetWidth; nb.classList.add('ready');
+      if(e.target.type==='radio'&&cur===1){ clearTimeout(advT); advT=setTimeout(function(){ if(cur===1&&validate(1)){ show(2); var f=form.querySelector('#shop'); if(f&&window.innerWidth>700) f.focus(); } },650); } }
+  });
+  var phone=form.querySelector('#phone');
+  phone.addEventListener('input',function(){ var d=phone.value.replace(/\D/g,'').replace(/^1(?=\d{10})/,'').slice(0,10), o=d;
+    if(d.length>6) o='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6); else if(d.length>3) o='('+d.slice(0,3)+') '+d.slice(3); else if(d.length) o='('+d; phone.value=o; });
+  function checkField(el){ var v=el.value.trim(), ok=true;
+    if(el.id==='email') ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); else if(el.id==='phone') ok=v.replace(/\D/g,'').length>=10; else ok=!!v;
+    el.classList.toggle('bad',!ok&&v!==''); el.classList.toggle('good',ok); return ok; }
+  [].forEach.call(steps[1].querySelectorAll('input'),function(el,i,all){
+    el.addEventListener('blur',function(){ checkField(el); });
+    el.addEventListener('input',function(){ if(el.classList.contains('bad')) checkField(el); var err=steps[1].querySelector('.err'); if(err.textContent) err.textContent=''; });
+    el.addEventListener('keydown',function(e){ if(e.key==='Enter'&&i<all.length-1){ e.preventDefault(); all[i+1].focus(); } });
+  });
   form.querySelector('.next').addEventListener('click',function(){ if(validate(1)) show(2); });
   form.querySelector('.back').addEventListener('click',function(){ show(1); });
 
   form.addEventListener('submit',function(e){
-    e.preventDefault(); if(!validate(2)) return;
+    e.preventDefault(); if(!validate(2)){ [].forEach.call(steps[1].querySelectorAll('input'),function(el){ if(!checkField(el)) el.classList.add('bad'); }); var b=steps[1].querySelector('input.bad'); if(b) b.focus(); return; }
     var d={services:svcs().join(', '),shop:val('shop'),city:val('city'),budget:val('budget'),running_ads:val('ads'),name:val('name'),email:val('email'),phone:val('phone'),fbclid:fbclid,page:location.href,submitted_at:new Date().toISOString()};
     for(var k in utm) d[k]=utm[k];
     var qualified=d.budget!=='Under $1,000';
