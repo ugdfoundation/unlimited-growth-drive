@@ -832,7 +832,7 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
           <li>Run a collision or auto body shop in the US</li>
           <li>Have room for more repair jobs every month</li>
           <li>Have someone answering the phone during business hours</li>
-          <li>Can invest $1,500+/month in Google ad spend (for Google Ads)</li>
+          <li>Can invest $1,000+/month in ads ($1,500+ recommended for Google Ads)</li>
           <li>Want to see exactly where every lead came from</li>
         </ul>
       </div>
@@ -1043,7 +1043,7 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
     e.preventDefault(); if(!validate(2)) return;
     var d={services:svcs().join(', '),shop:val('shop'),city:val('city'),budget:val('budget'),running_ads:val('ads'),name:val('name'),email:val('email'),phone:val('phone'),fbclid:fbclid,page:location.href,submitted_at:new Date().toISOString()};
     for(var k in utm) d[k]=utm[k];
-    var qualified=d.budget==='$1,500 – $3,000'||d.budget==='$3,000+';
+    var qualified=d.budget!=='Under $1,000';
     track('track','Lead',{content_name:'Auto Body Short Form',services:d.services,budget:d.budget,qualified:qualified});
     if(qualified) track('trackCustom','QualifiedLead',{budget:d.budget});
     if(WEBHOOK_URL){ try{ fetch(WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(d)}); }catch(x){} }
