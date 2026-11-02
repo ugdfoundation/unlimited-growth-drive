@@ -429,3 +429,35 @@ footer a:hover{color:#fff}
 .float svg{width:26px;height:26px}
 .float .wa{background:#25D366;color:#fff}
 .float .bk{background:linear-gradient(135deg,#93308F,#7E2C8E);color:#fff;box-shadow:0 10px 30px rgba(147,48,143,.45)}
+
+/* ---- floating animated buttons ---- */
+.btn-primary,.btn-gold,.btn-ghost{animation:bob 3.2s ease-in-out infinite;will-change:translate}
+.btn-gold{box-shadow:0 10px 26px rgba(233,177,59,.38)}
+.btn-primary{box-shadow:0 10px 26px rgba(14,27,51,.28)}
+.btn+.btn{animation-delay:-1.6s}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.btn-gold:hover{box-shadow:0 16px 34px rgba(233,177,59,.5)}
+.btn-primary:hover{box-shadow:0 16px 34px rgba(14,27,51,.36)}
+.btn-ghost:hover{background:var(--fg);color:#fff}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -5px}}
+.float a{animation:bob 3s ease-in-out infinite;position:relative}
+.float a+a{animation-delay:-1.5s}
+.float a:before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid currentColor;opacity:0;animation:ring 2.6s ease-out infinite}
+.float .wa:before{border-color:#25D366}.float .bk:before{border-color:#93308F;animation-delay:1.3s}
+@keyframes ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.6);opacity:0}}
+
+/* ---- full growth system (cross-sell) ---- */
+.fs{background:linear-gradient(180deg,var(--bg) 0%,#F4EEF4 100%)}
+.fs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.fs-card{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;text-decoration:none;color:var(--fg);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+.fs-card:after{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--brand),var(--gold));transition:width .35s}
+.fs-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(14,27,51,.11);border-color:#d8cfe0}
+.fs-card:hover:after{width:100%}
+.fs-ic{flex:none;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:#fff;border:1px solid var(--line);box-shadow:0 6px 16px rgba(14,27,51,.06)}
+.fs-ic svg{width:26px;height:26px}
+.fs-card h3{font-size:1.05rem;margin:2px 0 6px}
+.fs-card p{font-size:.93rem;color:var(--muted);line-height:1.55;margin:0 0 10px}
+.fs-card i{font-style:normal;font-weight:600;font-size:.88rem;color:var(--brand)}
+@media (max-width:960px){.fs-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.fs-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.btn,.float a,.float a:before{animation:none!important}}
