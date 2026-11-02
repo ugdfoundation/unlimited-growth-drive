@@ -842,6 +842,16 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
 .vr .vc::after{background:linear-gradient(90deg,transparent,#F3EEF3)}
 @media (max-width:640px){.vr-head{align-items:flex-start}.vr .vnav{order:2}}
 @media (prefers-reduced-motion:reduce){.vr-eye i,.vr .vplay:before{animation:none}}
+
+/* ---- 3 founders ---- */
+.ab-founders{grid-template-columns:repeat(3,1fr)!important;max-width:1180px!important}
+.ab-founders .ab-f{flex-direction:column;gap:16px;position:relative;overflow:hidden}
+.ab-founders .ab-f:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#93308F,#E9B13B);opacity:0;transition:opacity .3s}
+.ab-founders .ab-f:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(14,27,51,.12)}
+.ab-founders .ab-f:hover:before{opacity:1}
+.ab-founders .ab-f:nth-child(2) .ab-av{background:linear-gradient(135deg,#E9B13B,#C98A12);color:#0E1B33}
+.ab-founders .ab-f:nth-child(3) .ab-av{background:linear-gradient(135deg,var(--navy),#2c4a86);color:#fff}
+@media (max-width:960px){.ab-founders{grid-template-columns:1fr!important;max-width:620px!important}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1203,7 +1213,8 @@ header.top.scrolled .logo-mark{width:34px;height:34px}
     <div class="head ab-center rv"><span class="eyebrow">Leadership</span><h2>The people behind your campaigns</h2><p class="lede">Every client works directly with specialists &mdash; never a middle layer.</p></div>
     <div class="ab-founders">
       <article class="ab-f rv"><span class="ab-av">S</span><div><h3>Samad</h3><span class="ab-role">Founder &amp; CEO</span><p>Founded Unlimited Growth Drive in 2021. Leads strategy and Google Ads for our clients.</p><div class="ab-tags"><span>Strategy</span><span>Google Ads</span></div></div></article>
-      <article class="ab-f rv" style="--d:120ms"><span class="ab-av">NM</span><div><h3>Nill Mostakim</h3><span class="ab-role">Co-owner &middot; Google Ads &amp; Tracking</span><p>Runs Google Ads for law firms, dental and medical practices and auto body shops in the US and Canada, with browser- and server-side tracking.</p><div class="ab-tags"><span>PPC</span><span>GTM</span><span>GA4</span></div></div></article>
+      <article class="ab-f rv" style="--d:120ms"><span class="ab-av">A</span><div><h3>Alim</h3><span class="ab-role">Google Ads Specialist &middot; Account Management</span><p>Manages and optimizes Google Ads accounts for local businesses in the US and Canada, with clear reporting and a focus on lead quality.</p><div class="ab-tags"><span>Google Ads</span><span>Optimization</span><span>Reporting</span></div></div></article>
+      <article class="ab-f rv" style="--d:240ms"><span class="ab-av">NM</span><div><h3>Nill Mostakim</h3><span class="ab-role">Co-owner &middot; Google Ads &amp; Tracking</span><p>Runs Google Ads for law firms, dental and medical practices and auto body shops in the US and Canada, with browser- and server-side tracking.</p><div class="ab-tags"><span>PPC</span><span>GTM</span><span>GA4</span></div></div></article>
     </div>
     <p class="ab-center" style="margin-top:26px"><a class="btn btn-ghost" href="#team" data-go="team">Meet the full team</a></p>
   </div></div>
@@ -1368,6 +1379,7 @@ const REVIEWS=[
 ];
 const TEAM=[
  {init:"S",name:"Samad",role:"Founder & CEO",bio:"Founded Unlimited Growth Drive in 2021. Leads strategy and Google Ads for our clients, and is a Top Rated nominated seller on Fiverr.",tags:["Strategy","Google Ads"]},
+ {init:"A",name:"Alim",role:"Google Ads Specialist · Account Management",bio:"Manages and optimizes Google Ads accounts for local businesses in the US and Canada, with clear reporting and a focus on lead quality.",tags:["Google Ads","Optimization","Reporting"]},
  {init:"NM",name:"Nill Mostakim",role:"Co-owner · Google Ads & Tracking",bio:"Runs Google Ads for law firms, dental and medical practices and auto body shops in the US and Canada, with browser-side and server-side tracking through GTM and GA4.",tags:["PPC","GTM","GA4"]}
 ];
 const FAQ=[
