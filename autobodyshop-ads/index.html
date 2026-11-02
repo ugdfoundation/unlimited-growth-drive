@@ -1185,6 +1185,18 @@ body.lock{overflow:hidden}
      stats:[['Mobile','first design'],['1-tap','call in English & Spanish'],['Quote','form with damage photos']],
      problem:'A mobile dent, scratch and bumper repair business in Raleigh needed a site that turns local searches and ad clicks into calls and quote requests.',
      did:['Hero with "Call Now" buttons in English and Spanish','Services, service areas and before/after gallery sections','Request-a-quote form with vehicle details and photos of the damage'],quote:''},
+    {id:'carstar-xpress',service:'web',name:'CARSTAR Xpress Collision',type:'Website design · Collision repair, Stratford, CT',
+     coverScroll:'/autobodyshop-ads/cases/carstar-xpress-collision-site-card.webp',metric:'Full site',metricLabel:'designed & built by UGD',
+     images:[{scroll:'/autobodyshop-ads/cases/carstar-xpress-collision-site.webp'}],
+     stats:[['Lifetime','warranty up front'],['1-tap','call & free estimate'],['ADAS','& autoglass services']],
+     problem:'A CARSTAR collision center in Stratford needed a site that builds trust fast and turns visitors into estimate requests and calls.',
+     did:['Hero with "Get Free Estimate" and click-to-call buttons','Lifetime-warranty banner, services and a step-by-step repair process','Photo gallery, Google reviews, brands serviced and a contact form'],quote:''},
+    {id:'pristine-collision',service:'web',name:'Pristine Collision',type:'Website design · Collision repair, Paterson, NJ',
+     coverScroll:'/autobodyshop-ads/cases/pristine-collision-site-card.webp',metric:'Full site',metricLabel:'designed & built by UGD',
+     images:[{scroll:'/autobodyshop-ads/cases/pristine-collision-site.webp'}],
+     stats:[['329','Google reviews featured'],['6','OEM certifications shown'],['2','CTAs: estimate & booking']],
+     problem:'An I-CAR Gold Class collision shop in Paterson wanted a premium site that shows off its certifications and makes it easy to start a repair.',
+     did:['"Online Estimate" and "Book An Appointment" buttons up top','9 services, a 5-step repair process and an OEM certification section','Gallery, Google reviews and a location map with shop hours'],quote:''},
     {id:'ugd-autobody',service:'web',name:'UGD Auto Body Page',type:'Collision & auto body landing page',
      coverLive:'https://www.unlimitedgrowthdrive.com/auto-body/',metric:'Live',metricLabel:'page built for body shops',
      images:[{live:'https://www.unlimitedgrowthdrive.com/auto-body/'}],
@@ -1260,7 +1272,7 @@ body.lock{overflow:hidden}
 
     function open(id){
       cur=CASES.filter(function(x){return x.id===id;})[0]; if(!cur) return; lastFocus=document.activeElement;
-      var bar=document.getElementById('pfmBar'); bar.style.display=cur.url?'':'none'; bar.querySelector('span').textContent=cur.url||'';
+      var bar=document.getElementById('pfmBar'); var bt=cur.url||(cur.service==='web'?cur.name:''); bar.style.display=bt?'':'none'; bar.querySelector('span').textContent=bt;
       document.getElementById('pfmTag').textContent=LABEL[cur.service];
       document.getElementById('pfmTitle').textContent=cur.name+(cur.sample?' (sample)':'');
       document.getElementById('pfmType').textContent=cur.type;
