@@ -1215,12 +1215,15 @@ body.lock{overflow:hidden}
      quote:'"They have been managing my Meta ads professionally and have delivered excellent results… Their strategies have helped increase the quality of leads and improve my overall ad performance."<small>Yeg Detailerzz</small>'}
   ];
 
+  // Cards shown in the default "All" view (one per service)
+  var FEATURED=['sdb-website','same-day-bumper','yeg-detailerzz'];
+
   (function(){
     var grid=document.getElementById('pfGrid'), pills=[].slice.call(document.querySelectorAll('#results .pill')), LABEL={web:'Website Design',google:'Google Ads',meta:'Meta Ads'};
     pills.forEach(function(p){ var c=p.querySelector('.cnt'); if(c) c.textContent=CASES.filter(function(x){return x.service===p.dataset.tab;}).length; });
     function esc(t){ return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
     function render(tab){
-      var list = tab==='all' ? ['web','google','meta'].reduce(function(a,sv){ return a.concat(CASES.filter(function(x){return x.service===sv;}).slice(0,2)); },[]) : CASES.filter(function(x){return x.service===tab;});
+      var list = tab==='all' ? FEATURED.map(function(id){ return CASES.filter(function(x){return x.id===id;})[0]; }).filter(Boolean) : CASES.filter(function(x){return x.service===tab;});
       grid.innerHTML=list.map(function(c,i){
         return '<button class="pf-card" data-id="'+c.id+'" style="animation-delay:'+(i*60)+'ms">'+(c.sample?'<span class="sample">Sample</span>':'')+
           (c.coverScroll?'<div class="pf-img pf-scroll"><img class="scrollimg" src="'+c.coverScroll+'" alt="'+esc(c.name)+' website design" loading="lazy"><span class="pf-open">View case study →</span></div>':c.coverLive?'<div class="pf-img pf-live"><iframe src="'+c.coverLive+'" tabindex="-1" loading="lazy" scrolling="no" title=""></iframe><span class="pf-open">View case study →</span></div>':c.cover?'<div class="pf-img" style="background-image:url(\''+c.cover+'\')"><span class="pf-open">View case study →</span></div>':'<div class="pf-img pf-none pf-'+c.service+'"><span class="pf-big">'+esc(c.metric)+'</span><span class="pf-open">View case study →</span></div>')+
