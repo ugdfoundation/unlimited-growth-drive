@@ -1065,7 +1065,17 @@ footer{background:#050505;color:#77746c;font-size:13px;text-align:center;padding
     markQ(); var err=steps[0].querySelector('.err'); if(err.textContent) validate(1);
     var nb=form.querySelector('.next');
     if(svcs().length&&val('budget')&&val('ads')){ nb.classList.remove('ready'); void nb.offsetWidth; nb.classList.add('ready');
-      if(e.target.type==='radio'&&cur===1){ clearTimeout(advT); advT=setTimeout(function(){ if(cur===1&&validate(1)){ show(2); var f=form.querySelector('#shop'); if(f&&window.innerWidth>700) f.focus(); } },650); } }
+      if(e.target.type==='radio'&&cur===1){ clearTimeout(advT); advT=setTimeout(function(){ if(cur===1&&svcs().length&&val('budget')&&val('ads')&&validate(1)){ show(2); var f=form.querySelector('#shop'); if(f&&window.innerWidth>700) f.focus(); } },650); } }
+  });
+
+  // radios: click a selected option again to deselect it
+  [].forEach.call(form.querySelectorAll('.opt input[type=radio]'),function(r){
+    var lbl=r.closest('label');
+    lbl.addEventListener('pointerdown',function(){ r._was=r.checked; });
+    lbl.addEventListener('keydown',function(){ r._was=r.checked; });
+    r.addEventListener('click',function(){
+      if(r._was){ r.checked=false; r._was=false; clearTimeout(advT); form.dispatchEvent(new Event('change',{bubbles:true})); }
+    });
   });
   var phone=form.querySelector('#phone');
   phone.addEventListener('input',function(){ var d=phone.value.replace(/\D/g,'').replace(/^1(?=\d{10})/,'').slice(0,10), o=d;
