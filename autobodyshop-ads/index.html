@@ -677,6 +677,7 @@ body.lock{overflow:hidden}
 .pfm-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#1c1c1f;border-bottom:1px solid #2a2a2e}
 .pfm-bar i{width:9px;height:9px;border-radius:50%;background:#3a3a40}
 .pfm-bar span{margin-left:10px;font-size:12px;color:#a8a59c;background:#0f0f11;border-radius:999px;padding:3px 14px}
+.pfm-stage.is-shot{align-items:center;background:#f1f3f4}
 .pfm-stage{scrollbar-width:thin;overscroll-behavior:contain}
 @media (prefers-reduced-motion:reduce){.scrollimg.run{animation:none}}
 .pfm-box{height:min(780px,calc(100vh - 48px));grid-template-rows:100%}
@@ -1245,6 +1246,7 @@ body.lock{overflow:hidden}
       var ims=cur.images; if(!ims.length) return; idx=(i+ims.length)%ims.length; var it=ims[idx];
       stopAuto(); stage.scrollTop=0;
       stage.classList.toggle('is-ph',!it.src&&!it.scroll);
+      stage.classList.toggle('is-shot',!!it.src);
       if(it.src||it.scroll){ img.src=it.src||it.scroll; img.alt=cur.name+' — image '+(idx+1); }
       if(it.scroll){ if(img.complete) startAuto(); else img.onload=startAuto; }
       else if(it.live){ ph.className='pfm-ph'; ph.innerHTML='<iframe src="'+it.live+'" title="'+esc(cur.name)+'" style="width:100%;height:100%;border:0;background:#000"></iframe>'; }
