@@ -699,6 +699,57 @@ body.lock{overflow:hidden}
 .lg-txt span{font-weight:700;font-size:15px;letter-spacing:-.01em;color:#1c2b4a;text-align:center;line-height:1.2;text-transform:uppercase}
 @media (max-width:700px){.logos{padding-bottom:48px}.lg{width:160px;height:70px;padding:10px 12px}.lg img{max-height:44px}.lg-txt span{font-size:12.5px}.marquee .track{gap:14px;padding-right:14px;animation-duration:44s}}
 @media (prefers-reduced-motion:reduce){.marquee .track{animation:none}.marquee{overflow-x:auto}}
+
+/* ===== mobile polish ===== */
+@media (max-width:700px){
+  section{padding:52px 0}
+  .head{margin-bottom:26px}
+  h2{font-size:clamp(26px,7.4vw,32px)}
+  .hero{padding:80px 0 36px}
+  .hero-grid{display:flex;flex-direction:column;gap:0}
+  .hero-copy{display:contents}
+  .hero-copy .eyebrow{order:1;font-size:11px;letter-spacing:.08em}
+  .hero h1{order:2;font-size:clamp(32px,9vw,40px);margin-bottom:14px}
+  .hero .lead{order:3;font-size:15px;margin-bottom:20px}
+  .formcard{order:4}
+  .fine{order:5;margin-top:16px;font-size:11.5px}
+  .hero-book{order:6;margin-top:14px;align-self:stretch;justify-content:center;font-size:15px;padding:12px 16px}
+  .hero-book .hb-q{display:none}
+  .formcard{padding:20px 16px;border-radius:20px}
+  .formcard h2{font-size:20px}
+  .logos{padding-bottom:40px}
+  .logos-t{font-size:11px;letter-spacing:.14em;margin-bottom:16px}
+  .pains{gap:12px}
+  .pain{padding:18px;gap:14px}
+  .pain i{width:36px;height:36px}
+  .bridge{margin-top:26px;font-size:17px}
+  .svcs{gap:14px}
+  .svc{padding:22px 18px}
+  .svc .num{margin-bottom:16px}
+  .svc-top{margin-bottom:16px}
+  .scr.phone{height:260px}
+  #results .pills{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;margin:-6px -20px 0;padding:4px 20px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  #results .pills::-webkit-scrollbar{display:none}
+  #results .pill{flex:none;padding:10px 16px}
+  .pf-grid{margin-top:20px;gap:14px}
+  .pf-img{height:180px}
+  .pf-open{opacity:1;transform:none;font-size:11.5px;padding:6px 11px}
+  .lq>div,.fit>div{padding:22px 18px}
+  .how>div{padding:24px 20px}
+  .how .n{font-size:34px;margin-bottom:10px}
+  .team img{max-height:240px}
+  .review p{font-size:15.5px}
+  .faq details{padding:18px 2px}
+  .faq summary{font-size:15.5px}
+  .final h2{font-size:clamp(28px,8vw,34px)}
+  .ghost-link{display:inline-block;padding:10px 4px}
+  .pf-tag,.badge,.seal span,.logo small{font-size:11px}
+  .fine a{display:inline-block;padding:4px 0}
+}
+@media (max-width:380px){
+  .opts.c3 .opt span{font-size:12px}
+  .hero h1{font-size:30px}
+}
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -750,12 +801,12 @@ body.lock{overflow:hidden}
 <!-- 1. HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       <div class="eyebrow">Websites · Google Ads · Meta Ads for body shops</div>
       <h1>Get 200+ collision leads in 3 months. <span class="gold">Or we work for free.</span><a href="#guarantee" class="ast" aria-label="See guarantee terms">*</a></h1>
       <p class="lead">Keep your bays full and your techs busy — without waiting on DRP referrals. A website built to turn visitors into estimate requests, plus Google &amp; Meta Ads that send it drivers with damaged cars, only from the ZIP codes you serve.</p>
       <p class="fine">*Google Ads guarantee: 200+ qualified leads in 90 days with $1,500+/mo ad spend, or no management fee until you get there. <a href="#guarantee">See terms</a></p>
-      <a class="hero-book cta book" href="/autobodyshop-ads/book/"><span class="cal-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>Prefer to pick a time now? <b>Book a free call →</b></a>
+      <a class="hero-book cta book" href="/autobodyshop-ads/book/"><span class="cal-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><span class="hb-q">Prefer to pick a time now?</span> <b>Book a free call →</b></a>
     </div>
 
     <div class="formcard" id="book">
