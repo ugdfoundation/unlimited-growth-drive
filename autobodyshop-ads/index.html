@@ -70,7 +70,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 .logo small{display:block;font-size:10px;letter-spacing:.14em;color:#8f8c84;font-weight:500}
 header .btn{padding:12px 20px;font-size:14px}
 
-.hero{background:var(--ink);color:#f2f0eb;padding:124px 0 96px;overflow:hidden}
+.hero{background:var(--ink);color:#f2f0eb;padding:124px 0 64px;overflow:hidden}
 .hero::before{content:"";position:absolute;top:-20%;right:-10%;width:780px;height:780px;background:radial-gradient(closest-side,rgba(233,177,59,.18),transparent 70%);pointer-events:none}
 .hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 30% 40%,#000 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 30% 40%,#000 0%,transparent 70%);pointer-events:none}
 .hero .wrap{position:relative;z-index:1}
@@ -687,6 +687,18 @@ body.lock{overflow:hidden}
 .pfm-stage{min-height:0}
 @media (max-width:960px){.pfm-box{display:block;height:auto}.pfm-media{height:auto}.pfm-stage{height:55vh;flex:none}}
 @media (max-width:640px){.pfm-box{height:100%}}
+.logos{background:var(--ink);padding:0 0 64px;overflow:hidden;margin-top:-1px}
+.logos-t{text-align:center;font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#a8a59c;margin-bottom:22px;padding:0 20px}
+.marquee{display:flex;width:max-content;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);width:100%}
+.marquee .track{display:flex;gap:22px;padding-right:22px;list-style:none;flex:none;animation:logoScroll 32s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes logoScroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.lg{flex:none;width:210px;height:88px;border-radius:14px;display:grid;place-items:center;padding:14px 18px;border:1px solid rgba(255,255,255,.08)}
+.lg img{max-width:100%;max-height:56px;width:auto;height:auto;object-fit:contain}
+.lg-txt{background:#f5f3ee}
+.lg-txt span{font-weight:700;font-size:15px;letter-spacing:-.01em;color:#1c2b4a;text-align:center;line-height:1.2;text-transform:uppercase}
+@media (max-width:700px){.logos{padding-bottom:48px}.lg{width:160px;height:70px;padding:10px 12px}.lg img{max-height:44px}.lg-txt span{font-size:12.5px}.marquee .track{gap:14px;padding-right:14px;animation-duration:24s}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}.marquee{overflow-x:auto}}
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -787,6 +799,15 @@ body.lock{overflow:hidden}
         </div>
       </form>
     </div>
+  </div>
+</section>
+
+<!-- CLIENT LOGOS -->
+<section class="logos" aria-label="Body shops we work with">
+  <p class="logos-t">Trusted by auto body &amp; collision shops across the US</p>
+  <div class="marquee">
+    <ul class="track"><li class="lg" style="background:#0a2240"><img src="/autobodyshop-ads/cases/logo-sdb.webp" alt="Same Day Bumper" loading="lazy"></li><li class="lg" style="background:#0a2240"><img src="/autobodyshop-ads/cases/logo-pr.webp" alt="Pristine Collision" loading="lazy"></li><li class="lg" style="background:#ffffff"><img src="/autobodyshop-ads/cases/logo-xp.webp" alt="CARSTAR Xpress Collision" loading="lazy"></li><li class="lg lg-txt"><span>Same Day Tint</span></li><li class="lg lg-txt"><span>Same Day Fiberglass</span></li><li class="lg lg-txt"><span>Platinum Auto Collision</span></li></ul>
+    <ul class="track" aria-hidden="true"><li class="lg" style="background:#0a2240"><img src="/autobodyshop-ads/cases/logo-sdb.webp" alt="Same Day Bumper" loading="lazy"></li><li class="lg" style="background:#0a2240"><img src="/autobodyshop-ads/cases/logo-pr.webp" alt="Pristine Collision" loading="lazy"></li><li class="lg" style="background:#ffffff"><img src="/autobodyshop-ads/cases/logo-xp.webp" alt="CARSTAR Xpress Collision" loading="lazy"></li><li class="lg lg-txt"><span>Same Day Tint</span></li><li class="lg lg-txt"><span>Same Day Fiberglass</span></li><li class="lg lg-txt"><span>Platinum Auto Collision</span></li></ul>
   </div>
 </section>
 
