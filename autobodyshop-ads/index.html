@@ -804,6 +804,31 @@ section{padding:76px 0}
 @media (max-width:380px){.fgrid{grid-template-columns:1fr}}
 @media (max-width:700px){[data-step="2"] .field input{font-size:16px}}
 .sec-team{background:#fff}
+.sec-team{background:#fff}
+.tm{display:grid;grid-template-columns:1.12fr .88fr;gap:64px;align-items:center}
+.tm>*{min-width:0}
+.tm-photo{position:relative;padding:0 18px 22px 0;margin:16px 0 8px}
+.tm-photo::before{content:"";position:absolute;right:0;bottom:0;width:72%;height:78%;border-radius:28px;background:linear-gradient(140deg,#f7d27a,#cf9320);opacity:.9}
+.tm-frame{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 30px 70px rgba(16,16,20,.22),0 0 0 1px rgba(0,0,0,.05)}
+.tm-frame img{display:block;width:100%;height:auto;aspect-ratio:1448/1086;object-fit:cover}
+.tm-chip{position:absolute;display:flex;align-items:center;gap:10px;background:rgba(14,14,16,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:10px 14px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.tm-chip b{display:block;font-size:14px;line-height:1.2}
+.tm-chip small{display:block;font-size:11.5px;color:#b9b6ae}
+.tm-chip-a{left:-14px;bottom:-4px}
+.tm-chip-b{top:-16px;left:22px;flex-direction:column;align-items:flex-start;gap:0;padding:10px 16px}
+.tm-chip-b b{font-size:24px;letter-spacing:-.02em}
+.tm-logo{width:34px;height:34px;border-radius:9px;background:url(/autobodyshop-ads/cases/ugd-logo.webp) center/cover;flex:none}
+.tm-body h2{font-size:clamp(28px,3.2vw,40px);margin-bottom:14px}
+.tm-body .muted{font-size:16px;margin-bottom:26px}
+.tm-list{list-style:none;display:grid;gap:12px;margin-bottom:28px}
+.tm-list li{display:flex;gap:14px;align-items:flex-start;background:var(--cream);border:1px solid #ece8df;border-radius:16px;padding:16px 18px;transition:transform .2s,box-shadow .2s}
+.tm-list li:hover{transform:translateX(4px);box-shadow:0 10px 24px rgba(0,0,0,.06)}
+.tm-list i{flex:none;width:40px;height:40px;border-radius:12px;background:var(--ink);color:var(--gold);display:grid;place-items:center}
+.tm-list i svg{width:19px;height:19px}
+.tm-list strong{display:block;font-size:15.5px;font-weight:600;color:var(--text)}
+.tm-list span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+@media (max-width:960px){.tm{grid-template-columns:1fr;gap:36px}}
+@media (max-width:700px){.tm-photo{padding:0 10px 14px 0}.tm-chip{padding:8px 11px;border-radius:12px}.tm-chip-a{left:-4px;bottom:-6px}.tm-chip-b{top:-12px;left:12px;padding:7px 12px}.tm-chip-b b{font-size:19px}.tm-logo{width:28px;height:28px}.tm-list li{padding:14px}.tm-body .btn{display:flex;width:100%}}
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -1207,20 +1232,30 @@ section{padding:76px 0}
 </section>
 
 <!-- 8. TEAM -->
-<section class="dark sec-team">
-  <div class="wrap">
-    <div class="team rv">
-      <img src="/autobodyshop-ads/cases/ugd-team.webp" width="1448" height="1086" loading="lazy" alt="The Unlimited Growth Drive team">
-      <div class="team-body">
-        <div class="eyebrow">Who you'll work with</div>
-        <h2>A full team behind your shop — and <span class="gold">one specialist you talk to directly.</span></h2>
-        <p class="muted">No salesperson in the middle. No getting passed around.</p>
-        <ul class="team-list">
-          <li><b>1:1</b><div><strong>Direct line to your specialist</strong><span>The person running your account is the person you talk to.</span></div></li>
-          <li><b>✓</b><div><strong>Google Ads, GA4 &amp; Meta certified</strong><span>Running paid ads since 2021.</span></div></li>
-          <li><b>↗</b><div><strong>Monthly plain-English report</strong><span>Calls, estimate requests and what each one cost.</span></div></li>
-        </ul>
-        <!-- Add specialist name + US-hours availability here when ready -->
+<section class="sec-team">
+  <div class="wrap tm">
+    <div class="tm-photo rv">
+      <div class="tm-frame">
+        <img src="/autobodyshop-ads/cases/ugd-team.webp" width="1448" height="1086" loading="lazy" alt="The Unlimited Growth Drive team at work">
+      </div>
+      <div class="tm-chip tm-chip-a"><span class="tm-logo"></span><div><b>The UGD team</b><small>Unlimited Growth Drive</small></div></div>
+      <div class="tm-chip tm-chip-b"><b class="gold">2021</b><small>Running paid ads since</small></div>
+    </div>
+    <div class="tm-body rv">
+      <div class="eyebrow">Who you'll work with</div>
+      <h2>A full team behind your shop — and <span class="gold">one specialist you talk to directly.</span></h2>
+      <p class="muted">No salesperson in the middle. No getting passed around.</p>
+      <ul class="tm-list">
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></i><div><strong>Direct line to your specialist</strong><span>The person running your account is the person you talk to.</span></div></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9z"/></svg></i><div><strong>Google Ads, GA4 &amp; Meta certified</strong><span>Running paid ads since 2021.</span></div></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></i><div><strong>Monthly plain-English report</strong><span>Calls, estimate requests and what each one cost.</span></div></li>
+      </ul>
+      <a class="btn cta book" href="/autobodyshop-ads/book/">Meet the team — book a call <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Add specialist name + US-hours availability here when ready -->
       </div>
     </div>
   </div>
