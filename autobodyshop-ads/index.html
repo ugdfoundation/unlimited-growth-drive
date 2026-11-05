@@ -793,6 +793,16 @@ section{padding:76px 0}
 .sec-white .bridge{margin-top:26px}
 @media (max-width:700px){section{padding:48px 0}.sec-rev{padding:40px 0 20px}.sec-white{padding:32px 0 40px}.sec-rev .head,.sec-white .head{margin-bottom:22px}}
 .opt-l{font-weight:400;color:var(--muted)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 10px;margin-bottom:4px}
+.fgrid .field{margin:0}
+[data-step="2"] .field label{font-size:12px;margin-bottom:4px}
+[data-step="2"] .field input{padding:10px 12px;font-size:15px;border-radius:10px}
+[data-step="2"] h3.f2{font-size:15px;margin:0 0 12px;line-height:1.3}
+[data-step="2"] .frow{margin-top:12px}
+[data-step="2"] .frow .btn{padding:15px 20px}
+[data-step="2"] .privacy{margin-top:8px}
+@media (max-width:380px){.fgrid{grid-template-columns:1fr}}
+@media (max-width:700px){[data-step="2"] .field input{font-size:16px}}
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -882,12 +892,13 @@ section{padding:76px 0}
         </div>
         <div class="fstep" data-step="2">
           <h3 class="f2">Almost done — where should we send your call details?</h3>
-          <div class="field"><label for="shop">Shop name</label><input id="shop" name="shop" autocomplete="organization"></div>
+          <div class="fgrid"><div class="field"><label for="shop">Shop name</label><input id="shop" name="shop" autocomplete="organization"></div>
           <div class="field"><label for="website">Your website <span class="opt-l">(optional)</span></label><input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="yourshop.com"></div>
           <div class="field"><label for="city">City &amp; state</label><input id="city" name="city" placeholder="e.g. Dallas, TX"></div>
           <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name"></div>
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@yourshop.com"></div>
-          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 123-4567"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@shop.com"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 123-4567"></div></div>
+          
           <div class="err" role="alert"></div>
           <div class="frow"><button type="button" class="back">← Back</button><button type="submit" class="btn">Continue to booking <span class="arr">→</span></button></div>
           <p class="privacy">Only used to prepare for your call. No spam.</p>
