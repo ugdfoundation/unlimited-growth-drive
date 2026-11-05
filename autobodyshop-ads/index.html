@@ -792,6 +792,7 @@ section{padding:76px 0}
 .sec-rev .head,.sec-white .head{margin-bottom:30px}
 .sec-white .bridge{margin-top:26px}
 @media (max-width:700px){section{padding:48px 0}.sec-rev{padding:40px 0 20px}.sec-white{padding:32px 0 40px}.sec-rev .head,.sec-white .head{margin-bottom:22px}}
+.opt-l{font-weight:400;color:var(--muted)}
 .mcta{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -882,6 +883,7 @@ section{padding:76px 0}
         <div class="fstep" data-step="2">
           <h3 class="f2">Almost done — where should we send your call details?</h3>
           <div class="field"><label for="shop">Shop name</label><input id="shop" name="shop" autocomplete="organization"></div>
+          <div class="field"><label for="website">Your website <span class="opt-l">(optional)</span></label><input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="yourshop.com"></div>
           <div class="field"><label for="city">City &amp; state</label><input id="city" name="city" placeholder="e.g. Dallas, TX"></div>
           <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name"></div>
           <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@yourshop.com"></div>
@@ -1547,7 +1549,7 @@ section{padding:76px 0}
   var phone=form.querySelector('#phone');
   phone.addEventListener('input',function(){ var d=phone.value.replace(/\D/g,'').replace(/^1(?=\d{10})/,'').slice(0,10), o=d;
     if(d.length>6) o='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6); else if(d.length>3) o='('+d.slice(0,3)+') '+d.slice(3); else if(d.length) o='('+d; phone.value=o; });
-  function checkField(el){ var v=el.value.trim(), ok=true;
+  function checkField(el){ var v=el.value.trim(), ok=true; if(el.id==='website'){ el.classList.remove('bad'); el.classList.toggle('good',!!v); return true; }
     if(el.id==='email') ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); else if(el.id==='phone') ok=v.replace(/\D/g,'').length>=10; else ok=!!v;
     el.classList.toggle('bad',!ok&&v!==''); el.classList.toggle('good',ok); return ok; }
   [].forEach.call(steps[1].querySelectorAll('input'),function(el,i,all){
@@ -1560,7 +1562,7 @@ section{padding:76px 0}
 
   form.addEventListener('submit',function(e){
     e.preventDefault(); if(!validate(2)){ [].forEach.call(steps[1].querySelectorAll('input'),function(el){ if(!checkField(el)) el.classList.add('bad'); }); var b=steps[1].querySelector('input.bad'); if(b) b.focus(); return; }
-    var d={services:svcs().join(', '),shop:val('shop'),city:val('city'),budget:val('budget'),running_ads:val('ads'),name:val('name'),email:val('email'),phone:val('phone'),fbclid:fbclid,page:location.href,submitted_at:new Date().toISOString()};
+    var d={services:svcs().join(', '),shop:val('shop'),website:val('website'),city:val('city'),budget:val('budget'),running_ads:val('ads'),name:val('name'),email:val('email'),phone:val('phone'),fbclid:fbclid,page:location.href,submitted_at:new Date().toISOString()};
     for(var k in utm) d[k]=utm[k];
     var qualified=d.budget!=='Under $1,000';
     track('track','Lead',{content_name:'Auto Body Short Form',services:d.services,budget:d.budget,qualified:qualified});
