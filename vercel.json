@@ -9,5 +9,137 @@
       "source": "/services/:slug",
       "destination": "/"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "destination": "/team",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/",
+      "destination": "/team",
+      "permanent": true
+    },
+    {
+      "source": "/client-reviews",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/client-reviews/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/starting-package",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/starting-package/",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/packages",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/packages/",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/law-firm-website-design",
+      "destination": "/website-design/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/law-firm-website-design/",
+      "destination": "/website-design/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/google-ads-for-law-firm-blogs",
+      "destination": "/google-ads/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/google-ads-for-law-firm-blogs/",
+      "destination": "/google-ads/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/top-7-benefits-of-google-ads-for-law-firm-growth",
+      "destination": "/google-ads/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/top-7-benefits-of-google-ads-for-law-firm-growth/",
+      "destination": "/google-ads/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/blogs",
+      "destination": "/google-ads/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/",
+      "destination": "/google-ads/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:slug*",
+      "destination": "/google-ads/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug*",
+      "destination": "/google-ads/law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/get-a-free-audit-and-consutation-for-you-law-firm",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/get-a-free-audit-and-consutation-for-you-law-firm/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about",
+      "permanent": true
+    }
   ]
 }
