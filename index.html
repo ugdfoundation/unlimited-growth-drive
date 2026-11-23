@@ -1422,6 +1422,86 @@ footer.site .social svg{width:22px;height:22px}
 .i2js #svcPage .rv.in{opacity:1;transform:none}
 @media (max-width:980px){.sp2-hg,.sp2-og,.sp2-ig{grid-template-columns:1fr;gap:32px}.sp2-gl,.sp2-ig .sp2-sh{position:static}.sp2-w3,.sp2-pg,.sp2-rg{grid-template-columns:1fr 1fr}.sp2-ind{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.sp2-hero{padding:104px 0 44px}.sp2-w3,.sp2-pg,.sp2-pg.n2,.sp2-rg,.sp2-ind{grid-template-columns:1fr}}
+
+/* ================= Pricing ================= */
+.pr-hero,.ct-hero{background:#F6F2EA;padding:128px 0 60px;border-bottom:1px solid #E7E1D4}
+.pr-hero h1,.ct-hero h1{margin:0 0 18px;font-size:clamp(2.4rem,5.2vw,4.1rem);line-height:1.04;letter-spacing:-.025em;color:#0E1B33;max-width:900px}
+.pr-lede{font-size:1.1rem;line-height:1.7;color:#4A5568;max-width:640px;margin:0}
+.pr-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.pr-chips span{font-size:.88rem;font-weight:600;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid #E7E1D4}
+.pr-chips span:before{content:"✓";color:#1E9E63;margin-right:7px;font-weight:800}
+.pr-plans{background:#FBFAF7;padding-top:64px}
+.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.pr-c{position:relative;display:flex;flex-direction:column;padding:30px 28px;border-radius:22px;background:#fff;border:1px solid #E7E1D4;box-shadow:0 1px 0 rgba(14,27,51,.03);transition:transform .3s,box-shadow .3s}
+.pr-c:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(14,27,51,.09)}
+.pr-t{margin:0;font-weight:800;font-size:1.3rem;color:#0E1B33}
+.pr-for{margin:4px 0 22px;color:#6B7280;font-size:.9rem}
+.pr-amt{display:flex;align-items:baseline;gap:8px;padding-bottom:18px;border-bottom:1px dashed #E3DED2;margin-bottom:18px}
+.pr-amt b{font-size:2.6rem;line-height:1;letter-spacing:-.03em;color:#0E1B33}
+.pr-amt small{color:#6B7280;font-size:.9rem}
+.pr-d{margin:0 0 18px;color:#4A5568;line-height:1.6;font-size:.95rem}
+.pr-ul{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:11px}
+.pr-ul li{display:flex;gap:10px;font-size:.94rem;line-height:1.45}
+.pr-ul i{flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:rgba(34,160,107,.12);color:#1E9E63;margin-top:1px}
+.pr-ul i svg{width:10px;height:10px}
+.pr-ul em{font-style:normal;color:#93308F;font-weight:700}
+.pr-c .btn{margin-top:auto;width:100%}
+.pr-pop{background:#0B1528;border-color:#0B1528;color:#fff;transform:translateY(-10px);box-shadow:0 30px 70px rgba(14,27,51,.28)}
+.pr-pop:hover{transform:translateY(-14px)}
+.pr-pop .pr-t,.pr-pop .pr-amt b{color:#fff}
+.pr-pop .pr-for,.pr-pop .pr-amt small{color:rgba(255,255,255,.6)}
+.pr-pop .pr-d,.pr-pop .pr-ul li{color:rgba(255,255,255,.82)}
+.pr-pop .pr-amt{border-color:rgba(255,255,255,.15)}
+.pr-pop .pr-ul i{background:rgba(233,177,59,.18);color:#E9B13B}
+.pr-tape{position:absolute;top:-14px;right:22px;transform:rotate(3deg);background:#E9B13B;color:#0E1B33;font-weight:800;font-size:.8rem;padding:7px 14px;border-radius:4px;box-shadow:0 8px 18px rgba(14,27,51,.2)}
+.pr-note{max-width:680px;margin:34px auto 0;text-align:center;color:#6B7280;font-size:.95rem;line-height:1.6}
+.pr-how{background:#fff}
+.pr-hg{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.pr-hl h2{margin:0 0 10px;font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.pr-hl p:last-child{color:#4A5568;margin:0}
+.pr-split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pr-split div{padding:24px;border-radius:20px;background:#F6F2EA;border:1px solid #E7E1D4;display:grid;gap:8px}
+.pr-split b{font-size:1.1rem}.pr-split p{margin:0;color:#4A5568;line-height:1.6;font-size:.93rem}
+.pr-ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;color:#fff}
+.pr-ic.g{background:#22A06B}.pr-ic.p{background:#93308F}
+@media (max-width:980px){.pr-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}.pr-pop{transform:none}.pr-pop:hover{transform:translateY(-5px)}.pr-hg{grid-template-columns:1fr;gap:24px}}
+@media (max-width:600px){.pr-hero,.ct-hero{padding:104px 0 44px}.pr-split{grid-template-columns:1fr}}
+
+/* ================= Contact ================= */
+.ct-body{background:#FBFAF7;padding-top:56px}
+.ct-g{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:start}
+.ct-l{display:grid;gap:12px}
+.ct-card{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:18px;background:#fff;border:1px solid #E7E1D4;text-decoration:none;color:var(--fg);transition:transform .25s,box-shadow .25s,border-color .25s}
+.ct-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(14,27,51,.08);border-color:#D8CFE0}
+.ct-ic{flex:none;width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:#F6F2EA;border:1px solid #E7E1D4}
+.ct-ic svg{width:26px;height:26px}
+.ct-tx{display:grid;gap:2px;min-width:0;flex:1}
+.ct-tx small{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:#8A93A3;font-weight:600}
+.ct-tx b{font-size:1.02rem;overflow-wrap:anywhere}
+.ct-tx em{font-style:normal;font-size:.84rem;color:#6B7280}
+.ct-go{font-size:1.3rem;color:#93308F;transition:transform .25s}.ct-card:hover .ct-go{transform:translateX(4px)}
+.ct-act{display:flex;gap:6px;flex:none}
+.ct-act a,.ct-act .copy{font:600 .8rem var(--f-body);padding:7px 12px;border-radius:999px;border:1px solid #E7E1D4;background:#fff;color:#0E1B33;text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.ct-act a{background:#0E1B33;color:#fff;border-color:#0E1B33}
+.ct-act a:hover{background:#93308F;border-color:#93308F}
+.ct-act .copy:hover{background:#F6F2EA}
+.ct-act .copy{margin:0!important;position:static!important}
+.ct-cal{background:#0B1528;border-color:#0B1528;color:#fff;padding:22px}
+.ct-cal .ct-ic{background:#fff;border:0}
+.ct-cal .ct-tx small{color:#E9B13B}.ct-cal .ct-tx em{color:rgba(255,255,255,.65)}
+.ct-cal .ct-go{color:#E9B13B}
+.ct-hours{display:grid;gap:4px;padding:18px 20px;border-radius:18px;border:1px dashed #D9D2C3}
+.ct-hours b{font-size:.95rem}.ct-hours span{font-size:.88rem;color:#6B7280}
+.ct-live{display:flex;align-items:center;gap:8px;color:#1E9E63!important;font-weight:600}
+.ct-live i{width:8px;height:8px;border-radius:50%;background:#22A06B;box-shadow:0 0 0 0 rgba(34,160,107,.6);animation:wyp 1.8s infinite}
+.ct-form{background:#fff;border:1px solid #E7E1D4;border-radius:24px;padding:32px;box-shadow:0 24px 56px rgba(14,27,51,.08)}
+.ct-form h2{margin:0 0 8px;font-size:clamp(1.6rem,3vw,2.1rem)}
+.ct-fp{margin:0 0 22px;color:#6B7280;font-size:.93rem}
+.ct-form .f label{font-weight:600;font-size:.86rem;color:#0E1B33}
+.ct-form .f input,.ct-form .f select,.ct-form .f textarea{border-radius:12px!important;border:1px solid #E3DED2!important;background:#FBFAF7!important;padding:12px 14px!important;transition:border-color .2s,box-shadow .2s,background .2s}
+.ct-form .f input:focus,.ct-form .f select:focus,.ct-form .f textarea:focus{outline:none;border-color:#93308F!important;background:#fff!important;box-shadow:0 0 0 4px rgba(147,48,143,.12)}
+@media (max-width:980px){.ct-g{grid-template-columns:1fr}}
+@media (max-width:600px){.ct-form{padding:22px}.ct-card{flex-wrap:wrap}.ct-act{width:100%;padding-left:66px}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1998,46 +2078,81 @@ footer.site .social svg{width:22px;height:22px}
 </section>
 
 <!-- ============ PRICING ============ -->
-<section class="view" data-view="pricing" hidden>
-  <div class="phead"><div class="wrap"><p class="crumb">Home / Pricing</p><span class="eyebrow">Pricing</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">Simple plans. No long contracts.</h1><p class="lede">Management fees are separate from ad spend, which you pay directly to Google or Meta.</p></div></div>
-  <div class="band"><div class="wrap">
-    <div class="grid g3">
-      <div class="card price"><span class="tag">Launch</span><div class="amt">$1,000 <small>starting</small></div><p style="color:var(--muted)">One channel, done right. Ideal for testing paid ads.</p>
-        <ul><li>Google Ads or Meta Ads setup</li><li>Keyword & audience research</li><li>Conversion tracking (GA4 + GTM)</li><li>1 landing page</li><li>Monthly report</li></ul>
-        <a class="btn btn-ghost" href="/contact" data-go="contact">Start with Launch</a></div>
-      <div class="card price pop"><span class="badge">Most popular</span><span class="tag">Growth</span><div class="amt">Custom <small>/ month</small></div><p style="color:var(--muted)">Google + Meta working together with full tracking.</p>
-        <ul><li>Google Ads + Meta Ads management</li><li>Server-side & call tracking</li><li>Landing pages + CRO testing</li><li>Weekly optimization</li><li>Bi-weekly strategy calls</li><li>Live reporting dashboard</li></ul>
-        <a class="btn btn-primary" href="/contact" data-go="contact">Get a Growth quote</a></div>
-      <div class="card price"><span class="tag">Full Engine</span><div class="amt">Custom <small>/ month</small></div><p style="color:var(--muted)">Your complete outsourced marketing department.</p>
-        <ul><li>Everything in Growth</li><li>New website design & development</li><li>SEO & Google Business Profile</li><li>Social media management</li><li>CRM & follow-up automation</li><li>Dedicated account manager</li></ul>
-        <a class="btn btn-ghost" href="/contact" data-go="contact">Talk to us</a></div>
-    </div>
-    <p class="notice">Only the $1,000 starting point comes from your current listing. Set the Growth and Full Engine prices yourself.</p>
+<section class="view pr" data-view="pricing" hidden>
+  <div class="pr-hero"><div class="wrap">
+    <p class="wkh-k">Pricing</p>
+    <h1>Honest pricing. <span class="wkh-u">No long contracts.<svg viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 6, 140 4, 296 12" fill="none" stroke="#E9B13B" stroke-width="7" stroke-linecap="round"/></svg></span></h1>
+    <p class="pr-lede">Our management fee is separate from your ad spend. You pay Google and Meta directly from your own card, so the accounts, the data and the results always stay yours.</p>
+    <div class="pr-chips"><span>Month-to-month after onboarding</span><span>You own every account</span><span>Free audit before you commit</span></div>
   </div></div>
-  <div class="band alt"><div class="wrap">
-    <div class="head"><span class="eyebrow">Pricing FAQ</span><h2>Before you decide</h2></div>
+
+  <div class="band pr-plans"><div class="wrap">
+    <div class="pr-grid">
+      <article class="pr-c">
+        <p class="pr-t">Launch</p><p class="pr-for">For testing paid ads on one channel</p>
+        <div class="pr-amt"><small>from</small><b>$1,000</b></div>
+        <p class="pr-d">One channel, set up properly: research, campaigns, tracking and a page that converts.</p>
+        <ul class="pr-ul"><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Google Ads <em>or</em> Meta Ads setup</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Keyword &amp; audience research</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Conversion tracking (GA4 + GTM)</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>1 landing page</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Monthly report</li></ul>
+        <a class="btn btn-ghost" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Book a call about Launch</a>
+      </article>
+      <article class="pr-c pr-pop">
+        <span class="pr-tape">Most clients pick this</span>
+        <p class="pr-t">Growth</p><p class="pr-for">For businesses ready to scale leads</p>
+        <div class="pr-amt"><b>Custom</b><small>/ month</small></div>
+        <p class="pr-d">Google and Meta working together, with full tracking and landing pages we keep testing.</p>
+        <ul class="pr-ul"><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Google Ads + Meta Ads management</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Server-side &amp; call tracking</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Landing pages + CRO testing</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Weekly optimization</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Bi-weekly strategy calls</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Live reporting dashboard</li></ul>
+        <a class="btn btn-gold" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Get a Growth quote</a>
+      </article>
+      <article class="pr-c">
+        <p class="pr-t">Full Engine</p><p class="pr-for">For a complete outsourced marketing team</p>
+        <div class="pr-amt"><b>Custom</b><small>/ month</small></div>
+        <p class="pr-d">Ads, website, SEO, social and follow-up, run by one team and reported in one place.</p>
+        <ul class="pr-ul"><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Everything in Growth</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>New website design &amp; development</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>SEO &amp; Google Business Profile</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Social media management</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>CRM &amp; follow-up automation</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Dedicated account manager</li></ul>
+        <a class="btn btn-ghost" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Talk to us</a>
+      </article>
+    </div>
+    <p class="pr-note">Every quote is based on your market, your goals and how many channels we run. We'll give you a clear number on a free call, with no pressure to sign.</p>
+  </div></div>
+
+  <div class="band pr-how"><div class="wrap pr-hg">
+    <div class="pr-hl"><p class="wkh-k">How it works</p><h2>Where your money goes</h2><p>Two separate costs, both visible to you at all times.</p></div>
+    <div class="pr-split">
+      <div><span class="pr-ic g">1</span><b>Ad spend</b><p>Paid straight to Google or Meta from your own card. We never mark it up and never hold your money.</p></div>
+      <div><span class="pr-ic p">2</span><b>Our management fee</b><p>Covers strategy, setup, daily optimization, landing pages, tracking and reporting, depending on your plan.</p></div>
+    </div>
+  </div></div>
+
+  <div class="band alt"><div class="wrap"><div class="fq">
+    <div class="fq-l"><span class="eyebrow">Pricing FAQ</span><h2>Before you decide</h2><p class="lede">Questions business owners usually ask before signing up.</p>
+      <div class="fq-card"><b>Get your number</b><span>A free 30-minute call, a clear quote and an honest answer on whether ads fit your business.</span><div class="fq-btns"><a class="btn btn-gold" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Book a free call</a><a class="btn btn-ghost fq-wa" href="https://wa.me/8801754829854" target="_blank" rel="noopener">WhatsApp</a></div></div></div>
     <div class="faq">
-      <details><summary>Is ad spend included?</summary><p>No. You pay Google and Meta directly from your own card, so you always own the account and the data.</p></details>
+      <details open><summary>Is ad spend included in the price?</summary><p>No. You pay Google and Meta directly from your own card, so you always own the account and the data.</p></details>
       <details><summary>Is there a minimum contract?</summary><p>We ask for a short onboarding period so campaigns can gather data, then billing is month to month.</p></details>
       <details><summary>Do you offer a free audit?</summary><p>Yes. Send us your website and current campaigns and we'll show you where leads are leaking, free.</p></details>
+      <details><summary>How much should I budget for ads?</summary><p>For most local service markets we recommend at least $1,500–$3,000 a month in ad spend, on top of management.</p></details>
     </div>
-  </div></div>
+  </div></div></div>
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="view" data-view="contact" hidden>
-  <div class="phead"><div class="wrap"><p class="crumb">Home / Contact</p><span class="eyebrow">Contact us</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">Let's turn your goals <span class="mark">into reality.</span></h1><p class="lede">Book a free strategy call or request a free audit. We usually reply within a few hours.</p></div></div>
-  <div class="band"><div class="wrap contact">
-    <div class="cinfo">
-      <div class="card"><svg width="22" height="22" style="color:var(--accent);flex:none"><use href="#i-wa"/></svg><div><small>WhatsApp / Phone</small><b id="cPhone">+880 1754-829854</b></div><button class="copy" type="button" data-copy="cPhone">Copy</button></div>
-      <div class="card"><svg width="22" height="22" style="color:var(--accent);flex:none"><use href="#i-web"/></svg><div><small>Email</small><b id="cMail">unlimitedgrowthdrive@gmail.com</b></div><button class="copy" type="button" data-copy="cMail">Copy</button></div>
-      <div class="card"><svg width="22" height="22" style="color:var(--accent);flex:none"><use href="#i-track"/></svg><div><small>Office</small><b>Rajshahi, Bangladesh</b><br><span style="color:var(--muted);font-size:.85rem">Serving clients in the USA & Canada</span></div></div>
-      <div class="card"><svg width="22" height="22" style="color:var(--accent);flex:none"><use href="#i-cal"/></svg><div><small>Hours</small><b>Mon–Sat, US business hours</b></div></div>
-      <a class="btn btn-primary" href="https://wa.me/8801754829854?text=Hi%20UGD%2C%20I%27d%20like%20a%20free%20growth%20audit." target="_blank" rel="noopener">Chat on WhatsApp</a>
+<section class="view ct" data-view="contact" hidden>
+  <div class="ct-hero"><div class="wrap">
+    <p class="wkh-k">Contact us</p>
+    <h1>Let's talk about <span class="wkh-u">your next 100 leads.<svg viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 6, 140 4, 296 12" fill="none" stroke="#E9B13B" stroke-width="7" stroke-linecap="round"/></svg></span></h1>
+    <p class="pr-lede">Book a free strategy call, send us a WhatsApp, or fill in the form. A real person on our team replies, usually within a few hours during US business hours.</p>
+  </div></div>
+  <div class="band ct-body"><div class="wrap ct-g">
+    <div class="ct-l">
+      <a class="ct-card ct-cal" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener"><span class="ct-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#006BFF" d="M19.655 14.262c.281 0 .557.023.828.064 0 .005-.005.01-.005.014-.105.267-.234.534-.381.786l-1.219 2.106c-1.112 1.936-3.177 3.127-5.411 3.127h-2.432c-2.23 0-4.294-1.191-5.412-3.127l-1.218-2.106a6.251 6.251 0 0 1 0-6.252l1.218-2.106C6.736 4.832 8.8 3.641 11.035 3.641h2.432c2.23 0 4.294 1.191 5.411 3.127l1.219 2.106c.147.252.271.519.381.786 0 .004.005.009.005.014-.267.041-.543.064-.828.064-1.816 0-2.501-.607-3.291-1.306-.764-.676-1.711-1.517-3.44-1.517h-1.029c-1.251 0-2.387.455-3.2 1.278-.796.805-1.233 1.904-1.233 3.099v1.411c0 1.196.437 2.295 1.233 3.099.813.823 1.949 1.278 3.2 1.278h1.034c1.729 0 2.676-.841 3.439-1.517.791-.703 1.471-1.306 3.287-1.301Zm.005-3.237c.399 0 .794-.036 1.179-.11-.002-.004-.002-.01-.002-.014-.073-.414-.193-.823-.349-1.218.731-.12 1.407-.396 1.986-.819 0-.004-.005-.013-.005-.018-.331-1.085-.832-2.101-1.489-3.03-.649-.915-1.435-1.719-2.331-2.395-1.867-1.398-4.088-2.138-6.428-2.138-1.448 0-2.855.28-4.175.841-1.273.543-2.423 1.315-3.407 2.299S2.878 6.552 2.341 7.83c-.557 1.324-.842 2.726-.842 4.175 0 1.448.281 2.855.842 4.174.542 1.274 1.314 2.423 2.298 3.407s2.129 1.761 3.407 2.299c1.324.556 2.727.841 4.175.841 2.34 0 4.561-.74 6.428-2.137a10.815 10.815 0 0 0 2.331-2.396c.652-.929 1.158-1.949 1.489-3.03 0-.004.005-.014.005-.018-.579-.423-1.255-.699-1.986-.819.161-.395.276-.804.349-1.218.005-.009.005-.014.005-.023.869.166 1.692.506 2.404 1.035.685.505.552 1.075.446 1.416C22.184 20.437 17.619 24 12.221 24c-6.625 0-12-5.375-12-12s5.37-12 12-12c5.398 0 9.963 3.563 11.471 8.464.106.341.239.915-.446 1.421-.717.529-1.535.873-2.404 1.034.128.716.128 1.45 0 2.166-.387-.074-.782-.11-1.182-.11-4.184 0-3.968 2.823-6.736 2.823h-1.029c-1.899 0-3.15-1.357-3.15-3.095v-1.411c0-1.738 1.251-3.094 3.15-3.094h1.034c2.768 0 2.552 2.823 6.731 2.827Z"/></svg></span><span class="ct-tx"><small>Fastest way</small><b>Book a free 30-min strategy call</b><em>Pick a time that suits you on Calendly</em></span><span class="ct-go">→</span></a>
+      <div class="ct-card"><span class="ct-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span><span class="ct-tx"><small>WhatsApp / Phone</small><b id="cPhone">+880 1754-829854</b></span><span class="ct-act"><a href="https://wa.me/8801754829854?text=Hi%20UGD%2C%20I%27d%20like%20a%20free%20growth%20audit." target="_blank" rel="noopener">Chat</a><button class="copy" type="button" data-copy="cPhone">Copy</button></span></div>
+      <div class="ct-card"><span class="ct-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></span><span class="ct-tx"><small>Email</small><b id="cMail">unlimitedgrowthdrive@gmail.com</b></span><span class="ct-act"><a href="mailto:unlimitedgrowthdrive@gmail.com">Email</a><button class="copy" type="button" data-copy="cMail">Copy</button></span></div>
+      <a class="ct-card" href="https://www.google.com/maps/search/?api=1&amp;query=Rajshahi%2C%20Bangladesh" target="_blank" rel="noopener"><span class="ct-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z"/></svg></span><span class="ct-tx"><small>Office</small><b>Rajshahi, Bangladesh</b><em>Serving clients in the USA, Canada &amp; UK</em></span><span class="ct-go">→</span></a>
+      <div class="ct-hours"><b>Working hours</b><span>Mon–Sat · US &amp; Canada business hours</span><span class="ct-live"><i></i>Usually replies within a few hours</span></div>
     </div>
-    <div class="card">
-      <h3 style="font-size:1.3rem">Get your free growth audit</h3>
-      <p style="color:var(--muted);font-size:.92rem">Fill this in and it opens WhatsApp with your details ready to send.</p>
+    <div class="ct-form">
+      <p class="wkh-k">Free growth audit</p>
+      <h2>Tell us about your business</h2>
+      <p class="ct-fp">Fill this in and WhatsApp opens with your details ready to send. No spam, no automated sales calls.</p>
       <form class="f" id="leadForm" novalidate>
         <label>Full name<input id="fName" required autocomplete="name" placeholder="Jane Smith"></label>
         <label>Business email<input id="fEmail" type="email" required autocomplete="email" placeholder="jane@yourfirm.com"></label>
@@ -2047,7 +2162,7 @@ footer.site .social svg{width:22px;height:22px}
         <label>Monthly ad budget<select id="fBud"><option>Under $1,000</option><option>$1,000 – $3,000</option><option>$3,000 – $10,000</option><option>$10,000+</option></select></label>
         <label>Country<select id="fCountry"><option>USA</option><option>Canada</option><option>Other</option></select></label>
         <label class="full">Your main goal<textarea id="fMsg" placeholder="e.g. More personal injury cases from Google in Dallas"></textarea></label>
-        <div class="full" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn btn-primary" type="submit">Send via WhatsApp →</button><span class="formmsg" id="formMsg" aria-live="polite"></span></div>
+        <div class="full" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn btn-gold" type="submit">Send via WhatsApp →</button><span class="formmsg" id="formMsg" aria-live="polite"></span></div>
       </form>
     </div>
   </div></div>
