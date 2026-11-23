@@ -1100,6 +1100,101 @@ footer.site .social svg{width:22px;height:22px}
 @media (max-width:980px){.wy-grid{grid-template-columns:1fr}.wy-fig{min-height:340px}.wy-strip{grid-template-columns:1fr 1fr}.wy-strip div:nth-child(3){border-left:0}.wy-strip div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}}
 @media (max-width:560px){.wy-cards{grid-template-columns:1fr}.wy-strip{grid-template-columns:1fr}.wy-strip div+div{border-left:0;border-top:1px solid rgba(255,255,255,.1)}}
 @media (prefers-reduced-motion:reduce){.gt-seal svg,.wy-badge i{animation:none}.gt-track i{transition:none}}
+
+/* ================= Our Work (premium) ================= */
+.wk-hero{position:relative;overflow:hidden;padding:130px 0 70px;background:radial-gradient(800px 420px at 85% 0%,rgba(147,48,143,.45),transparent 60%),radial-gradient(600px 400px at 0% 100%,rgba(233,177,59,.18),transparent 60%),#0B1528;color:#fff}
+.wk-hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 75%);pointer-events:none}
+.wk-hero .wrap{position:relative}
+.wk-eye{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.85rem;color:#E9B13B;padding:6px 14px;border-radius:999px;background:rgba(233,177,59,.1);border:1px solid rgba(233,177,59,.35)}
+.wk-eye i{width:8px;height:8px;border-radius:50%;background:#22A06B;box-shadow:0 0 0 0 rgba(34,160,107,.6);animation:wyp 1.8s infinite}
+.wk-hero h1{color:#fff;margin:18px 0 16px;font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:1.02;max-width:900px}
+.wk-hero h1 em{font-style:normal;background:linear-gradient(90deg,#E9B13B,#F5D27A 45%,#D27CCF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wk-lede{color:rgba(255,255,255,.75);font-size:1.12rem;line-height:1.65;max-width:720px;margin:0 0 40px}
+.wk-hl{display:grid;grid-template-columns:repeat(4,1fr);border-radius:22px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(8px)}
+.wk-hl div{padding:22px 22px 20px;display:grid;gap:6px}
+.wk-hl div+div{border-left:1px solid rgba(255,255,255,.1)}
+.wk-hl b{font-size:clamp(1.8rem,3vw,2.4rem);line-height:1;background:linear-gradient(90deg,#E9B13B,#F5D27A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wk-hl span{color:#fff;font-weight:600;font-size:.95rem;display:grid;gap:4px}
+.wk-hl small{color:rgba(255,255,255,.55);font-weight:400;font-size:.78rem}
+.wk-k{display:inline-block;font-weight:600;font-size:.85rem;color:#93308F;padding:6px 14px;border-radius:999px;background:rgba(147,48,143,.08);border:1px solid rgba(147,48,143,.22)}
+.wk-bar{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.wk-bar h2,.wk-sec-h h2{margin:14px 0 0;font-size:clamp(1.9rem,3.6vw,2.7rem)}
+.wk-tabs{display:flex;gap:6px;padding:6px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px rgba(14,27,51,.05);flex-wrap:wrap}
+.wk-tabs button{font:600 .9rem var(--f-body);padding:9px 18px;border-radius:999px;border:0;background:transparent;color:var(--fg);cursor:pointer;transition:background .2s,color .2s}
+.wk-tabs button:hover{background:var(--bg2)}
+.wk-tabs button.on{background:#0E1B33;color:#fff}
+.wk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.wk-c{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(14,27,51,.08);border-radius:24px;overflow:hidden;box-shadow:0 12px 32px rgba(14,27,51,.06);transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s,border-color .4s;font-family:var(--f-body);color:var(--fg)}
+.wk-c[hidden]{display:none}
+.wk-c:hover,.wk-c:focus-visible{transform:translateY(-8px);box-shadow:0 28px 58px rgba(14,27,51,.14);border-color:color-mix(in srgb,var(--ac) 40%,transparent)}
+.wk-c:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.wk-cov{position:relative;display:block;height:220px;background:#EEF1F6;overflow:hidden}
+.wk-cov>img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.wk-c:hover .wk-cov>img{transform:scale(1.05)}
+.wk-web .wk-cov{background:linear-gradient(135deg,#2A1844,#0E1B33);padding:16px 18px 0}
+.wk-chrome{display:flex;align-items:center;gap:5px;height:26px;padding:0 10px;background:#fff;border-radius:10px 10px 0 0;border-bottom:1px solid #eee}
+.wk-chrome i{width:8px;height:8px;border-radius:50%;background:#FF5F57}.wk-chrome i:nth-child(2){background:#FEBC2E}.wk-chrome i:nth-child(3){background:#28C840}
+.wk-chrome em{font-style:normal;font-size:.7rem;color:#777;margin-left:10px;background:#f3f3f3;border-radius:6px;padding:2px 10px}
+.wk-scr{display:block;height:178px;overflow:hidden;background:#fff}
+.wk-scr img{width:100%;display:block;transition:transform 6s linear}
+.wk-c:hover .wk-scr img{transform:translateY(calc(-100% + 178px))}
+.wk-badge{position:absolute;top:14px;right:14px;font-size:.72rem;font-weight:700;padding:5px 11px;border-radius:999px;background:#fff;color:var(--ac);box-shadow:0 6px 16px rgba(14,27,51,.15)}
+.wk-cb{display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;flex:1}
+.wk-ty{font-size:.8rem;color:var(--muted);line-height:1.4}
+.wk-nm{font-size:1.15rem}
+.wk-met{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:4px 0 2px}
+.wk-met strong{font-size:2rem;line-height:1;color:var(--ac);font-weight:800}
+.wk-met small{font-size:.88rem;color:var(--fg);font-weight:600}
+.wk-st{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding-top:12px;border-top:1px dashed var(--line)}
+.wk-st span{font-size:.74rem;color:var(--muted);line-height:1.3;display:grid;gap:2px}
+.wk-st b{font-size:.98rem;color:var(--fg)}
+.wk-more{margin-top:auto;padding-top:12px;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;color:var(--ac)}
+.wk-more svg{width:15px;height:15px;transition:transform .3s}
+.wk-c:hover .wk-more svg{transform:translateX(5px)}
+.wk-logos-band{background:#fff}
+.wk-sec-h{max-width:720px;margin-bottom:30px}
+.wk-sec-h p{color:var(--muted);margin:12px 0 0;font-size:1.02rem}
+.wk-logos{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:22px}
+.wk-lg{height:84px;border-radius:16px;border:1px solid var(--line);background:#FBF9F5;display:grid;place-items:center;padding:14px;transition:transform .3s,box-shadow .3s,background .3s}
+.wk-lg img{max-width:100%;max-height:46px;object-fit:contain;filter:grayscale(1);opacity:.75;transition:filter .3s,opacity .3s}
+.wk-lg:hover{transform:translateY(-4px);background:#fff;box-shadow:0 14px 30px rgba(14,27,51,.08)}
+.wk-lg:hover img{filter:none;opacity:1}
+.wk-names{margin-top:6px}
+.wk-pb .card{border-radius:20px;transition:transform .3s,box-shadow .3s}
+.wk-pb .card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(14,27,51,.09)}
+/* modal */
+.wk-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px}
+.wk-modal[hidden]{display:none}
+.wk-mbg{position:absolute;inset:0;background:rgba(8,14,28,.72);backdrop-filter:blur(6px);opacity:0;transition:opacity .25s}
+.wk-mbox{position:relative;width:min(1100px,100%);max-height:calc(100vh - 40px);overflow:auto;background:#fff;border-radius:26px;box-shadow:0 40px 100px rgba(0,0,0,.4);opacity:0;transform:translateY(20px) scale(.98);transition:opacity .25s,transform .3s cubic-bezier(.2,.7,.2,1)}
+.wk-modal.on .wk-mbg{opacity:1}.wk-modal.on .wk-mbox{opacity:1;transform:none}
+.wk-x{position:sticky;top:14px;float:right;margin:14px 14px 0 0;z-index:3;width:42px;height:42px;border-radius:50%;border:0;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.2);font-size:1.6rem;line-height:1;cursor:pointer;color:#0E1B33}
+.wkm-h{padding:34px 34px 28px;background:radial-gradient(500px 240px at 100% 0%,rgba(147,48,143,.4),transparent 60%),#0B1528;color:#fff}
+.wkm-h .wk-badge{position:static;display:inline-block}
+.wkm-h h3{color:#fff;margin:12px 0 4px;font-size:clamp(1.6rem,3vw,2.2rem)}
+.wkm-h p{color:rgba(255,255,255,.7);margin:0}
+.wkm-st{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.wkm-st span{display:grid;gap:2px;padding:12px 16px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-size:.8rem;color:rgba(255,255,255,.7)}
+.wkm-st b{font-size:1.25rem;color:#E9B13B}
+.wkm-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;padding:30px 34px 34px}
+.wkm-g h4{margin:0 0 8px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.wkm-g h4+p{margin:0 0 22px;line-height:1.65}
+.wkm-g ul{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px}
+.wkm-g li{display:flex;gap:10px;line-height:1.5;font-size:.95rem}
+.wkm-g li i{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:rgba(34,160,107,.12);color:#1E9E63;margin-top:1px}
+.wkm-g li i svg{width:11px;height:11px}
+.wkm-g blockquote{margin:0 0 22px;padding:16px 18px;border-left:3px solid #E9B13B;background:#FBF9F5;border-radius:0 14px 14px 0;font-style:italic;line-height:1.6}
+.wkm-g blockquote small{display:block;font-style:normal;font-weight:700;margin-top:6px;color:var(--muted)}
+.wkm-imgs{display:grid;gap:14px;align-content:start}
+.wkm-imgs figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 26px rgba(14,27,51,.08)}
+.wkm-imgs figure img{width:100%;display:block}
+.wkm-site{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 26px rgba(14,27,51,.1)}
+.wkm-sv{height:520px;overflow:auto;background:#fff}
+.wkm-sv img{width:100%;display:block}
+.wkm-note{color:var(--muted);font-size:.78rem}
+@media (max-width:1000px){.wk-grid{grid-template-columns:repeat(2,1fr)}.wk-hl{grid-template-columns:1fr 1fr}.wk-hl div:nth-child(3){border-left:0}.wk-hl div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}.wk-logos{grid-template-columns:repeat(4,1fr)}.wkm-g{grid-template-columns:1fr}}
+@media (max-width:620px){.wk-hero{padding:110px 0 50px}.wk-grid{grid-template-columns:1fr}.wk-logos{grid-template-columns:repeat(2,1fr)}.wk-hl{grid-template-columns:1fr 1fr}.wk-hl div{padding:16px}.wkm-h,.wkm-g{padding-left:20px;padding-right:20px}.wkm-sv{height:420px}.wk-tabs{width:100%;border-radius:18px}}
+@media (prefers-reduced-motion:reduce){.wk-scr img{transition:none}.wk-c:hover .wk-scr img{transform:none}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1404,17 +1499,39 @@ footer.site .social svg{width:22px;height:22px}
 <section class="view" data-view="service" hidden><div id="svcPage"></div></section>
 
 <!-- ============ WORK ============ -->
-<section class="view" data-view="work" hidden>
-  <div class="phead"><div class="wrap"><p class="crumb">Home / Our work</p><span class="eyebrow">Our work</span><h1 style="margin-top:14px;font-size:clamp(2rem,4.5vw,3.4rem)">The kind of work we do, by industry.</h1><p class="lede">Every account is different, so here's what we typically build for each type of business. Want numbers from a business like yours? Ask on a call and we'll walk you through real accounts.</p></div></div>
-  <div class="band"><div class="wrap">
-    <div class="filters" id="workFilters" role="group" aria-label="Filter by industry"></div>
-    <div class="grid g3" id="workGrid"></div>
+<section class="view wk" data-view="work" hidden>
+  <div class="wk-hero"><div class="wrap">
+    <span class="wk-eye"><i></i>Our work</span>
+    <h1>Real campaigns. <em>Real screenshots.</em></h1>
+    <p class="wk-lede">Live Google Ads, Meta Ads and website projects for local businesses in the USA. Every number below comes straight from the client's ad account, shown as it appears in the dashboard.</p>
+    <div class="wk-hl">
+      <div><b>1,000+</b><span>leads in 11 months<small>Same Day Bumper · Google Ads</small></span></div>
+      <div><b>527</b><span>phone calls in 3 months<small>Roadside assistance · Google Ads</small></span></div>
+      <div><b>1,352</b><span>conversations in 3 months<small>Auto detailing · Meta Ads</small></span></div>
+      <div><b>$19.83</b><span>cost per lead<small>Same Day Bumper · 11 months</small></span></div>
+    </div>
   </div></div>
+
+  <div class="band wk-cases"><div class="wrap">
+    <div class="wk-bar"><div><span class="wk-k">Case studies</span><h2>Results from real client accounts</h2></div>
+      <div class="wk-tabs" role="tablist" aria-label="Filter case studies"><button type="button" class="on" data-f="all">All work</button><button type="button" data-f="google">Google Ads</button><button type="button" data-f="meta">Meta Ads</button><button type="button" data-f="web">Websites</button></div></div>
+    <div class="wk-grid" id="wkGrid"></div>
+  </div></div>
+
+  <div class="band wk-logos-band"><div class="wrap">
+    <div class="wk-sec-h"><span class="wk-k">Clients</span><h2>Businesses we've worked with</h2><p>Auto body shops, collision centers, tint and detailing studios, towing companies and more, alongside clients in healthcare, home services and professional services.</p></div>
+    <div class="wk-logos"><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-sdb.webp" alt="Same Day Bumper" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-tint.webp" alt="Same Day Tint" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-fiber.webp" alt="Same Day Fiberglass" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-pr.webp" alt="Pristine Collision" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-xp.webp" alt="CARSTAR Xpress Collision" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-platinum.webp" alt="Platinum Auto Collision" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-monaco.webp" alt="Monaco Auto Styling" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-sdglass.webp" alt="San Diego Auto Glass &amp; Repair" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-rosso.webp" alt="Rosso's Roadside" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-precision.webp" alt="Precision Towing" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-roadmate.webp" alt="Roadmate Services" loading="lazy"></span><span class="wk-lg"><img src="/autobodyshop-ads/cases/logo-nextdrive.webp" alt="Next Drive Autos" loading="lazy"></span></div>
+    <div class="clients wk-names" id="clientList"></div>
+  </div></div>
+
   <div class="band alt"><div class="wrap">
-    <div class="head"><span class="eyebrow">Clients</span><h2>Businesses we've worked with</h2></div>
-    <div class="clients" id="clientList"></div>
+    <div class="wk-sec-h"><span class="wk-k">Playbooks</span><h2>What we build for each industry</h2><p>Every account is different. Here's the setup we typically start with for each type of business.</p></div>
+    <div class="filters" id="workFilters" role="group" aria-label="Filter by industry"></div>
+    <div class="grid g3 wk-pb" id="workGrid"></div>
   </div></div>
   <div class="band"><div class="wrap" data-cta></div></div>
+
+  <div class="wk-modal" id="wkModal" hidden role="dialog" aria-modal="true" aria-labelledby="wkmT"><div class="wk-mbg" data-close></div><div class="wk-mbox"><button type="button" class="wk-x" data-close aria-label="Close case study">&times;</button><div id="wkmBody"></div></div></div>
 </section>
 
 <!-- ============ ABOUT ============ -->
@@ -2030,4 +2147,89 @@ var ixr=document.querySelectorAll(".ix .rv, .hw-band .rv");if("IntersectionObser
 var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");o.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll(".gt .rv,.sv .rv,.wy .rv").forEach(function(e){o.observe(e)});
 var m=document.querySelector(".gt-meter");if(m){var n=m.querySelector(".gt-num"),done=false;var red=matchMedia("(prefers-reduced-motion: reduce)").matches;
 new IntersectionObserver(function(es,ob){es.forEach(function(e){if(e.isIntersecting&&!done){done=true;ob.disconnect();m.classList.add("go");if(red){n.textContent="100";return}var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/2400);k=1-Math.pow(1-k,3);n.textContent=Math.round(k*100);if(k<1)requestAnimationFrame(f)})(t0)}})},{threshold:.4}).observe(m)}})();</script>
+<script>
+(function(){
+const WORK_CASES=[
+    {id:'sdb-website',service:'web',name:'Same Day Bumper',type:'Website design · Mobile auto body repair, Raleigh, NC',url:'samedaybumper.com',
+     coverScroll:'/autobodyshop-ads/cases/same-day-bumper-site-card.webp',metric:'Full site',metricLabel:'designed & built by UGD',
+     images:[{scroll:'/autobodyshop-ads/cases/same-day-bumper-site.webp'}],
+     stats:[['Mobile','first design'],['1-tap','call in English & Spanish'],['Quote','form with damage photos']],
+     problem:'A mobile dent, scratch and bumper repair business in Raleigh needed a site that turns local searches and ad clicks into calls and quote requests.',
+     did:['Hero with "Call Now" buttons in English and Spanish','Services, service areas and before/after gallery sections','Request-a-quote form with vehicle details and photos of the damage'],quote:''},
+    {id:'carstar-xpress',service:'web',name:'CARSTAR Xpress Collision',type:'Website design · Collision repair, Stratford, CT',
+     coverScroll:'/autobodyshop-ads/cases/carstar-xpress-collision-site-card.webp',metric:'Full site',metricLabel:'designed & built by UGD',
+     images:[{scroll:'/autobodyshop-ads/cases/carstar-xpress-collision-site.webp'}],
+     stats:[['Lifetime','warranty up front'],['1-tap','call & free estimate'],['ADAS','& autoglass services']],
+     problem:'A CARSTAR collision center in Stratford needed a site that builds trust fast and turns visitors into estimate requests and calls.',
+     did:['Hero with "Get Free Estimate" and click-to-call buttons','Lifetime-warranty banner, services and a step-by-step repair process','Photo gallery, Google reviews, brands serviced and a contact form'],quote:''},
+    {id:'pristine-collision',service:'web',name:'Pristine Collision',type:'Website design · Collision repair, Paterson, NJ',
+     coverScroll:'/autobodyshop-ads/cases/pristine-collision-site-card.webp',metric:'Full site',metricLabel:'designed & built by UGD',
+     images:[{scroll:'/autobodyshop-ads/cases/pristine-collision-site.webp'}],
+     stats:[['329','Google reviews featured'],['6','OEM certifications shown'],['2','CTAs: estimate & booking']],
+     problem:'An I-CAR Gold Class collision shop in Paterson wanted a premium site that shows off its certifications and makes it easy to start a repair.',
+     did:['"Online Estimate" and "Book An Appointment" buttons up top','9 services, a 5-step repair process and an OEM certification section','Gallery, Google reviews and a location map with shop hours'],quote:''},
+
+    {id:'same-day-bumper',service:'google',name:'Same Day Bumper',type:'Google Ads · Bumper & collision repair, Raleigh, NC',
+     cover:'/autobodyshop-ads/cases/sdb-google-overview-card.webp',metric:'1,000+',metricLabel:'leads in 11 months',
+     images:[{src:'/autobodyshop-ads/cases/sdb-google-overview.webp'},{src:'/autobodyshop-ads/cases/sdb-google-keywords.webp'}],
+     stats:[['762','lead forms'],['263','phone calls'],['$19.83','per lead']],
+     problem:'Needed a steady flow of collision, bumper and paint repair jobs from local drivers — not wasted clicks. (Dec 1, 2025 – Nov 2, 2026)',
+     did:['Campaigns split by repair type: collision, dent & scratch, bumper repair','Bid on high-intent searches like "auto collision repair", "car body work near me" and "bumper fix near me"','Targeted only the areas the shop serves and cut wasted searches every week'],
+     quote:'"My phone rings consistently and I get on average 3-5 quote request a day. He\'s very understanding and patient."<small>Same Day Bumper</small>'},
+    {id:'same-day-bumper-90d',service:'google',name:'Same Day Bumper',type:'Google Ads · 90-day results, Raleigh, NC',
+     cover:'/autobodyshop-ads/cases/sdb-google-90d-overview-card.webp',metric:'271',metricLabel:'leads in 90 days',
+     images:[{src:'/autobodyshop-ads/cases/sdb-google-90d-overview.webp'},{src:'/autobodyshop-ads/cases/sdb-google-90d-keywords.webp'}],
+     stats:[['203','lead forms'],['68','phone calls'],['$21.30','per lead']],
+     problem:'Keep a steady stream of repair leads coming in a single quarter on a $4.48K ad budget. (Jul 1 – Sep 30, 2026)',
+     did:['Separate ad groups for auto body & collision and car paint & scratch repair','High-intent keywords like "auto collision repair", "dent and scratch repair near me" and "car body work near me"','Added RV fiberglass and camper roof repair searches as a new lead source'],quote:''},
+    {id:'paterson-collision',service:'google',name:'Collision Shop · Paterson, NJ',type:'Google Ads · Collision repair (client name hidden for privacy)',
+     cover:'/autobodyshop-ads/cases/paterson-google-overview-card.webp',metric:'206',metricLabel:'phone calls in 3 months',
+     images:[{src:'/autobodyshop-ads/cases/paterson-google-overview.webp'},{src:'/autobodyshop-ads/cases/paterson-google-keywords.webp'}],
+     stats:[['206','phone calls'],['125','conversions'],['$3.58K','total ad spend']],
+     problem:'A collision shop in Paterson, NJ wanted more local drivers calling the shop — without paying for clicks from outside its area. (Aug 1 – Oct 31, 2026)',
+     did:['Local keywords like "auto body paterson nj" and "body shop in paterson nj"','High-intent searches: "body shops near me", "car collision repair", "auto collision repair"','Kept the account healthy — 93% optimization score, no outstanding issues'],quote:''},
+    {id:'roadside-assist',service:'google',name:'Roadside Assistance Company',type:'Google Ads · 24/7 roadside & mobile tire service (client name hidden for privacy)',
+     cover:'/autobodyshop-ads/cases/roadside-google-overview-card.webp',metric:'527',metricLabel:'phone calls in 3 months',
+     images:[{src:'/autobodyshop-ads/cases/roadside-google-overview.webp'},{src:'/autobodyshop-ads/cases/roadside-google-keywords.webp'}],
+     stats:[['527','phone calls'],['456','conversions'],['1.41K','clicks']],
+     problem:'A roadside assistance company needed stranded drivers to call them first — the moment they search for help. (May 1 – Jul 31, 2026)',
+     did:['Urgent, high-intent keywords: "roadside assistance", "24 hour roadside assistance", "flat tire help"','Mobile tire repair searches as a second lead source','Call-focused campaigns so drivers can tap and call straight from the ad'],quote:''},
+
+    {id:'detailing-meta',service:'meta',name:'Auto Detailing Business',type:'Meta Ads · Interior & exterior detailing (client name hidden for privacy)',
+     cover:'/autobodyshop-ads/cases/detailing-meta-results-card.webp',metric:'1,352',metricLabel:'customer conversations in 3 months',
+     images:[{src:'/autobodyshop-ads/cases/detailing-meta-results.webp'}],
+     stats:[['1,352','conversations started'],['$3.13','per conversation'],['320K+','ad impressions']],
+     problem:'A detailing business wanted a steady flow of local customers asking for quotes and bookings — straight from Facebook & Instagram. (Aug 8 – Nov 6, 2026)',
+     did:['Messaging campaigns so customers can tap and start a chat right from the ad','Interior detailing offers that brought in 1,299 conversations at $3.03 each','Tested ABO vs. CBO setups and moved budget to what got the cheapest conversations'],quote:''}
+  ];
+const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const SV={google:["Google Ads","#4285F4"],meta:["Meta Ads","#0467DF"],web:["Website","#93308F"]};
+const ARR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const CK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+const grid=document.getElementById("wkGrid");if(!grid)return;
+const card=(c,i)=>{const sv=SV[c.service]||SV.google;const web=c.service==="web";
+ return `<button type="button" class="wk-c${web?" wk-web":""}" data-s="${c.service}" data-i="${i}" style="--ac:${sv[1]}">
+  <span class="wk-cov">${web?`<span class="wk-chrome"><i></i><i></i><i></i>${c.url?`<em>${esc(c.url)}</em>`:""}</span><span class="wk-scr"><img src="${c.coverScroll}" alt="${esc(c.name)} website design" loading="lazy"></span>`:`<img src="${c.cover}" alt="${esc(c.name)} ${sv[0]} results" loading="lazy">`}<span class="wk-badge">${sv[0]}</span></span>
+  <span class="wk-cb"><span class="wk-ty">${esc(c.type)}</span><b class="wk-nm">${esc(c.name)}</b>
+  <span class="wk-met"><strong>${esc(c.metric)}</strong><small>${esc(c.metricLabel)}</small></span>
+  <span class="wk-st">${c.stats.map(s=>`<span><b>${esc(s[0])}</b>${esc(s[1])}</span>`).join("")}</span>
+  <span class="wk-more">View case study ${ARR}</span></span></button>`};
+grid.innerHTML=WORK_CASES.map(card).join("");
+const tabs=[...document.querySelectorAll(".wk-tabs button")];
+tabs.forEach(b=>b.addEventListener("click",()=>{tabs.forEach(x=>x.classList.toggle("on",x===b));const f=b.dataset.f;[...grid.children].forEach(c=>c.hidden=!(f==="all"||c.dataset.s===f))}));
+const M=document.getElementById("wkModal"),body=document.getElementById("wkmBody");let last=null;
+function open(i){const c=WORK_CASES[i],sv=SV[c.service]||SV.google,web=c.service==="web";last=document.activeElement;
+ body.innerHTML=`<div class="wkm-h" style="--ac:${sv[1]}"><span class="wk-badge">${sv[0]}</span><h3 id="wkmT">${esc(c.name)}</h3><p>${esc(c.type)}</p>
+  <div class="wkm-st"><span><b>${esc(c.metric)}</b>${esc(c.metricLabel)}</span>${c.stats.map(s=>`<span><b>${esc(s[0])}</b>${esc(s[1])}</span>`).join("")}</div></div>
+  <div class="wkm-g"><div><h4>The goal</h4><p>${esc(c.problem)}</p><h4>What we did</h4><ul>${c.did.map(d=>`<li><i>${CK}</i>${esc(d)}</li>`).join("")}</ul>${c.quote?`<blockquote>${c.quote}</blockquote>`:""}
+  <a class="btn btn-gold" href="https://calendly.com/unlimitedgrowthdrive/free-growth-strategy-call" target="_blank" rel="noopener">Get results like this</a></div>
+  <div class="wkm-imgs">${c.images.map(im=>im.scroll?`<div class="wkm-site"><span class="wk-chrome"><i></i><i></i><i></i>${c.url?`<em>${esc(c.url)}</em>`:""}</span><div class="wkm-sv"><img src="${im.scroll}" alt="${esc(c.name)} full website" loading="lazy"></div></div>`:`<figure><img src="${im.src}" alt="${esc(c.name)} ${sv[0]} dashboard screenshot" loading="lazy"></figure>`).join("")}<small class="wkm-note">${web?"Scroll inside the frame to see the full page.":"Screenshots from the client's ad account. Some account details are blurred for privacy."}</small></div></div>`;
+ M.hidden=false;document.documentElement.style.overflow="hidden";requestAnimationFrame(()=>M.classList.add("on"));M.querySelector(".wk-x").focus();}
+function close(){M.classList.remove("on");document.documentElement.style.overflow="";setTimeout(()=>{M.hidden=true;body.innerHTML=""},250);if(last)last.focus();}
+grid.addEventListener("click",e=>{const c=e.target.closest(".wk-c");if(c)open(+c.dataset.i)});
+M.addEventListener("click",e=>{if(e.target.closest("[data-close]"))close()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!M.hidden)close()});
+
+})();
+</script>
 </body></html>
