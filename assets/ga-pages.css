@@ -524,3 +524,16 @@ footer .social svg{width:21px;height:21px}
 .sx-site figcaption{font-size:.78rem;color:#6B7280;padding:10px 6px 12px;font-weight:600}
 
 .byline{margin-top:10px;font-size:.86rem;color:var(--muted)}.byline a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+.float a span{display:none}
+@media (max-width:640px){
+html,body{overflow-x:clip}
+body{padding-bottom:calc(80px + env(safe-area-inset-bottom,0px))}
+.float{left:12px!important;right:12px!important;bottom:calc(10px + env(safe-area-inset-bottom,0px))!important;grid-template-columns:1.3fr 1fr;gap:8px!important;padding:7px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border:1px solid rgba(14,27,51,.08);border-radius:18px;box-shadow:0 12px 32px rgba(14,27,51,.2)}
+.float a{width:auto!important;height:48px!important;border-radius:12px!important;display:flex!important;align-items:center;justify-content:center;gap:8px;font:600 .95rem/1 Roboto,system-ui,sans-serif;letter-spacing:.01em;box-shadow:none!important;animation:none!important;transform:none!important}
+.float a:before{display:none!important}
+.float svg{width:20px!important;height:20px!important}
+.float a span{display:inline}
+footer .fgrid>div:last-child{grid-column:1/-1}
+footer .fgrid a,footer .fgrid li{overflow-wrap:anywhere}
+}
