@@ -102,12 +102,12 @@
       "permanent": true
     },
     {
-      "source": "/tag/:slug*",
+      "source": "/tag/(.*)",
       "destination": "/google-ads/law-firms",
       "permanent": true
     },
     {
-      "source": "/category/:slug*",
+      "source": "/category/(.*)",
       "destination": "/google-ads/law-firms",
       "permanent": true
     },
