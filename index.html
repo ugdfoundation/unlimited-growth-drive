@@ -1195,6 +1195,45 @@ footer.site .social svg{width:22px;height:22px}
 @media (max-width:1000px){.wk-grid{grid-template-columns:repeat(2,1fr)}.wk-hl{grid-template-columns:1fr 1fr}.wk-hl div:nth-child(3){border-left:0}.wk-hl div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}.wk-logos{grid-template-columns:repeat(4,1fr)}.wkm-g{grid-template-columns:1fr}}
 @media (max-width:620px){.wk-hero{padding:110px 0 50px}.wk-grid{grid-template-columns:1fr}.wk-logos{grid-template-columns:repeat(2,1fr)}.wk-hl{grid-template-columns:1fr 1fr}.wk-hl div{padding:16px}.wkm-h,.wkm-g{padding-left:20px;padding-right:20px}.wkm-sv{height:420px}.wk-tabs{width:100%;border-radius:18px}}
 @media (prefers-reduced-motion:reduce){.wk-scr img{transition:none}.wk-c:hover .wk-scr img{transform:none}}
+
+/* ---- Work v2: custom hero + calmer cards ---- */
+.wk-hero{background:#F6F2EA!important;color:var(--fg)!important;padding:128px 0 72px!important;border-bottom:1px solid var(--line)}
+.wk-hero:before{display:none!important}
+.wkh{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.wkh-k{display:flex;align-items:center;gap:12px;margin:0 0 18px;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#93308F}
+.wkh-k:before{content:"";width:34px;height:2px;background:#93308F}
+.wkh-l h1{margin:0 0 20px;font-size:clamp(2.6rem,5.6vw,4.5rem);line-height:1.02;letter-spacing:-.025em;color:#0E1B33}
+.wkh-u{position:relative;display:inline-block;white-space:nowrap;isolation:isolate}
+.wkh-u svg{position:absolute;left:-2%;bottom:-.08em;width:104%;height:.32em;z-index:-1}
+.wkh-p{font-size:1.1rem;line-height:1.65;color:#4A5568;max-width:520px;margin:0 0 34px}
+.wkh-st{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:0}
+.wkh-st div{padding:0 22px;border-left:1px solid #D9D2C3;display:grid;gap:4px}
+.wkh-st div:first-child{padding-left:0;border-left:0}
+.wkh-st b{font-size:1.7rem;line-height:1;color:#0E1B33;letter-spacing:-.02em}
+.wkh-st span{font-size:.82rem;color:#6B7280;white-space:nowrap}
+.wkh-r{position:relative;height:470px}
+.wkh-f{position:absolute;margin:0;background:#fff;border-radius:14px;padding:8px 8px 0;box-shadow:0 1px 0 rgba(0,0,0,.04),0 22px 48px rgba(14,27,51,.14);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.wkh-f img{display:block;width:100%;border-radius:8px}
+.wkh-f figcaption{font-size:.74rem;font-weight:600;color:#6B7280;padding:8px 4px 9px}
+.wkh-f.f1{width:72%;left:0;top:28px;transform:rotate(-2.5deg);z-index:2}
+.wkh-f.f2{width:44%;right:0;top:0;transform:rotate(3deg);z-index:1}
+.wkh-scr{display:block;height:250px;overflow:hidden;border-radius:0 0 8px 8px}
+.wkh-scr img{border-radius:0}
+.wkh-f.f2 .wk-chrome{border-radius:8px 8px 0 0;height:22px}
+.wkh-f.f3{width:62%;left:18%;bottom:0;transform:rotate(1.5deg);z-index:3}
+.wkh-r:hover .f1{transform:rotate(-4deg) translate(-8px,-6px)}.wkh-r:hover .f2{transform:rotate(5deg) translate(8px,-6px)}.wkh-r:hover .f3{transform:rotate(0) translateY(6px)}
+.wkh-note{position:absolute;z-index:4;left:-3%;top:-6px;transform:rotate(-5deg);background:#E9B13B;color:#0E1B33;font-weight:800;font-size:.95rem;line-height:1.35;padding:12px 16px;border-radius:4px;box-shadow:0 12px 24px rgba(14,27,51,.18)}
+.wkh-note:before{content:"";position:absolute;top:-8px;left:50%;width:44px;height:16px;margin-left:-22px;background:rgba(255,255,255,.55);transform:rotate(-3deg)}
+.wk-cb{gap:6px!important;padding:18px 20px 20px!important}
+.wk-ty{font-size:.78rem!important;text-transform:uppercase;letter-spacing:.06em;color:#8A93A3!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wk-nm{font-size:1.12rem!important;line-height:1.3}
+.wk-met{margin:8px 0 0!important;padding-top:12px;border-top:1px solid var(--line);gap:8px!important}
+.wk-met strong{font-size:1.65rem!important}
+.wk-met small{font-size:.85rem!important;color:#4A5568!important;font-weight:500!important}
+.wk-more{padding-top:14px!important;font-size:.86rem!important}
+.wk-lg img{filter:none!important;opacity:1!important}
+@media (max-width:980px){.wkh{grid-template-columns:1fr;gap:40px}.wkh-r{height:420px;max-width:560px}}
+@media (max-width:620px){.wk-hero{padding:104px 0 48px!important}.wkh-st{grid-template-columns:1fr 1fr;gap:18px 0}.wkh-st div:nth-child(3){padding-left:0;border-left:0}.wkh-r{height:330px}.wkh-scr{height:160px}.wkh-note{top:-10px;left:0;font-size:.8rem;padding:9px 12px}.wk-tabs{flex-wrap:nowrap;overflow-x:auto;border-radius:999px;scrollbar-width:none}.wk-tabs::-webkit-scrollbar{display:none}.wk-tabs button{flex:none;padding:9px 14px}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1500,15 +1539,23 @@ footer.site .social svg{width:22px;height:22px}
 
 <!-- ============ WORK ============ -->
 <section class="view wk" data-view="work" hidden>
-  <div class="wk-hero"><div class="wrap">
-    <span class="wk-eye"><i></i>Our work</span>
-    <h1>Real campaigns. <em>Real screenshots.</em></h1>
-    <p class="wk-lede">Live Google Ads, Meta Ads and website projects for local businesses in the USA. Every number below comes straight from the client's ad account, shown as it appears in the dashboard.</p>
-    <div class="wk-hl">
-      <div><b>1,000+</b><span>leads in 11 months<small>Same Day Bumper · Google Ads</small></span></div>
-      <div><b>527</b><span>phone calls in 3 months<small>Roadside assistance · Google Ads</small></span></div>
-      <div><b>1,352</b><span>conversations in 3 months<small>Auto detailing · Meta Ads</small></span></div>
-      <div><b>$19.83</b><span>cost per lead<small>Same Day Bumper · 11 months</small></span></div>
+  <div class="wk-hero"><div class="wrap wkh">
+    <div class="wkh-l">
+      <p class="wkh-k">Our work</p>
+      <h1>Real accounts.<br>Real <span class="wkh-u">numbers.<svg viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 6, 140 4, 296 12" fill="none" stroke="#E9B13B" stroke-width="7" stroke-linecap="round"/></svg></span></h1>
+      <p class="wkh-p">Google Ads, Meta Ads and websites we've built for local businesses in the USA. The screenshots come straight from our clients' ad accounts — nothing mocked up.</p>
+      <div class="wkh-st">
+        <div><b>1,000+</b><span>leads in 11 months</span></div>
+        <div><b>527</b><span>calls in 3 months</span></div>
+        <div><b>1,352</b><span>Meta conversations</span></div>
+        <div><b>$19.83</b><span>cost per lead</span></div>
+      </div>
+    </div>
+    <div class="wkh-r" aria-hidden="true">
+      <figure class="wkh-f f1"><img src="/autobodyshop-ads/cases/sdb-google-overview-card.webp" alt=""><figcaption>Same Day Bumper · Google Ads</figcaption></figure>
+      <figure class="wkh-f f2"><span class="wk-chrome"><i></i><i></i><i></i></span><span class="wkh-scr"><img src="/autobodyshop-ads/cases/pristine-collision-site-card.webp" alt=""></span><figcaption>Pristine Collision · Website</figcaption></figure>
+      <figure class="wkh-f f3"><img src="/autobodyshop-ads/cases/detailing-meta-results-card.webp" alt=""><figcaption>Auto detailing · Meta Ads</figcaption></figure>
+      <span class="wkh-note">762 lead forms<br>263 calls</span>
     </div>
   </div></div>
 
@@ -2207,12 +2254,12 @@ const SV={google:["Google Ads","#4285F4"],meta:["Meta Ads","#0467DF"],web:["Webs
 const ARR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const CK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 const grid=document.getElementById("wkGrid");if(!grid)return;
+const short=c=>{let t=(c.type.split("·")[1]||c.type).replace(/\(.*?\)/g,"").trim();return t.length>44?t.slice(0,t.lastIndexOf(",",44)>0?t.lastIndexOf(",",44):44):t};
 const card=(c,i)=>{const sv=SV[c.service]||SV.google;const web=c.service==="web";
  return `<button type="button" class="wk-c${web?" wk-web":""}" data-s="${c.service}" data-i="${i}" style="--ac:${sv[1]}">
   <span class="wk-cov">${web?`<span class="wk-chrome"><i></i><i></i><i></i>${c.url?`<em>${esc(c.url)}</em>`:""}</span><span class="wk-scr"><img src="${c.coverScroll}" alt="${esc(c.name)} website design" loading="lazy"></span>`:`<img src="${c.cover}" alt="${esc(c.name)} ${sv[0]} results" loading="lazy">`}<span class="wk-badge">${sv[0]}</span></span>
-  <span class="wk-cb"><span class="wk-ty">${esc(c.type)}</span><b class="wk-nm">${esc(c.name)}</b>
+  <span class="wk-cb"><span class="wk-ty">${esc(short(c))}</span><b class="wk-nm">${esc(c.name)}</b>
   <span class="wk-met"><strong>${esc(c.metric)}</strong><small>${esc(c.metricLabel)}</small></span>
-  <span class="wk-st">${c.stats.map(s=>`<span><b>${esc(s[0])}</b>${esc(s[1])}</span>`).join("")}</span>
   <span class="wk-more">View case study ${ARR}</span></span></button>`};
 grid.innerHTML=WORK_CASES.map(card).join("");
 const tabs=[...document.querySelectorAll(".wk-tabs button")];
