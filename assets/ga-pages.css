@@ -522,3 +522,5 @@ footer .social svg{width:21px;height:21px}
 .sx-scr img{display:block;width:100%;height:auto;transition:transform 9s linear}
 .sx-site:hover .sx-scr img{transform:translateY(calc(-100% + 380px))}
 .sx-site figcaption{font-size:.78rem;color:#6B7280;padding:10px 6px 12px;font-weight:600}
+
+.byline{margin-top:10px;font-size:.86rem;color:var(--muted)}.byline a{color:inherit;text-decoration:underline;text-underline-offset:3px}
