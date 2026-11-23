@@ -3,11 +3,11 @@
   "rewrites": [
     {
       "source": "/(about|team|work|pricing|contact|services)",
-      "destination": "/index.html"
+      "destination": "/"
     },
     {
       "source": "/services/:slug",
-      "destination": "/index.html"
+      "destination": "/"
     }
   ]
 }
